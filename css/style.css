@@ -1,0 +1,822 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap');
+/*formato scrollbar para firefox*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+    scrollbar-width: auto;
+    scrollbar-color: rgb(62, 64, 149) rgb(255, 255, 245);
+}
+/*formato scrollbar*/
+::-webkit-scrollbar{
+    height: 15px;
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(255, 255, 245);
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgb(62, 64, 149);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(12, 14, 110);
+}
+::-webkit-scrollbar-corner{
+    width: 15px;
+    background-color: rgb(255, 255, 245);
+}
+::-webkit-scrollbar-button{
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 255, 245);
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement{
+    background-image: url(img/arrowup.svg);
+    background-size: 100%;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover{
+    background-image: url(img/arrowupy.svg);
+    background-size: 100%;
+}
+::-webkit-scrollbar-button:single-button:vertical:increment{
+    background-image: url(img/arrowdwn.svg);
+    background-size: 100%;
+}
+::-webkit-scrollbar-button:single-button:vertical:increment:hover{
+    background-image: url(img/arrowdwny.svg);
+    background-size: 100%;
+}
+::-webkit-scrollbar-button:single-button:horizontal:decrement{
+    background-image: url(img/arrowlft.svg);
+    background-size: 100%;
+}
+::-webkit-scrollbar-button:single-button:horizontal:decrement:hover{
+    background-image: url(img/arrowlfty.svg);
+    background-size: 100%;
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment{
+    background-image: url(img/arrowrgth.svg);
+    background-size: 100%;
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment:hover{
+    background-image: url(img/arrowrgthy.svg);
+    background-size: 100%;
+}
+
+body{
+    
+    background-image: url(img/bck.svg);
+    background-attachment: fixed;
+    color: rgb(62, 64, 149);
+    background-color: white;
+}
+main{
+    margin: 5px;
+    padding: 10px;
+}
+    main nav{
+        padding: 0;
+    }
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 100%;
+    padding: 5px 0 5px 5px;
+    border-bottom: solid 25px rgb(62, 64, 149); 
+    background-image: url(img/bck.svg);
+    background-color: white;
+} 
+    nav a{
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+    nav img{
+        height: 100%;
+        width: 100%;
+    }
+    nav .alineadoderecha{
+        overflow: hidden;
+    } 
+        nav .alineadoderecha ul{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+            nav .alineadoderecha ul li a{
+                height: 100%;
+            }
+            nav .alineadoderecha ul li a img{
+                height: 100%;
+            }   
+    nav .centrado ul{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        font-weight: 700;
+        font-size: 2em;
+    } 
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+    background-color: white;
+}
+    header img{
+        height: 100%;
+        object-fit: scale-down;
+    }
+section{
+    margin: 10px 0;
+}
+aside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 15px;
+}
+    aside section{
+        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: center;
+        padding-bottom: 15px;
+        justify-content: center;
+    }
+        aside section img{
+            width: 100%;
+        }
+            aside section a img{
+            width: 100%;  
+            margin-bottom: 15px; 
+            }
+footer{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    border-top: solid 25px rgb(62, 64, 149);
+    padding: 5px 15px;
+}
+    footer form{
+        width: 25%;
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        position: static;
+    }
+    footer section{
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-between;
+        
+    }
+        footer section ul{
+            display: flex;
+            flex-direction: column;
+        }
+            footer section ul li {
+                font-weight: 200;
+                font-size: 1em; 
+            }
+                footer section ul li img{
+                    width: 0.8em;
+                }
+    footer nav{
+        height: auto;
+        position: static;
+        display: flex;
+        width: 25%;
+        border: 0;
+        padding: 0;
+    }
+        footer nav ul{
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer nav ul li a img{
+
+            width: 1.5rem;
+        }
+    footer iframe{
+        width: 13%;
+        height: 90%;
+    }
+h1, h2, h3, h4{
+    font-weight: 700;
+}
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1.85em;
+}
+h3{
+    font-size: 1.4em;
+}
+h4{
+    font-size: 1.3em;
+}
+p{
+    font-weight: 400;
+    font-size: 1.1em;
+}
+ul li{
+    list-style: none;
+}
+dl{
+    margin-left: 1em;
+    font-weight: 700;
+}
+    dl dd{
+        margin-left: 2em;
+        font-weight: 400;
+    }
+        dl dd ul li{
+            margin-left: 4em;
+            list-style: disc;
+        }
+table{
+    width: 33%;
+    border: 3px solid rgb(62, 64, 149);
+    border-collapse: collapse;
+    font-weight:200;
+    font-size: 1em;
+    text-align: center;
+    background-color: rgb(255, 255, 245);
+} 
+    th{
+        border: 2px solid;
+        padding: 10px;
+        background-color: rgb(245, 245, 255);
+    }
+        td{
+            border: 1px solid;
+            padding: 10px;
+        }
+/*Para poner la lupa dentro del <input> buscar, z-index:0; para que quede atrás de la nav*/
+form{
+    position: relative;
+    font-weight: 400;
+    font-size: 1em;
+    color: rgb(62, 64, 149);
+    z-index: 0;
+}
+    form ul li{
+        line-height: 2em;
+    }
+fieldset{
+    width: 100%;
+    border-style: solid;
+    border-color: rgb(62, 64, 149);
+    padding: 10px;
+    background-color: rgb(255, 255, 245);
+}
+    fieldset ul li{
+        padding: 5px;
+    }
+figure{
+    overflow: auto;
+    width: 30%;
+    margin: 3px 0;
+    border: dotted 1px rgb(62, 64, 149);
+    padding: 1%;
+    background-color: rgb(255, 255, 245);
+}
+    figure figcaption{
+        font-weight: 700;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+        figure figcaption p{
+            margin: 0 0.5rem;
+            font-weight: 200;
+            font-size: 1rem;
+            text-align: left;
+            line-height: 1.3rem;
+        }
+    /*Tamaño de las imágenes de la tienda*/
+    figure img{
+        width: 90%;
+        margin:  0 3px;
+        border: solid 1px rgb(62, 64, 149);
+    }
+a{
+    text-decoration: none;
+    color: rgb(62, 64, 149);
+}
+a:hover{
+    color: rgb(255, 242, 18);
+}
+select{
+    border: 1.5px solid rgb(62, 64, 149);
+}
+/*a-textdeco mejora el contraste con el background claro*/
+.a-textdeco{
+    text-decoration: underline;
+}
+.a-textdeco:hover{
+    color: crimson;
+}
+/*formato para algunos headings*/
+.headingdeco{
+    margin: 0;
+    padding: 0;
+    text-indent: 15px;
+    background-color: rgb(62, 64, 149);
+    color:rgb(255, 242, 18);
+}
+/*cambia el formato de la palabra dirección:, teléfono:, etc sin afectar lo demás*/
+.formatchange{
+    font-size: 1.1em;
+    font-weight: 400;
+}
+/*alinea el texto a la izquierda*/
+.text-right{
+    text-align: right;
+}
+/*deja un pequeño margen entre el borde y la letra de los <input>*/
+.textBox{
+    border: 1.5px solid rgb(62, 64, 149);
+    padding: 0 3px;
+}
+.textBox:focus{
+    border-color: rgb(12, 14, 110);
+}
+/*formato de los botones*/
+.formatbutton{
+    border: 0;
+    padding: 1px 5px;
+    background-color: rgb(62, 64, 149);
+    color: rgb(247, 247, 247);
+}
+.formatbutton:hover{
+    color: rgb(255, 242, 18);
+}
+/*Para que no quede atrás de la lupa el texto que se ingresa en el <input> "buscar"*/
+.containertext{
+    width: 10rem;
+    border: 1.5px solid rgb(62, 64, 149);
+    padding-right: 20px;
+    padding-left: 3px;
+    color: rgb(62, 64, 149);
+}
+/*formato de la lupa*/
+.buttonsrch{
+    position: absolute;
+    width: 1rem;
+    left: 8.75rem;
+    top: 2.5px;
+    border-style: none;
+    background-image: url(img/srch.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    color: transparent;
+}
+.buttonsrch:hover{
+    background-image: url(img/srchy.png);
+    color: transparent;
+}
+/*Para que el carrito pueda entrar en el botón de "añadir al carrito"*/
+.buttonedit{
+    width: 8rem;
+    margin: 5px 0;
+    border-style: none;
+    padding-left: 0.20rem;
+    padding-right: 1.563rem;
+    background-image: url(img/crtdd.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: rgb(247, 247, 247);
+}
+.buttonedit:hover{
+    background-image: url(img/crtddy.png);
+    color: rgb(255, 242, 18);
+}
+/*Imágen para aviso de página en construcción*/
+.construction{
+    width: 30%;
+    margin: 5% 35% 0 35%;
+}
+.calendario{
+    border:solid 1px #777;
+    width: 800px; 
+    height: 600px; 
+}
+.grid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 10rem 5% auto 15rem;
+    grid-template-areas:
+    "nav nav"
+    "head head" 
+    "main aside"
+    "footer footer";
+}
+/* defino z-index: 1 para que quede por encima del form de busqueda */
+.navegacion{
+    height: 100%;
+    display: grid;
+    grid-area: nav;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 25% 75%;
+    grid-template-areas:
+    "log alineadoderecha"
+    "log  centrado";
+    z-index: 1;
+}
+.encabezado{ 
+    grid-area: head;
+}
+.principal{
+    grid-area: main;
+}
+.lado{
+    grid-area: aside;
+    
+}
+.pie{
+    grid-area: footer;
+}
+.pie form div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.pie form div .textBox{
+    width: 70%;
+    padding: 0 5px;
+}
+.alineadoderecha{
+    height: 100%;
+    display: flex;
+    grid-area: alineadoderecha;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+.centrado{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    grid-area: centrado;    
+}
+.logo{
+    height: 100%;
+    grid-area: log;
+}
+.grid_club{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 10rem auto auto 15rem;
+    grid-template-areas: 
+    "nav nav"
+    "head head"
+    "mainnav seccion"
+    "footer footer";
+}
+/* Uso display: contents para que me deje aplicar el grid los elementos que están dentro del main */
+.main_club{
+    display: contents;
+    position: relative;
+} 
+.main_nav{
+    grid-area: mainnav;
+    position: sticky;   
+    top: 10rem;
+    height: 10%;
+    padding: 0.5em;
+    border: 0;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.main_nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main_section{
+    grid-area: seccion;
+}
+.pages__header{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.pages__header__img{
+    object-fit: contain;
+}
+/* Uso margin-top: -10rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
+.pages__club__a-position{
+    position: absolute;
+    margin-top: -10rem;
+}
+.pages__a_competir-grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10rem auto auto 15rem;
+    grid-template-areas: 
+    "nav"
+    "head"
+    "main"
+    "footer";
+}
+.contacto__main__form{
+    width: 40%;
+}
+.contacto__main__input-margin{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    margin-top: 5px;  
+}
+.contacto__main__input-margin input{
+    margin-left: 10px;
+}
+.input-margin{
+    margin-left: 10px;
+}
+textarea{
+    width: 70%;
+    height: 30%;
+}
+.mensaje{
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (max-width: 1024px){
+    .grid{
+        grid-template-columns: 100vw;
+        grid-template-rows: 10rem auto auto auto auto;
+        grid-template-areas: 
+        "nav"
+        "head"
+        "main"
+        "aside"
+        "footer";
+       } 
+        .navegacion{
+            grid-template-columns: 45% 55%;
+            grid-template-rows: 1fr;
+            grid-area: nav;
+            grid-template-areas: 
+            "log centrado"
+            "log centrado";
+        }   
+        .centrado{
+            
+            justify-content: space-between;
+        }
+           nav .centrado ul{
+            height: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                font-size: 1.58em;
+                display: flex;
+                align-items: center;
+                align-content: space-between;
+            }
+                nav .centrado ul li{
+                    margin: 0 10px;
+                }
+        .encabezado{
+            grid-area: head;
+        } 
+            .encabezado img{
+                width: 100%;
+            }
+        .principal{
+            grid-area: main;
+        }
+        .lado{
+            align-content: center;
+            grid-area: aside;
+        }
+        .pie{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            grid-area: footer;
+            padding-top: 2%;
+        }
+        .alineadoderecha{
+            display: none;
+        }
+        aside section{
+            display: flex;
+            align-content: center;
+        }
+        aside section img{
+            width: 50vw;
+        }
+        aside section button{
+            font-size: 2em;
+        }
+        table{
+            display: block;
+            height: 50vh;
+            width: 80vw;
+            overflow: auto;
+        }
+            
+        footer form{
+            height: auto;
+            width: 80%;
+        }
+        footer section{
+            height: auto;
+        }
+        footer nav{
+            height: auto;
+            width: 80%;
+            padding: 20px 5px 0 5px;
+        }
+        footer iframe{
+            width: 80%;
+            height: 300px;
+        }
+        .pages__header__img{
+          object-fit: contain;
+          height: 100%;
+        }
+        .main_nav{
+            top: 8rem;   
+            height: 100%;
+            background-image: url(img/bck.svg);
+            background-color: white;
+            font-weight: 700;
+            font-size: 1.5em;
+            justify-content: center;
+        }
+        /* Uso margin-top: -10rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
+        .pages__club__a-position{
+            margin-top: -16.5rem;
+        }
+        .club__mobile-grid{
+            position: relative;
+            grid-template-columns: 100vw;
+            grid-template-rows: 8rem auto auto auto auto;
+            grid-template-areas: 
+            "nav"
+            "head"
+            "mainnav"
+            "seccion"
+            "footer";
+        }
+        .calendario{
+            width: 80vw;
+            height: 50vh;
+        }
+        .video{
+            width: 80vw;
+            
+        }
+        .pages__a_acompetir__mobile-grid{
+            display: grid;
+            grid-template-columns: 100vw;
+            grid-template-rows: 8rem auto auto auto;
+            grid-template-areas: 
+            "nav"
+            "head"
+            "main"
+            "footer";
+        }
+    .contacto__main__form{
+        width: 90%;
+    }
+    fieldset{
+        min-inline-size: 90%;
+    }
+    fieldset ul{
+        width: 90%;
+    }
+    fieldset ul li{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    } 
+    .inline{
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+.mensaje{
+    width: 100%;
+}
+textarea{
+    width: 90%;
+};
+}
+/*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
+@media only screen and (max-width: 480px){
+   .grid{
+    grid-template-columns: 100vw;
+    grid-template-rows: 8rem auto auto auto auto;
+    grid-template-areas: 
+    "nav"
+    "head"
+    "main"
+    "aside"
+    "footer";
+   } 
+    .navegacion{
+        grid-template-columns: 50% 50%;
+        grid-area: nav;
+        position: sticky;
+        top: 0;
+    }   
+    .encabezado{
+        grid-area: head;
+    } 
+        .encabezado img{
+            height: 100%;
+        }
+    .principal{
+        grid-area: main;
+    }
+    .lado{
+        align-content: center;
+        grid-area: aside;
+    }
+    .pie{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        grid-area: footer;
+        padding-top: 2%;
+    }
+    .alineadoderecha{
+        display: none;
+    }
+    .centrado{
+        display: none;
+    }
+    aside section button{
+        font-size: 2em;
+    }
+    table{
+        display: block;
+        height: 50vh;
+        width: 80vw;
+        overflow: auto;
+    } 
+    footer form{
+        height: auto;
+        width: 100%;
+    }
+    footer section{
+        height: auto;
+    }
+    footer nav{
+        height: auto;
+        width: 80%;
+        padding: 15px 5px 0 5px;
+    }
+    footer iframe{
+        width: 80%;
+        height: 300px;
+    }
+    .logo a img{
+        display: none;
+    }
+    .logo a{
+        content: url(../img/logosnnmbr.svg);
+   
+    }
+    textarea{
+        width: 100%;
+        height: 35%;
+    }
+}

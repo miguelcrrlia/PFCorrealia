@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Club de Ajedrez Bella Vista</title>
+    <link href="../css/style.css" rel="shortcut icon">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body class="pages__a_competir-grid pages__a_acompetir__mobile-grid">
+    <!--Nav con logo y links-->
+    <nav class="navegacion">
+        <div class="logo">
+            <!--Logo-->
+            <a href="../index.html" title="Inicio">
+                <img src="../img/logo.svg" alt="logo">
+            </a>
+        </div>
+            <!--Lista de links para redes y carrito-->
+            <div class= "alineadoderecha">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+                            <img src="../img/links/fcbk.svg" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                            <img src="../img/links/inst.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
+                            <img src="../img/links/whtsp.svg" alt="whatsapp">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
+                            <img src="../img/links/chsscm.svg" alt="chess.com">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html" title="Carrito de compras">
+                            <img src="../img/links/crt.svg" alt="carrito">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class= "centrado">
+                    <!-- Lista para navegar dentro del sitio-->
+                <ul>
+                    <li>
+                        <a href="club.html" title="Club">Club</a>
+                    </li>
+                    <li>
+                        <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
+                    </li>
+                    <li>
+                        <a href="tienda.html" title="Tienda">Tienda</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html" title="Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <!--Header-->
+    <header class="encabezado pages__header">    
+        <img class="pages__header__img" src="../img/nosotros_3.png" alt="dos peones enfrentados">
+        <h1 class="headingdeco pages__header__heading">Contacto</h1>
+    </header>
+    <main class="principal">
+        <!--Formulario de contacto-->
+            <a id="formulario"></a>
+            <form class="contacto__main__form" action="#">
+                <fieldset>
+                    <legend>Formulario</legend>
+                    <ul>
+                        <li>
+                            <label for="nombre">Nombre:</label>
+                            <input class="textBox" id="nombre" name="nombre" type="text" placeholder="*escriba su nombre aquí*">
+                        </li>
+                        <li>
+                            <label for="apellido">Apellido:</label>
+                            <input class="textBox" id="apellido" name="apellido" type="text" placeholder="*escriba su apellido aquí*">
+                        </li>
+                        <li>
+                            <label for="email">Email:</label>
+                            <input class="textBox" id="email" name="email" type="email" placeholder="*escriba su correo aquí*">
+                        </li>
+                        <li class="inline">
+                            <label for="newsletter">¿Desea recibir  el Newsletter?</label>
+                            <input class="input-margin"id="newsletter" name="newsletter" type="checkbox" checked="checked">
+                        </li>
+                        <li>
+                            <label for="motivo">Motivo del mensaje:</label>
+                            <select id="motivo">
+                                <option value="">Seleccione</option>
+                                <option value="afiliarse">Afiliarse</option>
+                                <option value="inscripciontorneo">Inscribirse a Torneo</option>
+                                <option value="inscribirsetaller">Inscribirse a Taller para las familias</option>
+                                <option value="charlas">Inscribirse a charla</option>
+                                <option value="reclamos">Reclamos</option>
+                                <option value="sugerencias">Sugerencias</option>
+                            </select>
+                        </li>
+                        <li class="mensaje">
+                            <label for="mensaje">Mensaje:</label>
+                            
+                            <textarea class="textBox" id="mensaje" cols="60" rows="10" placeholder="*escriba su mensaje aquí*"></textarea>
+                        </li>    
+                    </ul>
+                </fieldset>
+                <div class="contacto__main__input-margin">
+                    <input class="formatbutton" name="limpiar" type="reset" title="limpiar formulario" value="limpiar formulario">
+                    <input class="formatbutton" name="enviar" type="submit" title="enviar" value="enviar">      
+                </div>
+            </form>
+    </main>
+    <!--Footer-->
+    <footer class="pie">
+        <!--Suscripción a newsletter-->
+        <form action="#">
+            <label for="e_mail">Suscríbete para más contenido</label>
+            <div>
+                <input class="textBox" id="e_mail" name="mail" type="email" placeholder="Ingrese su mail aquí">
+                <input class="formatbutton" type="button" value="Suscríbete">
+            </div>
+        </form>
+        <!--Links de redes y carrito-->
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+                        <img src="../img/links/fcbk.png" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                        <img src="../img/links/inst.png" alt="instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
+                        <img src="../img/links/whtsp.png" alt="whatsapp">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
+                        <img src="../img/links/chsscm.png" alt="chess.com">
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html" title="Carrito de compras">
+                        <img src="../img/links/crt.png" alt="carrito">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--Section contactos del club-->
+        <section>
+            <h4>Contactos:</h4>
+            <ul>
+                <li>
+                    <img src="../img/links/mp.png" alt="ubicación">
+                    <span class="formatchange">Dirección:</span> Gral. Alfil 864 esq. Robert Fischer 
+                </li>
+                <li>
+                    <img src="../img/links/tlphn.png" alt="teléfono">
+                    <span class="formatchange">Teléfono:</span> 2475138644
+                </li>
+                <li>
+                    <img src="../img/links/whtsp.png" alt="whatsapp">
+                    <span class="formatchange">whatsapp:</span> 04468315742
+                </li>
+                <li>
+                    <img src="../img/links/mail.png" alt="email">
+                    <span class="formatchange">Email:</span>
+                    <a class="a-textdeco" href="mailto:clubajedrezbellavista@aim.com?">
+                        clubajedrezbellavista@aim.com
+                    </a> 
+                </li>
+            </ul>
+        </section>
+        <!--Mapa-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9735.08483896117!2d-56.10959533824161!3d-34.90052128135014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f87760e0b03ef%3A0xdd54da2716dd791e!2sIsla%20de%20las%20Gaviotas!5e0!3m2!1ses-419!2suy!4v1677743584377!5m2!1ses-419!2suy" width="400" height="300" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </footer>
+</body>
+</html>

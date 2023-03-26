@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.fil0 {fill:#3E4095}
+.scaled-path-svg {
+    svg {
+      path {
+        transform-origin: right: ;
+        transform: scale(2.1);
+      }
+    }
+  }
