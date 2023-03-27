@@ -212,6 +212,7 @@ footer{
         width: 25%;
         border: 0;
         padding: 0;
+        background-image: none;
     }
         footer nav ul{
             display: flex;
@@ -625,12 +626,14 @@ textarea{
             align-content: center;
             grid-area: aside;
         }
+        /* El z-index: 0 es para que no se superponga con .navegacion */
         .pie{
             display: flex;
             flex-direction: column;
             height: auto;
             grid-area: footer;
             padding-top: 2%;
+            z-index: 0;
         }
         .alineadoderecha{
             display: none;
@@ -673,13 +676,14 @@ textarea{
           height: 100%;
         }
         .main_nav{
-            top: 8rem;   
+            top: 7.9rem;   
             height: 100%;
             background-image: url(img/bck.svg);
             background-color: white;
             font-weight: 700;
             font-size: 1.5em;
             justify-content: center;
+            z-index: 1;
         }
         /* Uso margin-top: -10rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
         .pages__club__a-position{
