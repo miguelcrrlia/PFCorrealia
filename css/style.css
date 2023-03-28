@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap');
 /*formato scrollbar para firefox*/
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Mukta', sans-serif;
     scrollbar-width: auto;
@@ -63,13 +61,13 @@
     background-image: url(img/arrowrgthy.svg);
     background-size: 100%;
 }
-
+/* line-height para sacar el que aplica bootstrap */
 body{
-    
     background-image: url(img/bck.svg);
     background-attachment: fixed;
     color: rgb(62, 64, 149);
     background-color: white;
+    line-height: normal;
 }
 main{
     margin: 5px;
