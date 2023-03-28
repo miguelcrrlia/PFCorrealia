@@ -212,6 +212,8 @@ footer{
         width: 25%;
         border: 0;
         padding: 0;
+        background-image: none;
+        background-color: transparent;
     }
         footer nav ul{
             display: flex;
@@ -521,6 +523,7 @@ select{
     background-color: transparent;
     font-weight: 700;
     font-size: 1.5em;
+    z-index: 1;
 }
 .main_nav ul{
     display: flex;
@@ -673,7 +676,7 @@ textarea{
           height: 100%;
         }
         .main_nav{
-            top: 8rem;   
+            top: 7.9rem;   
             height: 100%;
             background-image: url(img/bck.svg);
             background-color: white;
