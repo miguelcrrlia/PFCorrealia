@@ -96,7 +96,7 @@ nav{
         width: 100%;
     }
     nav .alineadoderecha{
-        overflow: hidden;
+        height: 100%;
     } 
         nav .alineadoderecha ul{
             width: 20%;
@@ -247,6 +247,10 @@ h4{
 p{
     font-weight: 400;
     font-size: 1.1em;
+}
+/* saca al margin-botton que pone Bootstrap */
+ul{
+    margin-bottom: 0;
 }
 ul li{
     list-style: none;
@@ -547,7 +551,7 @@ select{
 }
 .pages__a_competir-grid{
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: 10rem auto auto 15rem;
     grid-template-areas: 
     "nav"
@@ -674,7 +678,7 @@ textarea{
           height: 100%;
         }
         .main_nav{
-            top: 7.9rem;   
+            top: 10rem;   
             height: 100%;
             background-image: url(img/bck.svg);
             background-color: white;
@@ -689,7 +693,7 @@ textarea{
         .club__mobile-grid{
             position: relative;
             grid-template-columns: 100vw;
-            grid-template-rows: 8rem auto auto auto auto;
+            grid-template-rows: 10rem auto auto auto auto;
             grid-template-areas: 
             "nav"
             "head"
@@ -708,7 +712,7 @@ textarea{
         .pages__a_acompetir__mobile-grid{
             display: grid;
             grid-template-columns: 100vw;
-            grid-template-rows: 8rem auto auto auto;
+            grid-template-rows: 10rem auto auto auto;
             grid-template-areas: 
             "nav"
             "head"
@@ -741,7 +745,7 @@ textarea{
 };
 }
 /*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 576px){
    .grid{
     grid-template-columns: 100vw;
     grid-template-rows: 8rem auto auto auto auto;
