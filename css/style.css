@@ -758,7 +758,9 @@ textarea{
    } 
     .navegacion{
         grid-template-columns: 50% 50%;
-        grid-area: nav;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "log centrado";
         position: sticky;
         top: 0;
     }   
@@ -786,7 +788,13 @@ textarea{
         display: none;
     }
     .centrado{
-        display: none;
+        height: 100%;
+        flex-wrap: nowrap;
+    }
+    nav div ul{
+        background-image: url(img/bck.svg);
+        background-color: white;
+        font-size: 2em;
     }
     aside section button{
         font-size: 2em;
