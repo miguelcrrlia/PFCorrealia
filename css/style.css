@@ -112,16 +112,6 @@ nav{
             nav .alineadoderecha ul li a img{
                 height: 100%;
             }   
-    nav .centrado ul{
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: center;
-        font-weight: 700;
-        font-size: 2em;
-    } 
 header{
     display: flex;
     flex-direction: column;
@@ -490,11 +480,20 @@ select{
     padding-top: 5px;
 }
 .centrado{
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     height: 100%;
     grid-area: centrado;    
+}
+.nav__button__ul{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: centrado;
 }
 .logo{
     height: 100%;
@@ -551,7 +550,7 @@ select{
 }
 .pages__a_competir-grid{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 10rem auto auto 15rem;
     grid-template-areas: 
     "nav"
@@ -582,6 +581,17 @@ textarea{
     display: flex;
     flex-direction: column;
 }
+.nav__button__ul{
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    font-size: 2em;
+}
+/* Le saco el borde al botón hamburguesa */
+.navbar-toggler{
+    border: 0;
+    color: transparent;
+}
 @media only screen and (max-width: 1024px){
     .grid{
         grid-template-columns: 100vw;
@@ -594,29 +604,13 @@ textarea{
         "footer";
        } 
         .navegacion{
-            grid-template-columns: 45% 55%;
-            grid-template-rows: 1fr;
+            grid-template-columns: 35% 65%;
+            grid-template-rows: 100%;
             grid-area: nav;
             grid-template-areas: 
-            "log centrado"
-            "log centrado";
+            "log menu";
         }   
-        .centrado{
-            
-            justify-content: space-between;
-        }
-           nav .centrado ul{
-            height: 100%;
-                flex-direction: column;
-                flex-wrap: wrap;
-                font-size: 1.58em;
-                display: flex;
-                align-items: center;
-                align-content: space-between;
-            }
-                nav .centrado ul li{
-                    margin: 0 10px;
-                }
+        
         .encabezado{
             grid-area: head;
         } 
@@ -678,7 +672,7 @@ textarea{
           height: 100%;
         }
         .main_nav{
-            top: 10rem;   
+            top: 0;   
             height: 100%;
             background-image: url(img/bck.svg);
             background-color: white;
@@ -742,13 +736,30 @@ textarea{
 }
 textarea{
     width: 90%;
-};
+}
+.nav__button{
+    height: 100%;
+    width: 100%;
+    grid-area: menu;
+    font-weight: 700;
+    font-size: 1em;
+}
+.nav__button__ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
 }
 /*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
 @media only screen and (max-width: 576px){
    .grid{
     grid-template-columns: 100vw;
-    grid-template-rows: 8rem auto auto auto auto;
+    grid-template-rows: 10rem auto auto auto auto;
     grid-template-areas: 
     "nav"
     "head"
@@ -757,8 +768,10 @@ textarea{
     "footer";
    } 
     .navegacion{
+        padding: 0;
+        display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: auto;
+        grid-template-rows: 100%;
         grid-template-areas: 
         "log centrado";
         position: sticky;
@@ -789,7 +802,9 @@ textarea{
     }
     .centrado{
         height: 100%;
+        display: flex;
         flex-wrap: nowrap;
+        justify-content: flex-end;
     }
     nav div ul{
         background-image: url(img/bck.svg);
@@ -831,5 +846,24 @@ textarea{
     textarea{
         width: 100%;
         height: 35%;
+    }
+    .nav__button{
+        grid-area: auto;
+    }
+    .nav__button__ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        font-weight: 700;
+        font-size: 2em;
+    }
+    .main_nav{
+        top: 10rem;   
+        height: 100%;
+        background-image: url(img/bck.svg);
+        background-color: white;
+        font-weight: 700;
+        font-size: 1.5em;
+        justify-content: center;
     }
 }

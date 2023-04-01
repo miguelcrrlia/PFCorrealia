@@ -11,7 +11,7 @@
 </head>
 <body class="pages__a_competir-grid pages__a_acompetir__mobile-grid">
     <!--Nav con logo y links-->
-    <nav class="navegacion">
+    <nav class="navbar navbar-expand-sm navegacion">
         <div class="logo">
             <!--Logo-->
             <a href="../index.html" title="Inicio">
@@ -48,19 +48,22 @@
                     </li>
                 </ul>
             </div>
-            <div class= "centrado">
+            <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon">
+                      </button>
+            <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
                     <!-- Lista para navegar dentro del sitio-->
-                <ul>
-                    <li>
+                <ul class="nav__button__ul">
+                    <li class="nav-item">
                         <a href="club.html" title="Club">Club</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="tienda.html" title="Tienda">Tienda</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="contacto.html" title="Contacto">Contacto</a>
                     </li>
                 </ul>
