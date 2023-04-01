@@ -84,9 +84,24 @@
         <section class="">
             <h2>Artículos</h2>
             <div class="row mb-3">
-                <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
+                <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3 div__div">
                     <figure>
-                        <img src="../img/img-tienda/T-Shirt-Front.png" alt="T-shirt-Club de ajedrez Bella Vista">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade figure__carousel">
+                            <div class="carousel-inner">
+                                <div class="d-flex justify-content-center carousel-item active">
+                                    <img src="../img/img-tienda/T-Shirt-Front.png" alt="T-shirt-Club de ajedrez Bella Vista">
+                                </div>
+                                <div class="d-flex justify-content-center carousel-item">
+                                    <img src="../img/img-tienda/T-Shirt-Back.png" alt="T-shirt-back Club de ajedrez Bella Vista">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev button__carousel" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                <img src="../css/img/arrowlft.svg" class="border-0 carousel-control-prev-icon" aria-hidden="true">
+                            </button>
+                            <button class="carousel-control-next button__carousel" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true"> 
+                            </button>
+                        </div>
                         <figcaption>Remera
                             <p>
                                 Para que luzcas la insignia en el verano. Remera estampada con el logo del club, 100% algodón.
@@ -99,7 +114,13 @@
                 </div>
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
-                        <img src="../img/img-tienda/t-shirt-woman-front.png" alt="Remera para mujer con logo">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade figure__carousel">
+                            <div class="carousel-inner">
+                                <div class="d-flex justify-content-center carousel-item active">
+                                    <img src="../img/img-tienda/t-shirt-woman-front.png" alt="Remera para mujer con logo">
+                                </div>
+                            </div>
+                        </div>
                         <figcaption>Remera para mujer
                             <p>
                                 Remera con ajuste femenino estampada con el logo del club, 100% algodón.
@@ -137,7 +158,7 @@
                     </button> 
                 </div>
             </div>
-            <div class="row gy-10">
+            <div class="row">
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
                         <img src="../img/img-tienda/Bag.png" alt="Bolsa-Club de ajedrez Bella Vista">
