@@ -110,7 +110,7 @@ nav{
                 height: 100%;
             }
             nav .alineadoderecha ul li a img{
-                height: 100%;
+                width: 1.5rem;
             }   
 header{
     display: flex;
@@ -185,6 +185,7 @@ footer{
         footer section ul{
             display: flex;
             flex-direction: column;
+            padding: 0;
         }
             footer section ul li {
                 font-weight: 200;
@@ -446,6 +447,8 @@ select{
 }
 /* defino z-index: 1 para que quede por encima del form de busqueda */
 .navegacion{
+    position: sticky;
+    top: 0;
     height: 100%;
     display: grid;
     grid-area: nav;
@@ -454,6 +457,7 @@ select{
     grid-template-areas:
     "log alineadoderecha"
     "log  centrado";
+    padding: 5px 15px;
     z-index: 1;
 }
 .encabezado{ 
@@ -524,7 +528,7 @@ select{
 .main_nav{
     grid-area: mainnav;
     position: sticky;   
-    top: 0;
+    top: 10rem;
     height: 10%;
     padding: 0.5em;
     border: 0;
@@ -539,6 +543,7 @@ select{
     align-items: center;
 }
 .main_section{
+    padding: 0 15px;
     grid-area: seccion;
 }
 .pages__header{
@@ -566,7 +571,7 @@ select{
     "footer";
 }
 .contacto__main__form{
-    width: 40%;
+    width: 60%;
 }
 .contacto__main__input-margin{
     display: flex;
@@ -627,7 +632,7 @@ textarea{
     background-image: url(img/arrowdwn.svg);
 }
 .accordion-button:not(.collapsed)::after{
-    background-image: url(img/arrowup.svg);
+    background-image: url(img/arrowdwn.svg);
 }
 .accordion-button:not(.collapsed){
     background-color: transparent;
@@ -701,7 +706,7 @@ button{
             width: 50vw;
         }
         aside section button{
-            font-size: 2em;
+            font-size: 1.5em;
         }
         table{
             display: block;
@@ -736,7 +741,7 @@ button{
         /* z-index para que esté por encima del form del footer */
         .nav__accordion{
             position: sticky;
-            top: 0;
+            top: 10rem;
             display: flex;
             justify-content: center;
             z-index: 2;
@@ -837,7 +842,7 @@ figure{
     
     margin: 3px 0;
     border: dotted 1px rgb(62, 64, 149);
-    padding: 1%;
+    padding: 5%;
     background-color: rgb(255, 255, 245);
 }
     figure figcaption{
@@ -866,7 +871,7 @@ figure{
     "footer";
    } 
     .navegacion{
-        padding: 0;
+        padding: 5px 0;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 100%;
