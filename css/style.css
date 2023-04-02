@@ -288,6 +288,7 @@ form{
     }
 fieldset{
     width: 100%;
+    border: 2px;
     border-style: solid;
     border-color: rgb(62, 64, 149);
     padding: 10px;
@@ -523,7 +524,7 @@ select{
 .main_nav{
     grid-area: mainnav;
     position: sticky;   
-    top: 10rem;
+    top: 0;
     height: 10%;
     padding: 0.5em;
     border: 0;
@@ -794,7 +795,7 @@ figure{
         }
 }
 /*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 575.98px){
    .grid{
     grid-template-columns: 100vw;
     grid-template-rows: 10rem auto auto auto auto;
@@ -839,6 +840,7 @@ figure{
         display: none;
     }
     .centrado{
+        grid-area: centrado;
         height: 100%;
         display: flex;
         flex-wrap: nowrap;
