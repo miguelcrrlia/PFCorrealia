@@ -612,6 +612,45 @@ textarea{
 .carousel__zoom:focus{
     width: 700px;
 }
+.lupa{
+    cursor: url(img/lupa.svg), auto;
+}
+.nav__accordion{
+    display: none;
+}
+.accordion-button{
+    background-color: transparent;
+    border-color: transparent;
+}
+.accordion-button::after{
+    margin: auto;
+    background-image: url(img/arrowdwn.svg);
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url(img/arrowup.svg);
+}
+.accordion-button:not(.collapsed){
+    background-color: transparent;
+}
+.accordion-button .collapsed{
+    background-color: transparent;
+}
+.accordion{
+    background-color: transparent;
+    --bs-accordion-border-color: transparent;
+    --bs-accordion-btn-focus-border-color: transparent;
+    --bs-accordion-btn-focus-box-shadow: transparent;
+    --bs-accordion-border-radius: 0;
+}
+.accordion__item{
+    background-color: transparent;
+}
+button{
+    border-color: transparent;
+}
+.accordion__ul{
+    padding: 0;
+}
 @media only screen and (max-width: 992px){
     .grid{
         grid-template-columns: 100vw;
@@ -670,7 +709,7 @@ textarea{
             width: 80vw;
             overflow: auto;
         }
-            
+        
         footer form{
             height: auto;
             width: 80%;
@@ -692,13 +731,33 @@ textarea{
           height: 100%;
         }
         .main_nav{
-            top: 0;   
+            display: none;
+        }
+        /* z-index para que esté por encima del form del footer */
+        .nav__accordion{
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+        }
+        .accordion__main_nav{   
             height: 100%;
             background-image: url(img/bck.svg);
             background-color: white;
             font-weight: 700;
             font-size: 1.5em;
             justify-content: center;
+            border: 0;
+        }
+        .accordion__ul{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 1px solid rgb(62, 64, 149);
+            padding: 10px;
+           
         }
         /* Uso margin-top: -10rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
         .pages__club__a-position{
@@ -905,5 +964,8 @@ figure{
         font-weight: 700;
         font-size: 1.5em;
         justify-content: center;
+    }
+    .nav__accordion{
+        top: 10rem;
     }
 }
