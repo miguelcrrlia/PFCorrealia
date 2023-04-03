@@ -10,7 +10,7 @@
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body class="grid_club club__mobile-grid">
-    <!--Nav con logo y links-->
+    <!-- Nav con logo y links. Nav de Bootstrap -->
     <nav class="navbar navbar-expand-sm navegacion">
         <div class="logo">
             <!--Logo-->
@@ -18,89 +18,93 @@
                 <img src="../img/logo.svg" alt="logo">
             </a>
         </div>
-            <!--Lista de links para redes y carrito-->
-            <div class= "alineadoderecha">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/" title="Facebook" target="_blank">
-                            <img src="../img/links/fcbk.svg" alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/" title="Instagram" target="_blank">
-                            <img src="../img/links/inst.svg" alt="instagram">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
-                            <img src="../img/links/whtsp.svg" alt="whatsapp">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
-                            <img src="../img/links/chsscm.svg" alt="chess.com">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="cart.html" title="Carrito de compras">
-                            <img src="../img/links/crt.svg" alt="carrito">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-                <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon">
-                </button>
-                <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
-                    <!-- Lista para navegar dentro del sitio-->
-                <ul class="nav__button__ul">
-                    <li class="nav-item">
-                        <a href="club.html" title="Club">Club</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="tienda.html" title="Tienda">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contacto.html" title="Contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+        <!-- Lista de links para redes y carrito -->
+        <div class= "alineadoderecha">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+                        <img src="../img/links/fcbk.svg" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                        <img src="../img/links/inst.svg" alt="instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
+                        <img src="../img/links/whtsp.svg" alt="whatsapp">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
+                        <img src="../img/links/chsscm.svg" alt="chess.com">
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html" title="Carrito de compras">
+                        <img src="../img/links/crt.svg" alt="carrito">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Botón hamburguesa de Bootstrap -->
+        <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon" alt="Botón hamburguesa">
+        </button>
+        <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
+            <!-- Lista para navegar dentro del sitio -->
+            <ul class="nav__button__ul">
+                <li class="nav-item">
+                    <a href="club.html" title="Club">Club</a>
+                </li>
+                <li class="nav-item">
+                    <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
+                </li>
+                <li class="nav-item">
+                    <a href="tienda.html" title="Tienda">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" title="Contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <!--Header-->
+    <!-- Header -->
     <header class="encabezado pages__header">    
         <img class="pages__header__img" src="../img/club.jpg" alt="fachada de la sede">
         <h1 class="headingdeco pages__header__heading">Club</h1>
     </header>
     <main class="main_club">
-                <!--Nav para navegar dentro de la página-->
+        <!-- Nav para navegar dentro de la página. Accordion de Bootstrap (aparece en max-width: 992px) -->
         <div class="nav__accordion accordion border-0" id="accordionButton">
             <div class="accordion-item accordion__item border-0">
                 <div class="accordion-header">
-                    <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      </button>
+                    <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav">
+                    </button>
                 </div>
-                  <div id="collapseOne" class="accordion-collapse collapse border-0" data-bs-parent="#accordionButton">
-                    <div class="accordion-body">
-                        <nav class="accordion__main_nav" >
-                            <ul class="accordion__ul">
-                                <li>
-                                    <a href="#anioranza" title="Añoranza">Añoranza</a>
-                                </li>
-                                <li>
-                                    <a href="#aprendiendo" title="Aprendiendo">Aprendiendo</a>
-                                </li>
-                                <li>
-                                    <a href="#leyendo" title="Leyendo">Leyendo</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                  </div>
+                <div id="collapseNav" class="accordion-collapse collapse border-0" data-bs-parent="#accordionButton">
+                <div class="accordion-body">
+                    <nav class="accordion__main_nav" >
+                        <ul class="accordion__ul">
+                            <li>
+                                <a href="#anioranza" title="Añoranza">Añoranza</a>
+                            </li>
+                            <li>
+                                <a href="#aprendiendo" title="Aprendiendo">Aprendiendo</a>
+                            </li>
+                            <li>
+                                <a href="#leyendo" title="Leyendo">Leyendo</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                </div>
             </div>
-        </div>        
+        </div>
+        <!-- Nav para navegar dentro de la página. Para desktop -->
         <nav class="main_nav" >
             <ul>
                 <li>
@@ -116,88 +120,88 @@
         </nav>
         <div class="main_section">
             <!--Section añoranza (breve hisoria del club)-->
-        <section>
-                <a id="anioranza" class="pages__club__a-position"></a>
-                <h2>Añoranza</h2>
+            <section>
+                    <a id="anioranza" class="pages__club__a-position"></a>
+                    <h2>Añoranza</h2>
+                    <p>
+                        Allá por el año 1995, a <em>Mario Roque Rey Gamboa</em> y <em>Alberto Torres Caballero</em>,
+                        les nace la inquietud de formar un club de ajedrez producto del cruce de ciertas adversidades.
+                        En 1994 fallece 
+                        <a class="a-textdeco" href="../img/5edbeb1c602487f48d7edd9173216b29.jpg" title="foto de nestor">
+                            <em>Nestor Lorenzo Trebejos Escaques</em>
+                        </a>, 
+                        mentor ajedrecistico de <i>Mario</i> y <i>Alberto</i>,
+                        dejando en ellos sin lugar a duda un gran vacio. Luego, un tiempo después, se suma la expulsión de 
+                        <i>Mario</i> de un torneo por parte de un club del centro capitalino, a causa de quedarse dormido 
+                        durante la partida en reiteradas ocaciones, molestando con sus ronquidos a los demás participantes
+                        <a href="../img/95c45335e89b862969087a485ef9e77a.jpg" title="jugador tendido">
+                            <sup class="a-textdeco">ref</sup>
+                        </a>. 
+                        Y aunque Mario haya alegado que el viaje al club era largo, lo cual le generaba un gran cansancio, 
+                        las autoridades no revocaron la sentencia. Mientras, por otro lado, en esa misma época, <i>Alberto</i> 
+                        no encontraba torneos donde poder competir con controles de tiempos más cortos, practicamente en ningún club. 
+                        Todas estas situciones, sumado a la necesidad de ampliar la cantidad de jugadores, con quién enfrentarse,
+                        fueron conspirando a que se pusieran manos a la obra.
+                    </p>
+                    <p>
+                        Por la ubicación del club no había duda, iba a hacer en el barrio que los vió nacer. Barrio que 
+                        <i>Don Lorenzo Trebejos</i> supo caminar durante 95 años. En donde supo ganarse el cariño de todos 
+                        los vecinos/as, y en particular el de <i>Mario</i> y <i>Alberto</i>, quienes encontraron una gran amistad. 
+                        <i>Lorenzo</i> siempre tenía una historia sorprendente que contarles. Toda esta experiencia, fue 
+                        alimentando la curiosidad de estos jóvenes, que fueron absorviendo todo lo que pudieron. Entre diversas 
+                        enseñanzas aprendidas fueron adoptando dos de las grandes pasiones de <i>Don Lorenzo Trebejos</i>: 
+                        el ajedrez y el fanatismo al equipo de fútbol <i>Bella Vista</i>. Pasión que <i>Mario</i> solidifica 
+                        nombrando al club y vistiéndolo con sus colores.
+                    </p>
+                    <p>
+                        El club se términa de fundar con personería jurídica el 28 de julio de 1995.
+                    </p>
+            </section>
+            <!-- Section aprendiendo -->
+            <section>
+                <a id="aprendiendo" class="pages__club__a-position"></a>
+                <h2>Aprendiendo</h2>
+                <!-- Article sobre el taller de las familias -->
+                <article>
+                    <h3>Junto a la familia</h3>
+                    <p>
+                        Un espacio que fue creciendo hace ya varios años, son los talleres para niños y niñas, donde se pueden acercar junto a sus
+                        familiares para aprender a hacer sus primeros movimientos.
+                    </p>
+                </article>
+                <!-- Article sobre las charlas -->
+                <article>
+                    <h3>Avanzados</h3>
+                    <p>
+                        Cuanto más se profundiza en el arte ciencia del ajedrez, los temas a tratar más se diversifican. Por esta razón,
+                        se crean instancias donde expertos de nuestro club e invitados/as exponen en diferentes charlas todo su conocimiento, 
+                        profundizando en cada uno de ellos.
+                    </p>
+                </article>
+                <!-- Article ¿tomamos unos mates? -->
+                <article>
+                    <h3>¿Tomamos unos mates?</h3>
+                    <p>
+                        Sin importar niveles, los socios y socias están convinados/as a disfrutar de un momento agradable de comunión entre pares. Todas las 
+                        tardes podés venir a tomar mate, jugar, aprender o simplemente a charlar.
+                    </p>
+                </article>
+            </section>
+            <!-- Section leyendo -->
+            <section>
+                <a id="leyendo" class="pages__club__a-position"></a>
+                <h2>Leyendo</h2>
                 <p>
-                    Allá por el año 1995, a <em>Mario Roque Rey Gamboa</em> y <em>Alberto Torres Caballero</em>,
-                    les nace la inquietud de formar un club de ajedrez producto del cruce de ciertas adversidades.
-                    En 1994 fallece 
-                    <a class="a-textdeco" href="../img/5edbeb1c602487f48d7edd9173216b29.jpg" title="foto de nestor">
-                        <em>Nestor Lorenzo Trebejos Escaques</em>
-                    </a>, 
-                    mentor ajedrecistico de <i>Mario</i> y <i>Alberto</i>,
-                    dejando en ellos sin lugar a duda un gran vacio. Luego, un tiempo después, se suma la expulsión de 
-                    <i>Mario</i> de un torneo por parte de un club del centro capitalino, a causa de quedarse dormido 
-                    durante la partida en reiteradas ocaciones, molestando con sus ronquidos a los demás participantes
-                    <a href="../img/95c45335e89b862969087a485ef9e77a.jpg" title="jugador tendido">
-                        <sup class="a-textdeco">ref</sup>
-                    </a>. 
-                    Y aunque Mario haya alegado que el viaje al club era largo, lo cual le generaba un gran cansancio, 
-                    las autoridades no revocaron la sentencia. Mientras, por otro lado, en esa misma época, <i>Alberto</i> 
-                    no encontraba torneos donde poder competir con controles de tiempos más cortos, practicamente en ningún club. 
-                    Todas estas situciones, sumado a la necesidad de ampliar la cantidad de jugadores, con quién enfrentarse,
-                    fueron conspirando a que se pusieran manos a la obra.
+                    Durante todos estos años, en nuestras estanterías se fueron juntando varios libros. Ya sean adquiridos por el club mismo,
+                    por donaciones o por ser obsequios que nos han dejado nuestros invitados. Estos tienen un valor incalculable y por ende el
+                    club pone a disposición de sus socios y socias una biblioteca en continuo desarrollo.
                 </p>
-                <p>
-                    Por la ubicación del club no había duda, iba a hacer en el barrio que los vió nacer. Barrio que 
-                    <i>Don Lorenzo Trebejos</i> supo caminar durante 95 años. En donde supo ganarse el cariño de todos 
-                    los vecinos/as, y en particular el de <i>Mario</i> y <i>Alberto</i>, quienes encontraron una gran amistad. 
-                    <i>Lorenzo</i> siempre tenía una historia sorprendente que contarles. Toda esta experiencia, fue 
-                    alimentando la curiosidad de estos jóvenes, que fueron absorviendo todo lo que pudieron. Entre diversas 
-                    enseñanzas aprendidas fueron adoptando dos de las grandes pasiones de <i>Don Lorenzo Trebejos</i>: 
-                    el ajedrez y el fanatismo al equipo de fútbol <i>Bella Vista</i>. Pasión que <i>Mario</i> solidifica 
-                    nombrando al club y vistiéndolo con sus colores.
-                </p>
-                <p>
-                    El club se términa de fundar con personería jurídica el 28 de julio de 1995.
-                </p>
-        </section>
-        <!--Section aprendiendo-->
-        <section>
-            <a id="aprendiendo" class="pages__club__a-position"></a>
-            <h2>Aprendiendo</h2>
-            <!--Article sobre el taller de las familias-->
-            <article>
-                <h3>Junto a la familia</h3>
-                <p>
-                    Un espacio que fue creciendo hace ya varios años, son los talleres para niños y niñas, donde se pueden acercar junto a sus
-                    familiares para aprender a hacer sus primeros movimientos.
-                </p>
-            </article>
-            <!--Article sobre las charlas-->
-            <article>
-                <h3>Avanzados</h3>
-                <p>
-                    Cuanto más se profundiza en el arte ciencia del ajedrez, los temas a tratar más se diversifican. Por esta razón,
-                    se crean instancias donde expertos de nuestro club e invitados/as exponen en diferentes charlas todo su conocimiento, 
-                    profundizando en cada uno de ellos.
-                </p>
-            </article>
-            <!--Article ¿tomamos unos mates?-->
-            <article>
-                <h3>¿Tomamos unos mates?</h3>
-                <p>
-                    Sin importar niveles, los socios y socias están convinados/as a disfrutar de un momento agradable de comunión entre pares. Todas las 
-                    tardes podés venir a tomar mate, jugar, aprender o simplemente a charlar.
-                </p>
-            </article>
-        </section>
-        <!--Section leyendo-->
-        <section>
-            <a id="leyendo" class="pages__club__a-position"></a>
-            <h2>Leyendo</h2>
-            <p>
-                Durante todos estos años, en nuestras estanterías se fueron juntando varios libros. Ya sean adquiridos por el club mismo,
-                por donaciones o por ser obsequios que nos han dejado nuestros invitados. Estos tienen un valor incalculable y por ende el
-                club pone a disposición de sus socios y socias una biblioteca en continuo desarrollo.
-            </p>
-        </section>
+            </section>
         </div>
     </main>
-    <!--Footer-->
+    <!-- Footer -->
     <footer class="pie">
-        <!--Suscripción a newsletter-->
+        <!-- Suscripción a newsletter -->
         <form action="#">
             <label for="e_mail">Suscríbete para más contenido</label>
             <div>
@@ -205,7 +209,7 @@
                 <input class="formatbutton" type="button" value="Suscríbete">
             </div>
         </form>
-        <!--Links de redes y carrito-->
+        <!-- Links de redes y carrito -->
         <nav>
             <ul>
                 <li>
@@ -235,7 +239,7 @@
                 </li>
             </ul>
         </nav>
-        <!--Section contactos del club-->
+        <!-- Section contactos del club -->
         <section>
             <h4>Contactos:</h4>
             <ul>
@@ -260,7 +264,7 @@
                 </li>
             </ul>
         </section>
-        <!--Mapa-->
+        <!-- Mapa -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9735.08483896117!2d-56.10959533824161!3d-34.90052128135014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f87760e0b03ef%3A0xdd54da2716dd791e!2sIsla%20de%20las%20Gaviotas!5e0!3m2!1ses-419!2suy!4v1677743584377!5m2!1ses-419!2suy" width="400" height="300" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </footer>

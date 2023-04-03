@@ -179,7 +179,7 @@ footer{
         flex-direction: column;
         flex-wrap: wrap;
         align-content: space-around;
-        justify-content: space-between;
+        justify-content: center;
         
     }
         footer section ul{
@@ -394,7 +394,7 @@ select{
     position: absolute;
     width: 1rem;
     left: 8.75rem;
-    top: 2.5px;
+    top: 1.5px;
     border-style: none;
     background-image: url(img/srch.png);
     background-size: 100%;
@@ -617,6 +617,10 @@ textarea{
 .carousel__zoom:focus{
     width: 700px;
 }
+/* saca el recuadro cuando haces click en el botón cerrar del modal de Bootstrap */
+.btn-close{
+    --bs-btn-close-focus-shadow: 0;
+}
 .lupa{
     cursor: url(img/lupa.svg), auto;
 }
@@ -626,10 +630,15 @@ textarea{
 .accordion-button{
     background-color: transparent;
     border-color: transparent;
+    margin: 0;
+            padding: 0;
 }
 .accordion-button::after{
+    height: 3em;
+    width: 3em;
     margin: auto;
     background-image: url(img/arrowdwn.svg);
+    background-size: 100%;
 }
 .accordion-button:not(.collapsed)::after{
     background-image: url(img/arrowdwn.svg);
@@ -640,6 +649,10 @@ textarea{
 .accordion-button .collapsed{
     background-color: transparent;
 }
+.accordion-body{
+    margin: 0;
+            padding: 0;
+}
 .accordion{
     background-color: transparent;
     --bs-accordion-border-color: transparent;
@@ -649,9 +662,6 @@ textarea{
 }
 .accordion__item{
     background-color: transparent;
-}
-button{
-    border-color: transparent;
 }
 .accordion__ul{
     padding: 0;
@@ -705,6 +715,9 @@ button{
         aside section img{
             width: 50vw;
         }
+        aside section a img{
+            width: 50vw;
+        }
         aside section button{
             font-size: 1.5em;
         }
@@ -725,7 +738,12 @@ button{
         footer nav{
             height: auto;
             width: 80%;
+            margin: 20px;
             padding: 20px 5px 0 5px;
+        }
+        footer nav ul li a img{
+
+            width: 2rem;
         }
         footer iframe{
             width: 80%;
@@ -738,6 +756,10 @@ button{
         .main_nav{
             display: none;
         }
+        .accordion{
+            background-image: url(img/bck.svg);
+            background-color: white;
+        }
         /* z-index para que esté por encima del form del footer */
         .nav__accordion{
             position: sticky;
@@ -745,6 +767,8 @@ button{
             display: flex;
             justify-content: center;
             z-index: 2;
+            margin: 0;
+            padding: 0;
         }
         .accordion__main_nav{   
             height: 100%;
@@ -766,7 +790,7 @@ button{
         }
         /* Uso margin-top: -10rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
         .pages__club__a-position{
-            margin-top: -16.5rem;
+            margin-top: -22.5rem;
         }
         .club__mobile-grid{
             position: relative;
@@ -916,7 +940,7 @@ figure{
         font-size: 2em;
     }
     aside section button{
-        font-size: 2em;
+        font-size: 1.5em;
     }
     table{
         display: block;

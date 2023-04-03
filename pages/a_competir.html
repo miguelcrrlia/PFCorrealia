@@ -10,8 +10,7 @@
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body class="pages__a_competir-grid pages__a_acompetir__mobile-grid">
-    <!--Nav-->
-    <!--Nav con logo y links-->
+    <!-- Nav con logo y links. Nav de Bootstrap -->
     <nav class="navbar navbar-expand-sm navegacion">
         <div class="logo">
             <!--Logo-->
@@ -19,64 +18,66 @@
                 <img src="../img/logo.svg" alt="logo">
             </a>
         </div>
-            <!--Lista de links para redes y carrito-->
-            <div class= "alineadoderecha">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/" title="Facebook" target="_blank">
-                            <img src="../img/links/fcbk.svg" alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/" title="Instagram" target="_blank">
-                            <img src="../img/links/inst.svg" alt="instagram">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
-                            <img src="../img/links/whtsp.svg" alt="whatsapp">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
-                            <img src="../img/links/chsscm.svg" alt="chess.com">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="cart.html" title="Carrito de compras">
-                            <img src="../img/links/crt.svg" alt="carrito">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon">
-                </button>
-            <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
-                    <!-- Lista para navegar dentro del sitio-->
-                <ul class="nav__button__ul">
-                    <li class="nav-item">
-                        <a href="club.html" title="Club">Club</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="tienda.html" title="Tienda">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contacto.html" title="Contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+        <!-- Lista de links para redes y carrito -->
+        <div class= "alineadoderecha">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+                        <img src="../img/links/fcbk.svg" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                        <img src="../img/links/inst.svg" alt="instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
+                        <img src="../img/links/whtsp.svg" alt="whatsapp">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
+                        <img src="../img/links/chsscm.svg" alt="chess.com">
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html" title="Carrito de compras">
+                        <img src="../img/links/crt.svg" alt="carrito">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Botón hamburguesa de Bootstrap -->
+        <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon" alt="Botón hamburguesa">
+        </button>
+        <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
+            <!-- Lista para navegar dentro del sitio -->
+            <ul class="nav__button__ul">
+                <li class="nav-item">
+                    <a href="club.html" title="Club">Club</a>
+                </li>
+                <li class="nav-item">
+                    <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
+                </li>
+                <li class="nav-item">
+                    <a href="tienda.html" title="Tienda">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" title="Contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <!--Header-->
+    <!-- Header -->
     <header class="encabezado pages__header">    
         <img class="pages__header__img" src="../img/a_competir.jpg" alt="peón reodeado de pieza caidas">
         <h1 class="headingdeco pages__header__heading">¡A competir!</h1>
     </header>
     <main class="principal">
-        <!--Section a competir-->
+        <!-- Section a competir -->
         <section>
             <h2>Torneos</h2>
             <p>
@@ -88,56 +89,56 @@
                 </a> 
                 a cualquiera de ellas.
             </p>    
-            <!--Definiciones de las categorías de torneos-->
-                <dl>
-                    <dt>Clásico:</dt>
-                    <dd>
-                        Torneos dónde las partidas se desarrollan en controles de tiempo largos.
-                        90 minutos para los primeros 40 movimientos seguido por 30 minutos de muerte súbita, con 30 segundos adicionales por 
-                        movimiento empezando desde el primero.
-                    </dd>
-                    <dt>Rápidas:</dt>
-                    <dd>
-                        Torneos dónde las partidas se desarrollan en controles de tiempo entre no más de 30 minutos y no menos de 10 minutos por jugador:
-                        <ul>
-                            <li>
-                                25 minutos + 10 segundos de incremento desde el primer movimiento para cada jugador
-                            </li>
-                            <li>
-                                15 minutos + 10 segundos de incremento desde el primer movimiento para cada jugador
-                            </li>
-                            <li>
-                                10 minutos para cada jugador
-                            </li>
-                        </ul>
-                    </dd>
-                    <dt>Relámpago:</dt>
-                    <dd>
-                        Torneos dónde las partidas se desarrollan en controles de tiempo entre no más de 10 minutos y no menos de 3 minutos por jugador:
-                        <ul>
-                            <li>
-                                5 minutos + 2 segundos de incremento desde el primer movimiento para cada jugador
-                            </li>
-                            <li>
-                                3 + 2 segundos de incremento desde el primer movimiento para cada jugador
-                            </li>
-                        </ul>
-                    </dd>
-                    <dt>¡A mover las manos!:</dt>
-                    <dd>
-                        Impulsados por la fiebre del ajedrez bullet online, hemos creado torneos en dónde la intuición y las manos rápidas son las protagonistas.
-                        Con un control de tiempo de 1 minuto por jugador más 2 de incremento las piezas volarán por los aires. <b>Advertencia:</b> estos torneos 
-                        no poseen validación de elo.
-                    </dd>
-                </dl>
+            <!-- Definiciones de las categorías de torneos -->
+            <dl>
+                <dt>Clásico:</dt>
+                <dd>
+                    Torneos dónde las partidas se desarrollan en controles de tiempo largos.
+                    90 minutos para los primeros 40 movimientos seguido por 30 minutos de muerte súbita, con 30 segundos adicionales por 
+                    movimiento empezando desde el primero.
+                </dd>
+                <dt>Rápidas:</dt>
+                <dd>
+                    Torneos dónde las partidas se desarrollan en controles de tiempo entre no más de 30 minutos y no menos de 10 minutos por jugador:
+                    <ul>
+                        <li>
+                            25 minutos + 10 segundos de incremento desde el primer movimiento para cada jugador
+                        </li>
+                        <li>
+                            15 minutos + 10 segundos de incremento desde el primer movimiento para cada jugador
+                        </li>
+                        <li>
+                            10 minutos para cada jugador
+                        </li>
+                    </ul>
+                </dd>
+                <dt>Relámpago:</dt>
+                <dd>
+                    Torneos dónde las partidas se desarrollan en controles de tiempo entre no más de 10 minutos y no menos de 3 minutos por jugador:
+                    <ul>
+                        <li>
+                            5 minutos + 2 segundos de incremento desde el primer movimiento para cada jugador
+                        </li>
+                        <li>
+                            3 + 2 segundos de incremento desde el primer movimiento para cada jugador
+                        </li>
+                    </ul>
+                </dd>
+                <dt>¡A mover las manos!:</dt>
+                <dd>
+                    Impulsados por la fiebre del ajedrez bullet online, hemos creado torneos en dónde la intuición y las manos rápidas son las protagonistas.
+                    Con un control de tiempo de 1 minuto por jugador más 2 de incremento las piezas volarán por los aires. <b>Advertencia:</b> estos torneos 
+                    no poseen validación de elo.
+                </dd>
+            </dl>
         </section>
-        <!--Calendario-->
+        <!-- Calendario -->
         <section>
             <h2>Calendario</h2>
             <iframe class="calendario" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FMontevideo&src=MDU3Yjc0ODg2OTEwMGY4NmU3YTFlMzFiODE2YjQzNjdkMGY5NzRiMmVmNDM0OTAyNzFiMDcxMDFmMWEyN2VkZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548">
             </iframe>
         </section>
-        <!--video-->
+        <!-- video -->
         <section>
             <h2>Video</h2>
             <p>Esto no pasó en nuestro club, y aunque exista una gran diferencia de cientos de elo entre nosotros y estos jugadores, 
@@ -147,9 +148,9 @@
             </iframe>
         </section>
     </main>
-    <!--Footer-->
+    <!-- Footer -->
     <footer class="pie">
-        <!--Suscripción a newsletter-->
+        <!-- Suscripción a newsletter -->
         <form action="#">
             <label for="e_mail">Suscríbete para más contenido</label>
             <div>
@@ -157,7 +158,7 @@
                 <input class="formatbutton" type="button" value="Suscríbete">
             </div>
         </form>
-        <!--Links de redes y carrito-->
+        <!-- Links de redes y carrito -->
         <nav>
             <ul>
                 <li>
@@ -187,7 +188,7 @@
                 </li>
             </ul>
         </nav>
-        <!--Section contactos del club-->
+        <!-- Section contactos del club -->
         <section>
             <h4>Contactos:</h4>
             <ul>
@@ -212,7 +213,7 @@
                 </li>
             </ul>
         </section>
-        <!--Mapa-->
+        <!-- Mapa -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9735.08483896117!2d-56.10959533824161!3d-34.90052128135014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f87760e0b03ef%3A0xdd54da2716dd791e!2sIsla%20de%20las%20Gaviotas!5e0!3m2!1ses-419!2suy!4v1677743584377!5m2!1ses-419!2suy" width="400" height="300" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </footer>

@@ -10,7 +10,7 @@
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body class="pages__a_competir-grid pages__a_acompetir__mobile-grid">
-    <!--Acá ubico todas las imágenes de la tienda para que al hacer click tengan zoom-->
+    <!-- Acá ubico todas las imágenes de la tienda para que al hacer click tengan zoom. Los modal de Bootstrap. -->
     <div class="modal fade" id="art__remera" tabindex="-1" aria-hidden="true">
         <div class="modal-xl modal-dialog modal-dialog-centered">
           <div class="modal-content rounded-0">
@@ -38,6 +38,7 @@
           </div>
         </div>
       </div>
+      <!-- No agrego los botones para cambiar de imágenes del carrusel de Bootstrap, porque de este artículo hay solo una foto -->
       <div class="modal fade" id="art__remera__mujer" tabindex="-1" aria-hidden="true">
         <div class="modal-xl modal-dialog modal-dialog-centered">
           <div class="modal-content rounded-0">
@@ -45,11 +46,11 @@
               <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                    <div class="carousel-inner">
-                        <div class="d-flex justify-content-center carousel-item active">
-                            <img src="../img/img-tienda/t-shirt-woman-front.png" class="img-fluid" alt="Remera para mujer con logo">
-                        </div>
+                <div class="carousel-inner">
+                    <div class="d-flex justify-content-center carousel-item active">
+                        <img src="../img/img-tienda/t-shirt-woman-front.png" class="img-fluid" alt="Remera para mujer con logo">
                     </div>
+                </div>
             </div>
           </div>
         </div>
@@ -75,13 +76,13 @@
                         <div class="d-flex justify-content-center carousel-item">
                             <img src="../img/img-tienda/Hoody-yellow-bck.png" class="img-fluid" alt="Buzo/capucha/amarillo/back-Club de ajedrez Bella Vista">
                         </div>
-                        <button class="carousel-control-prev button__carousel" type="button" data-bs-target="#carousel_buzo" data-bs-slide="prev">
-                            <img src="../css/img/arrowlft.svg" class="border-0 carousel-control-prev-icon" aria-hidden="true" alt="flecha izquierda">
-                        </button>
-                        <button class="carousel-control-next button__carousel" type="button" data-bs-target="#carousel_buzo" data-bs-slide="next">
-                            <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true" alt="flecha derecha"> 
-                        </button>
                     </div>
+                    <button class="carousel-control-prev button__carousel" type="button" data-bs-target="#carousel_buzo" data-bs-slide="prev">
+                        <img src="../css/img/arrowlft.svg" class="border-0 carousel-control-prev-icon" aria-hidden="true" alt="flecha izquierda">
+                    </button>
+                    <button class="carousel-control-next button__carousel" type="button" data-bs-target="#carousel_buzo" data-bs-slide="next">
+                        <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true" alt="flecha derecha"> 
+                    </button>
                 </div>
             </div>
           </div>
@@ -90,54 +91,55 @@
       <div class="modal fade" id="art__gorra" tabindex="-1" aria-hidden="true">
         <div class="modal-xl modal-dialog modal-dialog-centered">
           <div class="modal-content rounded-0">
-            <div class="modal-header border-0">
-              <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div id="carousel__gorra" class="carousel slide carousel-fade figure__carousel">
-                    <div class="carousel-inner">
-                        <div class="d-flex justify-content-center carousel-item active">
-                            <img src="../img/img-tienda/Snapback-Cap-front34.png" class="img-fluid" alt="Gorra vicera con logo">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carousel__gorra" class="carousel slide carousel-fade figure__carousel">
+                        <div class="carousel-inner">
+                            <div class="d-flex justify-content-center carousel-item active">
+                                <img src="../img/img-tienda/Snapback-Cap-front34.png" class="img-fluid" alt="Gorra vicera con logo">
+                            </div>
+                            <div class="d-flex justify-content-center carousel-item">
+                                <img src="../img/img-tienda/Snapback-Cap-front.png" class="img-fluid" alt="Gorra vicera con logo">
+                            </div>
+                            <div class="d-flex justify-content-center carousel-item">
+                                <img src="../img/img-tienda/Snapback-Cap-back.png" class="img-fluid" alt="Gorra vicera con logo">
+                            </div>
                         </div>
-                        <div class="d-flex justify-content-center carousel-item">
-                            <img src="../img/img-tienda/Snapback-Cap-front.png" class="img-fluid" alt="Gorra vicera con logo">
-                        </div>
-                        <div class="d-flex justify-content-center carousel-item">
-                            <img src="../img/img-tienda/Snapback-Cap-back.png" class="img-fluid" alt="Gorra vicera con logo">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev button__carousel" type="button" data-bs-target="#carousel__gorra" data-bs-slide="prev">
-                        <img src="../css/img/arrowlft.svg" class="border-0 carousel-control-prev-icon" aria-hidden="true" alt="flecha izquierda">
-                    </button>
-                    <button class="carousel-control-next button__carousel" type="button" data-bs-target="#carousel__gorra" data-bs-slide="next">
-                        <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true" alt="flecha derecha"> 
-                    </button>
+                        <button class="carousel-control-prev button__carousel" type="button" data-bs-target="#carousel__gorra" data-bs-slide="prev">
+                            <img src="../css/img/arrowlft.svg" class="border-0 carousel-control-prev-icon" aria-hidden="true" alt="flecha izquierda">
+                        </button>
+                        <button class="carousel-control-next button__carousel" type="button" data-bs-target="#carousel__gorra" data-bs-slide="next">
+                            <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true" alt="flecha derecha"> 
+                        </button>
                     </div>
                 </div>
             </div>
           </div>
         </div>
+        <!-- No agrego los botones para cambiar de imágenes del carrusel de Bootstrap, porque de este artículo hay solo una foto -->
         <div class="modal fade" id="art__chismosa" tabindex="-1" aria-hidden="true">
             <div class="modal-xl modal-dialog modal-dialog-centered">
               <div class="modal-content rounded-0">
-                <div class="modal-header border-0">
-                  <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="carousel-inner">
-                        <div class="d-flex justify-content-center carousel-item active">
-                            <img src="../img/img-tienda/Bag.png" class="img-fluid" alt="Bolsa-Club de ajedrez Bella Vista">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="carousel-inner">
+                            <div class="d-flex justify-content-center carousel-item active">
+                                <img src="../img/img-tienda/Bag.png" class="img-fluid" alt="Bolsa-Club de ajedrez Bella Vista">
+                            </div>
                         </div>
                     </div>
-                    </div>
                 </div>
-              </div>
             </div>
-            <div class="modal fade" id="art__taza" tabindex="-1" aria-hidden="true">
-                <div class="modal-xl modal-dialog modal-dialog-centered">
-                  <div class="modal-content rounded-0">
+        </div>
+        <div class="modal fade" id="art__taza" tabindex="-1" aria-hidden="true">
+            <div class="modal-xl modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-0">
                     <div class="modal-header border-0">
-                      <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div id="carousel__taza" class="carousel slide carousel-fade figure__carousel">
@@ -155,44 +157,46 @@
                             <button class="carousel-control-next button__carousel" type="button" data-bs-target="#carousel__taza" data-bs-slide="next">
                                 <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true" alt="flecha derecha"> 
                             </button>
-                            </div>
                         </div>
                     </div>
-                  </div>
                 </div>
-                <div class="modal fade" id="art__llavero" tabindex="-1" aria-hidden="true">
-                    <div class="modal-xl modal-dialog modal-dialog-centered">
-                      <div class="modal-content rounded-0">
-                        <div class="modal-header border-0">
-                          <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="carousel-inner">
-                                <div class="d-flex justify-content-center carousel-item active">
-                                    <img src="../img/img-tienda/Keychain.png" class="img-fluid" alt="Llavero-Club de ajedrez Bella vista">
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                      </div>
+            </div>
+        </div>
+        <!-- No agrego los botones para cambiar de imágenes del carrusel de Bootstrap, porque de este artículo hay solo una foto -->
+        <div class="modal fade" id="art__llavero" tabindex="-1" aria-hidden="true">
+            <div class="modal-xl modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal fade" id="art__reloj" tabindex="-1" aria-hidden="true">
-                        <div class="modal-xl modal-dialog modal-dialog-centered">
-                          <div class="modal-content rounded-0">
-                            <div class="modal-header border-0">
-                              <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                        <div class="carousel-inner">
+                            <div class="d-flex justify-content-center carousel-item active">
+                                <img src="../img/img-tienda/Keychain.png" class="img-fluid" alt="Llavero-Club de ajedrez Bella vista">
                             </div>
-                            <div class="modal-body">
-                                <div class="carousel-inner">
-                                    <div class="d-flex justify-content-center carousel-item active">
-                                        <img src="../img/img-tienda/Clock.png" class="img-fluid" alt="Reloj-pared-Club de ajedrez Bella vista">
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                          </div>
                         </div>
-    <!--Nav con logo y links-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- No agrego los botones para cambiar de imágenes del carrusel de Bootstrap, porque de este artículo hay solo una foto -->
+        <div class="modal fade" id="art__reloj" tabindex="-1" aria-hidden="true">
+            <div class="modal-xl modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="carousel-inner">
+                            <div class="d-flex justify-content-center carousel-item active">
+                                <img src="../img/img-tienda/Clock.png" class="img-fluid" alt="Reloj-pared-Club de ajedrez Bella vista">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Nav con logo y links. Nav de Bootstrap -->
     <nav class="navbar navbar-expand-sm navegacion">
         <div class="logo">
             <!--Logo-->
@@ -200,74 +204,80 @@
                 <img src="../img/logo.svg" alt="logo">
             </a>
         </div>
-            <!--Lista de links para redes y carrito-->
-            <div class= "alineadoderecha">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/" title="Facebook" target="_blank">
-                            <img src="../img/links/fcbk.svg" alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/" title="Instagram" target="_blank">
-                            <img src="../img/links/inst.svg" alt="instagram">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
-                            <img src="../img/links/whtsp.svg" alt="whatsapp">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
-                            <img src="../img/links/chsscm.svg" alt="chess.com">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="cart.html" title="Carrito de compras">
-                            <img src="../img/links/crt.svg" alt="carrito">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon" alt="botón hamburguesa">
-                </button>
-            <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
-                    <!-- Lista para navegar dentro del sitio-->
-                <ul class="nav__button__ul">
-                    <li class="nav-item">
-                        <a href="club.html" title="Club">Club</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="tienda.html" title="Tienda">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contacto.html" title="Contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+        <!--Lista de links para redes y carrito-->
+        <div class= "alineadoderecha">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+                        <img src="../img/links/fcbk.svg" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                        <img src="../img/links/inst.svg" alt="instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
+                        <img src="../img/links/whtsp.svg" alt="whatsapp">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
+                        <img src="../img/links/chsscm.svg" alt="chess.com">
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html" title="Carrito de compras">
+                        <img src="../img/links/crt.svg" alt="carrito">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Botón hamburguesa de Bootstrap -->
+        <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon" alt="botón hamburguesa">
+        </button>
+        <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
+            <!-- Lista para navegar dentro del sitio -->
+            <ul class="nav__button__ul">
+                <li class="nav-item">
+                    <a href="club.html" title="Club">Club</a>
+                </li>
+                <li class="nav-item">
+                    <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
+                </li>
+                <li class="nav-item">
+                    <a href="tienda.html" title="Tienda">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" title="Contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <!--Header-->
+    <!-- Header -->
     <header class="encabezado pages__header">    
         <img class="pages__header__img" src="../img/tienda.png" alt="torre en un tablero">
         <h1 class="headingdeco pages__header__heading">Tienda</h1>
     </header>
     <main class="principal">
-        <!--Form para buscar-->
+        <!-- Form para buscar -->
         <form action="#">
             <input class="containertext" name="buscar" type="text" placeholder="Buscar">
             <input class="buttonsrch" type="button" title="buscar" value="buscar">
         </form>
         <!--Section donde van los productos de la tienda-->
-        <section class="">
+        <section>
             <h2>Artículos</h2>
+            <!-- Grid de Bootstrap -->
+            <!-- Primera fila -->
             <div class="row mb-3">
+                <!-- Primera columna -->
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
+                        <!-- Carrusel de Bootstrap -->
                         <div id="section__carousel__remera" class="carousel slide carousel-fade figure__carousel">
                             <div class="carousel-inner lupa">
                                 <div class="d-flex justify-content-center carousel-item active">
@@ -294,8 +304,10 @@
                         añadir al carrito
                     </button>
                 </div>
+                <!-- Segunda columna -->
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
+                        <!-- Carrusel de Bootstrap -->
                         <div id="section__carousel__remeradama" class="carousel slide carousel-fade figure__carousel">
                             <div class="carousel-inner lupa">
                                 <div class="d-flex justify-content-center carousel-item active">
@@ -313,8 +325,10 @@
                         añadir al carrito
                     </button>
                 </div>
+                <!-- Tercera columna -->
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
+                        <!-- Carrusel de Bootstrap -->
                         <div id="section__carousel_buzo" class="carousel slide carousel-fade figure__carousel">
                             <div class="carousel-inner lupa">
                                 <div class="d-flex justify-content-center carousel-item active">
@@ -329,13 +343,13 @@
                                 <div class="d-flex justify-content-center carousel-item">
                                     <img src="../img/img-tienda/Hoody-yellow-bck.png" data-bs-toggle="modal" data-bs-target="#art__buzo" alt="Buzo/capucha/amarillo/back-Club de ajedrez Bella Vista">
                                 </div>
-                                <button class="carousel-control-prev button__carousel" type="button" data-bs-target="#section__carousel_buzo" data-bs-slide="prev">
-                                    <img src="../css/img/arrowlft.svg" class="border-0 carousel-control-prev-icon" aria-hidden="true" alt="flecha izquierda">
-                                </button>
-                                <button class="carousel-control-next button__carousel" type="button" data-bs-target="#section__carousel_buzo" data-bs-slide="next">
-                                    <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true" alt="flecha derecha"> 
-                                </button>
                             </div>
+                            <button class="carousel-control-prev button__carousel" type="button" data-bs-target="#section__carousel_buzo" data-bs-slide="prev">
+                                <img src="../css/img/arrowlft.svg" class="border-0 carousel-control-prev-icon" aria-hidden="true" alt="flecha izquierda">
+                            </button>
+                            <button class="carousel-control-next button__carousel" type="button" data-bs-target="#section__carousel_buzo" data-bs-slide="next">
+                                <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true" alt="flecha derecha"> 
+                            </button>
                         </div>
                         <figcaption>Buzo c/ capucha
                             <p>
@@ -347,28 +361,28 @@
                         añadir al carrito
                     </button>
                 </div>
+                <!-- Cuarta columna -->
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
-                        <div id="section__carousel__gorra-id">
-                            <div id="section__carousel__gorra" class="carousel slide carousel-fade figure__carousel">
-                                <div class="carousel-inner lupa">
-                                    <div class="d-flex justify-content-center carousel-item active">
-                                        <img src="../img/img-tienda/Snapback-Cap-front34.png" data-bs-toggle="modal" data-bs-target="#art__gorra" alt="Gorra vicera con logo">
-                                    </div>
-                                    <div class="d-flex justify-content-center carousel-item">
-                                        <img src="../img/img-tienda/Snapback-Cap-front.png" data-bs-toggle="modal" data-bs-target="#art__gorra" alt="Gorra vicera con logo">
-                                    </div>
-                                    <div class="d-flex justify-content-center carousel-item">
-                                        <img src="../img/img-tienda/Snapback-Cap-back.png" data-bs-toggle="modal" data-bs-target="#art__gorra" alt="Gorra vicera con logo">
-                                    </div>
+                        <!-- Carrusel de Bootstrap -->
+                        <div id="section__carousel__gorra" class="carousel slide carousel-fade figure__carousel">
+                            <div class="carousel-inner lupa">
+                                <div class="d-flex justify-content-center carousel-item active">
+                                    <img src="../img/img-tienda/Snapback-Cap-front34.png" data-bs-toggle="modal" data-bs-target="#art__gorra" alt="Gorra vicera con logo">
                                 </div>
-                                <button class="carousel-control-prev button__carousel" type="button" data-bs-target="#section__carousel__gorra" data-bs-slide="prev">
-                                    <img src="../css/img/arrowlft.svg" class="border-0 carousel-control-prev-icon" aria-hidden="true" alt="flecha izquierda">
-                                </button>
-                                <button class="carousel-control-next button__carousel" type="button" data-bs-target="#section__carousel__gorra" data-bs-slide="next">
-                                    <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true" alt="flecha derecha"> 
-                                </button>
+                                <div class="d-flex justify-content-center carousel-item">
+                                    <img src="../img/img-tienda/Snapback-Cap-front.png" data-bs-toggle="modal" data-bs-target="#art__gorra" alt="Gorra vicera con logo">
+                                </div>
+                                <div class="d-flex justify-content-center carousel-item">
+                                    <img src="../img/img-tienda/Snapback-Cap-back.png" data-bs-toggle="modal" data-bs-target="#art__gorra" alt="Gorra vicera con logo">
+                                </div>
                             </div>
+                            <button class="carousel-control-prev button__carousel" type="button" data-bs-target="#section__carousel__gorra" data-bs-slide="prev">
+                                <img src="../css/img/arrowlft.svg" class="border-0 carousel-control-prev-icon" aria-hidden="true" alt="flecha izquierda">
+                            </button>
+                            <button class="carousel-control-next button__carousel" type="button" data-bs-target="#section__carousel__gorra" data-bs-slide="next">
+                                <img src="../css/img/arrowrgth.svg" class="border-0 carousel-control-next-icon" aria-hidden="true" alt="flecha derecha"> 
+                            </button>
                         </div>
                         <figcaption>Gorra
                             <p>
@@ -381,9 +395,12 @@
                     </button> 
                 </div>
             </div>
+            <!-- Segunda fila -->
             <div class="row">
+                <!-- Primera columna -->
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
+                        <!-- Carrusel de Bootstrap -->
                         <div id="section__carousel__chismosa" class="carousel slide carousel-fade figure__carousel">
                             <div class="carousel-inner lupa">
                                 <div class="d-flex justify-content-center carousel-item active">
@@ -401,8 +418,10 @@
                         añadir al carrito
                     </button>
                 </div>
+                <!-- Segunda columna -->
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
+                        <!-- Carrusel de Bootstrap -->
                         <div id="section__carousel__taza" class="carousel slide carousel-fade figure__carousel">
                             <div class="carousel-inner lupa">
                                 <div class="d-flex justify-content-center carousel-item active">
@@ -429,8 +448,10 @@
                         añadir al carrito
                     </button>
                 </div>
+                <!-- Tercera columna -->
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
+                        <!-- Carrusel de Bootstrap -->
                         <div id="section__carousel__llavero" class="carousel slide carousel-fade figure__carousel">
                           <div class="carousel-inner lupa">
                             <div class="d-flex justify-content-center carousel-item active">
@@ -448,8 +469,10 @@
                         añadir al carrito
                     </button>
                 </div>
+                <!-- Cuarta columna -->
                 <div class="d-flex flex-column align-items-center col-xs-12 col-sm-6 col-lg-3">
                     <figure>
+                        <!-- Carrusel de Bootstrap -->
                         <div  id="section__carousel__reloj" class="carousel slide carousel-fade figure__carousel">
                             <div class="carousel-inner lupa">
                                 <div class="d-flex justify-content-center carousel-item active">
@@ -470,17 +493,17 @@
             </div>
         </section>    
     </main>
-    <!--Footer-->
+    <!-- Footer -->
     <footer class="pie">
-        <!--Suscripción a newsletter-->
+        <!-- Suscripción a newsletter -->
         <form action="#">
             <label for="e_mail">Suscríbete para más contenido</label>
             <div>
                 <input class="textBox" id="e_mail" name="mail" type="email" placeholder="Ingrese su mail aquí">
-            <input class="formatbutton" type="button" value="Suscríbete">
+                <input class="formatbutton" type="button" value="Suscríbete">
             </div>
         </form>
-        <!--Links de redes y carrito-->
+        <!-- Links de redes y carrito -->
         <nav>
             <ul>
                 <li>
@@ -510,7 +533,7 @@
                 </li>
             </ul>
         </nav>
-        <!--Section contactos del club-->
+        <!-- Section contactos del club -->
         <section>
             <h4>Contactos:</h4>
             <ul>
@@ -535,7 +558,7 @@
                 </li>
             </ul>
         </section>
-        <!--Mapa-->
+        <!-- Mapa -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9735.08483896117!2d-56.10959533824161!3d-34.90052128135014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f87760e0b03ef%3A0xdd54da2716dd791e!2sIsla%20de%20las%20Gaviotas!5e0!3m2!1ses-419!2suy!4v1677743584377!5m2!1ses-419!2suy" width="400" height="300" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </footer>
