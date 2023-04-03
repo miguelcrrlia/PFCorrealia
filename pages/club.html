@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link href="../css/style.css" rel="stylesheet">
 </head>
-<body class="grid_club club__mobile-grid">
+<body class="club__grid club-mobile__grid">
     <!-- Nav con logo y links. Nav de Bootstrap -->
-    <nav class="navbar navbar-expand-sm navegacion">
-        <div class="logo">
+    <nav class="navbar navbar-expand-sm navegador">
+        <div class="navegador__logo">
             <!--Logo-->
             <a href="../index.html" title="Inicio">
                 <img src="../img/logo.svg" alt="logo">
             </a>
         </div>
         <!-- Lista de links para redes y carrito -->
-        <div class= "alineadoderecha">
+        <div class= "navegador__links">
             <ul>
                 <li>
                     <a href="https://www.facebook.com/" title="Facebook" target="_blank">
@@ -49,13 +49,13 @@
             </ul>
         </div>
         <!-- Botón hamburguesa de Bootstrap -->
-        <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+        <button class="navbar-toggler navegador__menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon" alt="Botón hamburguesa">
         </button>
-        <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
+        <div class= "collapse navbar-collapse hamburger__grid" id="navbarSupportedContent">
             <!-- Lista para navegar dentro del sitio -->
-            <ul class="nav__button__ul">
+            <ul class="navegador__lista">
                 <li class="nav-item">
                     <a href="club.html" title="Club">Club</a>
                 </li>
@@ -72,13 +72,13 @@
         </div>
     </nav>
     <!-- Header -->
-    <header class="encabezado pages__header">    
-        <img class="pages__header__img" src="../img/club.jpg" alt="fachada de la sede">
-        <h1 class="headingdeco pages__header__heading">Club</h1>
+    <header class="encabezado encabezado--format">    
+        <img class="encabezado__img" src="../img/club.jpg" alt="fachada de la sede">
+        <h1 class="heading--decoration pages__header__heading">Club</h1>
     </header>
-    <main class="main_club">
+    <main class="club__main">
         <!-- Nav para navegar dentro de la página. Accordion de Bootstrap (aparece en max-width: 992px) -->
-        <div class="nav__accordion accordion border-0" id="accordionButton">
+        <div class="navegador__accordion accordion border-0" id="accordionButton">
             <div class="accordion-item accordion__item border-0">
                 <div class="accordion-header">
                     <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" 
@@ -87,7 +87,7 @@
                 </div>
                 <div id="collapseNav" class="accordion-collapse collapse border-0" data-bs-parent="#accordionButton">
                 <div class="accordion-body">
-                    <nav class="accordion__main_nav" >
+                    <nav class="accordion__club__nav" >
                         <ul class="accordion__ul">
                             <li>
                                 <a href="#anioranza" title="Añoranza">Añoranza</a>
@@ -105,7 +105,7 @@
             </div>
         </div>
         <!-- Nav para navegar dentro de la página. Para desktop -->
-        <nav class="main_nav" >
+        <nav class="club__nav" >
             <ul>
                 <li>
                     <a href="#anioranza" title="Añoranza">Añoranza</a>
@@ -118,16 +118,16 @@
                 </li>
             </ul>
         </nav>
-        <div class="main_section">
+        <div class="club__section">
             <!--Section añoranza (breve hisoria del club)-->
             <section>
-                    <a id="anioranza" class="pages__club__a-position"></a>
+                    <a id="anioranza" class="club__a-position"></a>
                     <h2>Añoranza</h2>
                     <p>
                         Allá por el año 1995, a <em>Mario Roque Rey Gamboa</em> y <em>Alberto Torres Caballero</em>,
                         les nace la inquietud de formar un club de ajedrez producto del cruce de ciertas adversidades.
                         En 1994 fallece 
-                        <a class="a-textdeco" href="../img/5edbeb1c602487f48d7edd9173216b29.jpg" title="foto de nestor">
+                        <a class="a--textdecoration" href="../img/5edbeb1c602487f48d7edd9173216b29.jpg" title="foto de nestor">
                             <em>Nestor Lorenzo Trebejos Escaques</em>
                         </a>, 
                         mentor ajedrecistico de <i>Mario</i> y <i>Alberto</i>,
@@ -135,7 +135,7 @@
                         <i>Mario</i> de un torneo por parte de un club del centro capitalino, a causa de quedarse dormido 
                         durante la partida en reiteradas ocaciones, molestando con sus ronquidos a los demás participantes
                         <a href="../img/95c45335e89b862969087a485ef9e77a.jpg" title="jugador tendido">
-                            <sup class="a-textdeco">ref</sup>
+                            <sup class="a--textdecoration">ref</sup>
                         </a>. 
                         Y aunque Mario haya alegado que el viaje al club era largo, lo cual le generaba un gran cansancio, 
                         las autoridades no revocaron la sentencia. Mientras, por otro lado, en esa misma época, <i>Alberto</i> 
@@ -159,7 +159,7 @@
             </section>
             <!-- Section aprendiendo -->
             <section>
-                <a id="aprendiendo" class="pages__club__a-position"></a>
+                <a id="aprendiendo" class="club__a-position"></a>
                 <h2>Aprendiendo</h2>
                 <!-- Article sobre el taller de las familias -->
                 <article>
@@ -189,7 +189,7 @@
             </section>
             <!-- Section leyendo -->
             <section>
-                <a id="leyendo" class="pages__club__a-position"></a>
+                <a id="leyendo" class="club__a-position"></a>
                 <h2>Leyendo</h2>
                 <p>
                     Durante todos estos años, en nuestras estanterías se fueron juntando varios libros. Ya sean adquiridos por el club mismo,
@@ -205,8 +205,8 @@
         <form action="#">
             <label for="e_mail">Suscríbete para más contenido</label>
             <div>
-                <input class="textBox" id="e_mail" name="mail" type="email" placeholder="Ingrese su mail aquí">
-                <input class="formatbutton" type="button" value="Suscríbete">
+                <input class="input--format" id="e_mail" name="mail" type="email" placeholder="Ingrese su mail aquí">
+                <input class="button--format" type="button" value="Suscríbete">
             </div>
         </form>
         <!-- Links de redes y carrito -->
@@ -245,20 +245,20 @@
             <ul>
                 <li>
                     <img src="../img/links/mp.png" alt="ubicación">
-                    <span class="formatchange">Dirección:</span> Gral. Alfil 864 esq. Robert Fischer 
+                    <span class="text--format">Dirección:</span> Gral. Alfil 864 esq. Robert Fischer 
                 </li>
                 <li>
                     <img src="../img/links/tlphn.png" alt="teléfono">
-                    <span class="formatchange">Teléfono:</span> 2475138644
+                    <span class="text--format">Teléfono:</span> 2475138644
                 </li>
                 <li>
                     <img src="../img/links/whtsp.png" alt="whatsapp">
-                    <span class="formatchange">whatsapp:</span> 04468315742
+                    <span class="text--format">whatsapp:</span> 04468315742
                 </li>
                 <li>
                     <img src="../img/links/mail.png" alt="email">
-                    <span class="formatchange">Email:</span>
-                    <a class="a-textdeco" href="mailto:clubajedrezbellavista@aim.com?">
+                    <span class="text--format">Email:</span>
+                    <a class="a--textdecoration" href="mailto:clubajedrezbellavista@aim.com?">
                         clubajedrezbellavista@aim.com
                     </a> 
                 </li>

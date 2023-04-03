@@ -95,17 +95,17 @@ nav{
         height: 100%;
         width: 100%;
     }
-    nav .alineadoderecha ul{
+    nav .navegador__links ul{
         width: 20%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         
     }
-        nav .alineadoderecha ul li a{
+        nav .navegador__links ul li a{
             height: 100%;
         }
-            nav .alineadoderecha ul li a img{
+            nav .navegador__links ul li a img{
                 width: 1.5rem;
             }   
 header{
@@ -280,6 +280,10 @@ form{
     form ul li{
         line-height: 2em;
     }
+textarea{
+    width: 70%;
+    height: 30%;
+}
 fieldset{
     width: 100%;
     border: 2px;
@@ -333,14 +337,14 @@ select{
     border: 1.5px solid rgb(62, 64, 149);
 }
 /*a-textdeco mejora el contraste con el background claro*/
-.a-textdeco{
+.a--textdecoration{
     text-decoration: underline;
 }
-.a-textdeco:hover{
+.a--textdecoration:hover{
     color: crimson;
 }
 /*formato para algunos headings*/
-.headingdeco{
+.heading--decoration{
     margin: 0;
     padding: 0;
     text-indent: 15px;
@@ -348,34 +352,34 @@ select{
     color:rgb(255, 242, 18);
 }
 /*cambia el formato de la palabra dirección:, teléfono:, etc sin afectar lo demás*/
-.formatchange{
+.text--format{
     font-size: 1.1em;
     font-weight: 400;
 }
 /*alinea el texto a la izquierda*/
-.text-right{
+.text--right{
     text-align: right;
 }
 /*deja un pequeño margen entre el borde y la letra de los <input>*/
-.textBox{
+.input--format{
     border: 1.5px solid rgb(62, 64, 149);
     padding: 0 3px;
 }
-.textBox:focus{
+.input--format:focus{
     border-color: rgb(12, 14, 110);
 }
 /*formato de los botones*/
-.formatbutton{
+.button--format{
     border: 0;
     padding: 1px 5px;
     background-color: rgb(62, 64, 149);
     color: rgb(247, 247, 247);
 }
-.formatbutton:hover{
+.button--format:hover{
     color: rgb(255, 242, 18);
 }
 /*Para que no quede atrás de la lupa el texto que se ingresa en el <input> "buscar"*/
-.containertext{
+.buscar__input{
     width: 10rem;
     border: 1.5px solid rgb(62, 64, 149);
     padding-right: 20px;
@@ -383,7 +387,7 @@ select{
     color: rgb(62, 64, 149);
 }
 /*formato de la lupa*/
-.buttonsrch{
+.buscar__button{
     position: absolute;
     width: 1rem;
     left: 8.75rem;
@@ -396,12 +400,12 @@ select{
     background-color: transparent;
     color: transparent;
 }
-.buttonsrch:hover{
+.buscar__button:hover{
     background-image: url(img/srchy.png);
     color: transparent;
 }
 /*Para que el carrito pueda entrar en el botón de "añadir al carrito"*/
-.buttonedit{
+.figure__button{
     width: 8rem;
     margin: 5px 0;
     border-style: none;
@@ -414,7 +418,7 @@ select{
     color: rgb(247, 247, 247);
     font-size: 0.8em;
 }
-.buttonedit:hover{
+.figure__button:hover{
     background-image: url(img/crtddy.png);
     color: rgb(255, 242, 18);
 }
@@ -438,8 +442,8 @@ select{
     "main aside"
     "footer footer";
 }
-/* defino z-index: 1 para que quede por encima del form de busqueda */
-.navegacion{
+/* defino z-index: 3 para que quede por encima del form de busqueda y de la nav del club */
+.navegador{
     position: sticky;
     top: 0;
     height: 100%;
@@ -451,7 +455,7 @@ select{
     "log alineadoderecha"
     "log  centrado";
     padding: 5px 15px;
-    z-index: 1;
+    z-index: 3;
 }
 .encabezado{ 
     grid-area: head;
@@ -472,23 +476,23 @@ select{
     flex-direction: row;
     justify-content: space-around;
 }
-.pie form div .textBox{
+.pie form div .input--format{
     width: 70%;
     padding: 0 5px;
 }
-.alineadoderecha{
+.navegador__links{
     display: flex;
     grid-area: alineadoderecha;
     justify-content: flex-end;
     padding-top: 5px;
 }
-.centrado{
+.navegador__menu{
     align-items: center;
     justify-content: flex-start;
     height: 100%;
     grid-area: centrado;    
 }
-.nav__button__ul{
+.navegador__lista{
     height: 100%;
     width: 80%;
     display: flex;
@@ -497,12 +501,14 @@ select{
     justify-content: space-around;
     align-items: center;
     grid-area: centrado;
+    font-weight: 700;
+    font-size: 2em;
 }
-.logo{
+.navegador__logo{
     height: 100%;
     grid-area: log;
 }
-.grid_club{
+.club__grid{
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 10rem auto auto 15rem;
@@ -512,12 +518,12 @@ select{
     "mainnav seccion"
     "footer footer";
 }
-/* Uso display: contents para que me deje aplicar el grid los elementos que están dentro del main */
-.main_club{
+/* Uso display: contents para que me deje aplicar grid a los elementos que están dentro del main */
+.club__main{
     display: contents;
     position: relative;
 } 
-.main_nav{
+.club__nav{
     grid-area: mainnav;
     position: sticky;   
     top: 10rem;
@@ -529,30 +535,30 @@ select{
     font-size: 1.5em;
     z-index: 1;
 }
-.main_nav ul{
+.club__nav ul{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.main_section{
+.club__section{
     padding: 0 15px;
     grid-area: seccion;
 }
-.pages__header{
+.encabezado--format{
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
 }
-.pages__header__img{
+.encabezado__img{
     object-fit: contain;
 }
 /* Uso margin-top: -10rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
-.pages__club__a-position{
+.club__a-position{
     position: absolute;
     margin-top: -10rem;
 }
-.pages__a_competir-grid{
+.other-grid{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10rem auto auto 15rem;
@@ -562,68 +568,57 @@ select{
     "main"
     "footer";
 }
-.contacto__main__form{
+.contacto__form{
     width: 60%;
 }
-.contacto__main__input-margin{
+.contacto__inputs{
     display: flex;
     flex-direction: row;
     justify-content: flex-end; 
     margin-top: 5px;  
 }
-.contacto__main__input-margin input{
+.contacto__inputs input{
     margin-left: 10px;
 }
-.input-margin{
+.contacto__input-margin{
     margin-left: 10px;
 }
-textarea{
-    width: 70%;
-    height: 30%;
-}
-.mensaje{
+.contacto__mensaje{
     display: flex;
     flex-direction: column;
-}
-.nav__button__ul{
-    display: flex;
-    flex-direction: row;
-    font-weight: 700;
-    font-size: 2em;
 }
 /* Le saco el borde al botón hamburguesa */
 .navbar-toggler{
     border: 0;
     color: transparent;
 }
-.figure__carousel{
-    z-index: 0;
-}
-.button__carousel{
+/* Separa un poco los botones de prev y next del carousel */
+.carousel__button{
     margin: 0 -10px;
 }
+/* Cambia el botón de cerrar del modal */
 .button__close-color{
     background-image: url(img/cls.svg);
     opacity: 1;
 }
-.carousel__zoom:focus{
-    width: 700px;
-}
-/* saca el recuadro cuando haces click en el botón cerrar del modal de Bootstrap */
+/* Saca el recuadro cuando haces click en el botón cerrar del modal de Bootstrap */
 .btn-close{
     --bs-btn-close-focus-shadow: 0;
 }
+/* El puntero del mouse cambia a lupa encima de las imágenes del carousel */
 .lupa{
     cursor: url(img/lupa.svg), auto;
 }
-.nav__accordion{
+/* Display: none para desktop */
+.navegador__accordion{
     display: none;
 }
+/* Cambio algunos parámetros del botón del accordion de Bootstrap */
 .accordion-button{
     background-color: transparent;
     border-color: transparent;
     margin: 0;
-            padding: 0;
+    padding: 0;
 }
 .accordion-button::after{
     height: 3em;
@@ -643,7 +638,7 @@ textarea{
 }
 .accordion-body{
     margin: 0;
-            padding: 0;
+    padding: 0;
 }
 .accordion{
     background-color: transparent;
@@ -669,150 +664,150 @@ textarea{
         "aside"
         "footer";
        } 
-        .navegacion{
-            grid-template-columns: 35% 65%;
-            grid-template-rows: 100%;
-            grid-area: nav;
-            grid-template-areas: 
-            "log menu";
-        }   
-        
-        .encabezado{
-            grid-area: head;
-        } 
-            .encabezado img{
-                width: 100%;
-            }
-        .principal{
-            grid-area: main;
+    .navegador{
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 100%;
+        grid-area: nav;
+        grid-template-areas: 
+        "log menu";
+    }   
+    
+    .encabezado{
+        grid-area: head;
+    } 
+        .encabezado img{
+            width: 100%;
         }
-        .lado{
-            align-content: center;
-            grid-area: aside;
-        }
-        .pie{
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            grid-area: footer;
-            padding-top: 2%;
-        }
-        .alineadoderecha{
-            display: none;
-        }
-        aside section{
-            align-content: center;
-        }
-        aside section img{
-            width: 50vw;
-        }
-        aside section a img{
-            width: 50vw;
-        }
-        aside section button{
-            font-size: 1.5em;
-        }
-        table{
-            display: block;
-            height: 50vh;
-            width: 80vw;
-            overflow: auto;
-        }
-        
-        footer form{
-            height: auto;
-            width: 80%;
-        }
-        footer section{
-            height: auto;
-        }
-        footer nav{
-            height: auto;
-            width: 80%;
-            margin: 20px;
-            padding: 20px 5px 0 5px;
-        }
-        footer nav ul li a img{
+    .principal{
+        grid-area: main;
+    }
+    .lado{
+        align-content: center;
+        grid-area: aside;
+    }
+    .pie{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        grid-area: footer;
+        padding-top: 2%;
+    }
+    .navegador__links{
+        display: none;
+    }
+    aside section{
+        align-content: center;
+    }
+    aside section img{
+        width: 50vw;
+    }
+    aside section a img{
+        width: 50vw;
+    }
+    aside section button{
+        font-size: 1.5em;
+    }
+    table{
+        display: block;
+        height: 50vh;
+        width: 80vw;
+        overflow: auto;
+    }
+    
+    footer form{
+        height: auto;
+        width: 80%;
+    }
+    footer section{
+        height: auto;
+    }
+    footer nav{
+        height: auto;
+        width: 80%;
+        margin: 20px;
+        padding: 20px 5px 0 5px;
+    }
+    footer nav ul li a img{
 
-            width: 2rem;
-        }
-        footer iframe{
-            width: 80%;
-            height: 300px;
-        }
-        .pages__header__img{
-          object-fit: contain;
-          height: 100%;
-        }
-        .main_nav{
-            display: none;
-        }
-        .accordion{
-            background-image: url(img/bck.svg);
-            background-color: white;
-        }
-        /* z-index para que esté por encima del form del footer */
-        .nav__accordion{
-            position: sticky;
-            top: 10rem;
-            display: flex;
-            justify-content: center;
-            z-index: 2;
-            margin: 0;
-            padding: 0;
-        }
-        .accordion__main_nav{   
-            height: 100%;
-            background-image: url(img/bck.svg);
-            background-color: white;
-            font-weight: 700;
-            font-size: 1.5em;
-            justify-content: center;
-            border: 0;
-        }
-        .accordion__ul{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
-            border: 1px solid rgb(62, 64, 149);
-            padding: 10px;
-           
-        }
-        /* Uso margin-top: -10rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
-        .pages__club__a-position{
-            margin-top: -22.5rem;
-        }
-        .club__mobile-grid{
-            position: relative;
-            grid-template-columns: 100vw;
-            grid-template-rows: 10rem auto auto auto auto;
-            grid-template-areas: 
-            "nav"
-            "head"
-            "mainnav"
-            "seccion"
-            "footer";
-        }
-        .calendario{
-            width: 80vw;
-            height: 50vh;
-        }
-        .video{
-            width: 80vw;
-            
-        }
-        .pages__a_acompetir__mobile-grid{
-            display: grid;
-            grid-template-columns: 100vw;
-            grid-template-rows: 10rem auto auto auto;
-            grid-template-areas: 
-            "nav"
-            "head"
-            "main"
-            "footer";
-        }
-    .contacto__main__form{
+        width: 2rem;
+    }
+    footer iframe{
+        width: 80%;
+        height: 300px;
+    }
+    .encabezado__img{
+        object-fit: contain;
+        height: 100%;
+    }
+    .club__nav{
+        display: none;
+    }
+    .accordion{
+        background-image: url(img/bck.svg);
+        background-color: white;
+    }
+    /* z-index para que esté por encima del form del footer */
+    .navegador__accordion{
+        position: sticky;
+        top: 10rem;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+    }
+    .accordion__club__nav{   
+        height: 100%;
+        background-image: url(img/bck.svg);
+        background-color: white;
+        font-weight: 700;
+        font-size: 1.5em;
+        justify-content: center;
+        border: 0;
+    }
+    .accordion__ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        border: 1px solid rgb(62, 64, 149);
+        padding: 10px;
+        
+    }
+    /* Uso margin-top: -10rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
+    .club__a-position{
+        margin-top: -22.5rem;
+    }
+    .club-mobile__grid{
+        position: relative;
+        grid-template-columns: 100vw;
+        grid-template-rows: 10rem auto auto auto auto;
+        grid-template-areas: 
+        "nav"
+        "head"
+        "mainnav"
+        "seccion"
+        "footer";
+    }
+    .calendario{
+        width: 80vw;
+        height: 50vh;
+    }
+    .video{
+        width: 80vw;
+        
+    }
+    .pages__a_acompetir__mobile-grid{
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 10rem auto auto auto;
+        grid-template-areas: 
+        "nav"
+        "head"
+        "main"
+        "footer";
+    }
+    .contacto__form{
         width: 90%;
     }
     fieldset{
@@ -826,52 +821,54 @@ textarea{
         display: flex;
         flex-direction: column;
     } 
-    .inline{
+    .contacto__li-row{
             flex-direction: row;
             justify-content: flex-start;
         }
-.mensaje{
-    width: 100%;
-}
-textarea{
-    width: 90%;
-}
-.nav__button{
-    height: 100%;
-    width: 100%;
-    grid-area: menu;
-    font-weight: 700;
-    font-size: 1em;
-}
-.nav__button__ul{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
-figure{
-    
-    margin: 3px 0;
-    border: dotted 1px rgb(62, 64, 149);
-    padding: 5%;
-    background-color: rgb(255, 255, 245);
-}
-    figure figcaption{
-        font-weight: 700;
-        font-size: 1.3rem;
-        text-align: center;
+    .contacto__mensaje{
+        width: 100%;
     }
-        figure figcaption p{
-            margin: 0 0.5rem;
-            font-weight: 200;
-            font-size: 1rem;
-            text-align: left;
-            line-height: 1.3rem;
+    textarea{
+        width: 90%;
+    }
+    .hamburger__grid{
+        height: 100%;
+        width: 100%;
+        grid-area: menu;
+        font-weight: 700;
+        font-size: 1em;
+    }
+    .navegador__lista{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    
+    }
+    figure{
+        
+        margin: 3px 0;
+        border: dotted 1px rgb(62, 64, 149);
+        padding: 5%;
+        background-color: rgb(255, 255, 245);
+    }
+        figure figcaption{
+            font-weight: 700;
+            font-size: 1.3rem;
+            text-align: center;
         }
+            figure figcaption p{
+                margin: 0 0.5rem;
+                font-weight: 200;
+                font-size: 1rem;
+                text-align: left;
+                line-height: 1.3rem;
+            }
 }
 /*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
 @media only screen and (max-width: 575.98px){
@@ -885,7 +882,7 @@ figure{
     "aside"
     "footer";
    } 
-    .navegacion{
+    .navegador{
         padding: 5px 0;
         display: grid;
         grid-template-columns: 50% 50%;
@@ -915,10 +912,10 @@ figure{
         grid-area: footer;
         padding-top: 2%;
     }
-    .alineadoderecha{
+    .navegador__links{
         display: none;
     }
-    .centrado{
+    .navegador__menu{
         grid-area: centrado;
         height: 100%;
         display: flex;
@@ -955,10 +952,10 @@ figure{
         width: 80%;
         height: 300px;
     }
-    .logo a img{
+    .navegador__logo a img{
         display: none;
     }
-    .logo a{
+    .navegador__logo a{
         content: url(../img/logosnnmbr.svg);
    
     }
@@ -966,17 +963,18 @@ figure{
         width: 100%;
         height: 35%;
     }
-    .nav__button{
+    /* ayuda a crear espacio en el grid cuando se abre el botón hamburguesa */
+    .hamburger__grid{
         grid-area: auto;
     }
-    .nav__button__ul{
+    .navegador__lista{
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         font-weight: 700;
         font-size: 2em;
     }
-    .main_nav{
+    .club__nav{
         top: 10rem;   
         height: 100%;
         background-image: url(img/bck.svg);
@@ -985,7 +983,7 @@ figure{
         font-size: 1.5em;
         justify-content: center;
     }
-    .nav__accordion{
+    .navegador__accordion{
         top: 10rem;
     }
 }

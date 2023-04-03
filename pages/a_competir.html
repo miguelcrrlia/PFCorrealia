@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link href="../css/style.css" rel="stylesheet">
 </head>
-<body class="pages__a_competir-grid pages__a_acompetir__mobile-grid">
+<body class="other-grid pages__a_acompetir__mobile-grid">
     <!-- Nav con logo y links. Nav de Bootstrap -->
-    <nav class="navbar navbar-expand-sm navegacion">
-        <div class="logo">
+    <nav class="navbar navbar-expand-sm navegador">
+        <div class="navegador__logo">
             <!--Logo-->
             <a href="../index.html" title="Inicio">
                 <img src="../img/logo.svg" alt="logo">
             </a>
         </div>
         <!-- Lista de links para redes y carrito -->
-        <div class= "alineadoderecha">
+        <div class= "navegador__links">
             <ul>
                 <li>
                     <a href="https://www.facebook.com/" title="Facebook" target="_blank">
@@ -49,13 +49,13 @@
             </ul>
         </div>
         <!-- Botón hamburguesa de Bootstrap -->
-        <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+        <button class="navbar-toggler navegador__menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon" alt="Botón hamburguesa">
         </button>
-        <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
+        <div class= "collapse navbar-collapse hamburger__grid" id="navbarSupportedContent">
             <!-- Lista para navegar dentro del sitio -->
-            <ul class="nav__button__ul">
+            <ul class="navegador__lista">
                 <li class="nav-item">
                     <a href="club.html" title="Club">Club</a>
                 </li>
@@ -72,9 +72,9 @@
         </div>
     </nav>
     <!-- Header -->
-    <header class="encabezado pages__header">    
-        <img class="pages__header__img" src="../img/a_competir.jpg" alt="peón reodeado de pieza caidas">
-        <h1 class="headingdeco pages__header__heading">¡A competir!</h1>
+    <header class="encabezado encabezado--format">    
+        <img class="encabezado__img" src="../img/a_competir.jpg" alt="peón reodeado de pieza caidas">
+        <h1 class="heading--decoration pages__header__heading">¡A competir!</h1>
     </header>
     <main class="principal">
         <!-- Section a competir -->
@@ -84,7 +84,7 @@
                 Avalados por la Federación Nacional de Ajedrez y ésta perteneciente a la <abbr title="Fédération Internationale des Échecs"><i>FIDE</i></abbr>,
                 el club posee torneos con una validación de elo nacional e internacional. Divididas en tres grandes categorías. El socio/a y el no socio/a
                 podrá participar previa 
-                <a class="a-textdeco" href="contacto.html#formulario" title="ir a formulario">
+                <a class="a--textdecoration" href="contacto.html#formulario" title="ir a formulario">
                     inscripción
                 </a> 
                 a cualquiera de ellas.
@@ -154,8 +154,8 @@
         <form action="#">
             <label for="e_mail">Suscríbete para más contenido</label>
             <div>
-                <input class="textBox" id="e_mail" name="mail" type="email" placeholder="Ingrese su mail aquí">
-                <input class="formatbutton" type="button" value="Suscríbete">
+                <input class="input--format" id="e_mail" name="mail" type="email" placeholder="Ingrese su mail aquí">
+                <input class="button--format" type="button" value="Suscríbete">
             </div>
         </form>
         <!-- Links de redes y carrito -->
@@ -194,20 +194,20 @@
             <ul>
                 <li>
                     <img src="../img/links/mp.png" alt="ubicación">
-                    <span class="formatchange">Dirección:</span> Gral. Alfil 864 esq. Robert Fischer 
+                    <span class="text--format">Dirección:</span> Gral. Alfil 864 esq. Robert Fischer 
                 </li>
                 <li>
                     <img src="../img/links/tlphn.png" alt="teléfono">
-                    <span class="formatchange">Teléfono:</span> 2475138644
+                    <span class="text--format">Teléfono:</span> 2475138644
                 </li>
                 <li>
                     <img src="../img/links/whtsp.png" alt="whatsapp">
-                    <span class="formatchange">whatsapp:</span> 04468315742
+                    <span class="text--format">whatsapp:</span> 04468315742
                 </li>
                 <li>
                     <img src="../img/links/mail.png" alt="email">
-                    <span class="formatchange">Email:</span>
-                    <a class="a-textdeco" href="mailto:clubajedrezbellavista@aim.com?">
+                    <span class="text--format">Email:</span>
+                    <a class="a--textdecoration" href="mailto:clubajedrezbellavista@aim.com?">
                         clubajedrezbellavista@aim.com
                     </a> 
                 </li>

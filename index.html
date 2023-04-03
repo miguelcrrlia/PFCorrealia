@@ -11,15 +11,15 @@
 </head>
 <body class="grid">
     <!-- Nav con logo y links. Nav de Bootstrap -->
-    <nav class="navbar navbar-expand-sm navegacion">
-        <div class="logo">
+    <nav class="navbar navbar-expand-sm navegador">
+        <div class="navegador__logo">
             <!-- Logo -->
             <a href="index.html" title="Inicio">
                 <img src="img/logo.svg" alt="logo">
             </a>
         </div>
         <!-- Lista de links para redes y carrito -->
-        <div class= "alineadoderecha">
+        <div class= "navegador__links">
             <ul>
                 <li>
                     <a href="https://www.facebook.com/" title="Facebook" target="_blank">
@@ -49,13 +49,13 @@
             </ul>
         </div>
         <!-- Botón hamburguesa de Bootstrap -->
-        <button class="navbar-toggler centrado" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+        <button class="navbar-toggler navegador__menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <img src="img/links/button-hamb.svg" class="navbar-toggler-icon" alt="botón hamburguesa">
         </button>
-        <div class= "collapse navbar-collapse nav__button" id="navbarSupportedContent">
+        <div class= "collapse navbar-collapse hamburger__grid" id="navbarSupportedContent">
             <!-- Links para navegar dentro del sitio-->
-            <ul class="nav__button__ul">
+            <ul class="navegador__lista">
                 <li class="nav-item">
                     <a href="pages/club.html" title="Club">Club</a>
                 </li>
@@ -86,7 +86,7 @@
                 socios/as y participando en las competiciones más importantes del país. Sin importar tu nivel, aunque no sepas las reglas o 
                 si ya posees una norma <abbr title="Fédération Internationale des Échecs"><i>FIDE</i></abbr>, encontrarás un lugar en el club.
             </p>
-            <p class="text-right">
+            <p class="text--right">
                 <strong>
                     Mario Roque Rey
                 </strong>
@@ -359,7 +359,7 @@
         <section>
             <h3>Puzzle del día</h3>
                 <img src="img/puzzle.png" alt="puzzle del día">
-                <button class="formatbutton" type="button">
+                <button class="button--format" type="button">
                     resolver
                 </button>
             
@@ -381,8 +381,8 @@
         <form action="#">
             <label for="e_mail">Suscríbete para más contenido</label>
             <div>
-                <input class="textBox" id="e_mail" name="mail" type="email" placeholder="Ingrese su mail aquí">
-                <input class="formatbutton" type="button" value="Suscríbete">
+                <input class="input--format" id="e_mail" name="mail" type="email" placeholder="Ingrese su mail aquí">
+                <input class="button--format" type="button" value="Suscríbete">
             </div>
         </form>
         <!-- Links para redes y carrito -->
@@ -421,20 +421,20 @@
             <ul>
                 <li>
                     <img src="img/links/mp.png" alt="ubicación">
-                    <span class="formatchange">Dirección:</span> Gral. Alfil 864 esq. Robert Fischer 
+                    <span class="text--format">Dirección:</span> Gral. Alfil 864 esq. Robert Fischer 
                 </li>
                 <li>
                     <img src="img/links/tlphn.png" alt="teléfono">
-                    <span class="formatchange">Teléfono:</span> 2475138644
+                    <span class="text--format">Teléfono:</span> 2475138644
                 </li>
                 <li>
                     <img src="img/links/whtsp.png" alt="whatsapp">
-                    <span class="formatchange">whatsapp:</span> 04468315742
+                    <span class="text--format">whatsapp:</span> 04468315742
                 </li>
                 <li>
                     <img src="img/links/mail.png" alt="email">
-                    <span class="formatchange">Email:</span>
-                    <a class="a-textdeco" href="mailto:clubajedrezbellavista@aim.com?">
+                    <span class="text--format">Email:</span>
+                    <a class="a--textdecoration" href="mailto:clubajedrezbellavista@aim.com?">
                         clubajedrezbellavista@aim.com
                     </a> 
                 </li>
