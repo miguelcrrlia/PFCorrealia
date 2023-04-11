@@ -1,0 +1,4 @@
+node_module/
+*.vsc
+*.map
+*.log
