@@ -500,7 +500,7 @@ select{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    grid-area: centrado;
+    
     font-weight: 700;
     font-size: 2em;
 }
@@ -652,6 +652,9 @@ select{
 }
 .accordion__ul{
     padding: 0;
+}
+.navegador__lista--grid{
+    grid-area: centrado;
 }
 @media only screen and (max-width: 992px){
     .grid{

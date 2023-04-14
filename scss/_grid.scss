@@ -1,0 +1,94 @@
+.grid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 10rem 5% auto 15rem;
+    grid-template-areas:
+    "nav nav"
+    "head head" 
+    "main aside"
+    "footer footer";
+}
+/* defino z-index: 3 para que quede por encima del form de busqueda y de la nav del club */
+.navegador{
+    position: sticky;
+    top: 0;
+    height: 100%;
+    display: grid;
+    grid-area: nav;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 25% 75%;
+    grid-template-areas:
+    "log alineadoderecha"
+    "log  centrado";
+    padding: 5px 15px;
+    z-index: 3;
+}
+.encabezado{ 
+    grid-area: head;
+}
+.principal{
+    grid-area: main;
+}
+.lado{
+    grid-area: aside;
+    
+}
+.pie{
+    grid-area: footer;
+}
+.navegador__links{
+    display: flex;
+    grid-area: alineadoderecha;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+.navegador__lista--grid{
+    grid-area: centrado;
+}
+.navegador__menu{
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    grid-area: centrado;    
+}
+.navegador__logo{
+    height: 100%;
+    grid-area: log;
+}
+.club__grid{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 10rem auto auto 15rem;
+    grid-template-areas: 
+    "nav nav"
+    "head head"
+    "mainnav seccion"
+    "footer footer";
+}
+.club__nav{
+    grid-area: mainnav;
+    position: sticky;   
+    top: 10rem;
+    height: 10%;
+    padding: 0.5em;
+    border: 0;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1.5em;
+    z-index: 1;
+}
+.club__section{
+    padding: 0 15px;
+    grid-area: seccion;
+}
+.other-grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10rem auto auto 15rem;
+    grid-template-areas: 
+    "nav"
+    "head"
+    "main"
+    "footer";
+}
+

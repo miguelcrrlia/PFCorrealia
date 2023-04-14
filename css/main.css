@@ -1,3 +1,1039 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+  scrollbar-width: auto;
+  scrollbar-color: rgb(62, 64, 149) rgb(255, 255, 245);
+}
 
+/*formato scrollbar*/
+::-webkit-scrollbar {
+  height: 15px;
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 245);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(62, 64, 149);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(12, 14, 110);
+}
+
+::-webkit-scrollbar-corner {
+  width: 15px;
+  background-color: rgb(255, 255, 245);
+}
+
+::-webkit-scrollbar-button {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(255, 255, 245);
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url(img/arrowup.svg);
+  background-size: 100%;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: url(img/arrowupy.svg);
+  background-size: 100%;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url(img/arrowdwn.svg);
+  background-size: 100%;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: url(img/arrowdwny.svg);
+  background-size: 100%;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  background-image: url(img/arrowlft.svg);
+  background-size: 100%;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+  background-image: url(img/arrowlfty.svg);
+  background-size: 100%;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+  background-image: url(img/arrowrgth.svg);
+  background-size: 100%;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+  background-image: url(img/arrowrgthy.svg);
+  background-size: 100%;
+}
+
+/*line-height para sacar el que aplica bootstrap*/
+body {
+  background-image: url(img/bck.svg);
+  background-attachment: fixed;
+  color: rgb(62, 64, 149);
+  background-color: white;
+  line-height: normal;
+}
+
+main {
+  margin: 5px;
+  padding: 10px;
+}
+main nav {
+  padding: 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100%;
+  padding: 5px 0 5px 5px;
+  border-bottom: solid 25px rgb(62, 64, 149);
+  background-image: url(img/bck.svg);
+  background-color: white;
+}
+nav a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+nav img {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  background-color: white;
+}
+header img {
+  height: 100%;
+  object-fit: scale-down;
+}
+
+section {
+  margin: 10px 0;
+}
+
+aside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+aside section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  padding-bottom: 15px;
+}
+aside section img {
+  width: 100%;
+}
+aside section a img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+footer {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-top: solid 25px rgb(62, 64, 149);
+  padding: 5px 15px;
+}
+footer form {
+  width: 25%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: static;
+}
+footer section {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: space-around;
+}
+footer section ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+footer section ul li {
+  font-weight: 200;
+  font-size: 1em;
+}
+footer section ul li img {
+  width: 0.8em;
+}
+footer nav {
+  height: auto;
+  width: 25%;
+  position: static;
+  display: flex;
+  border: 0;
+  padding: 0;
+  background-image: none;
+  background-color: transparent;
+}
+footer nav ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+footer nav ul li a img {
+  width: 1.5rem;
+}
+footer iframe {
+  width: 13%;
+  height: 90%;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.85em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+/*saca al margin-botton que pone Bootstrap */
+ul {
+  margin-bottom: 0;
+}
+ul li {
+  list-style: none;
+}
+
+dl {
+  margin-left: 1em;
+  font-weight: 700;
+}
+dl dd {
+  margin-left: 2em;
+  font-weight: 400;
+}
+dl dd ul li {
+  margin-left: 4em;
+  list-style: disc;
+}
+
+table {
+  width: 33%;
+  border: 3px solid rgb(62, 64, 149);
+  border-collapse: collapse;
+  font-weight: 200;
+  font-size: 1em;
+  text-align: center;
+  background-color: rgb(255, 255, 245);
+}
+
+th {
+  border: 2px solid;
+  padding: 10px;
+  background-color: rgb(245, 245, 255);
+}
+
+td {
+  border: 1px solid;
+  padding: 10px;
+}
+
+/* Para poner la lupa dentro del <input> buscar, z-index:0; para que quede atrás de la nav*/
+form {
+  position: relative;
+  font-weight: 400;
+  font-size: 1em;
+  color: rgb(62, 64, 149);
+  z-index: 0;
+}
+form ul li {
+  line-height: 2em;
+}
+
+textarea {
+  width: 70%;
+  height: 30%;
+}
+
+fieldset {
+  width: 100%;
+  border: 2px;
+  border-style: solid;
+  border-color: rgb(62, 64, 149);
+  padding: 10px;
+  background-color: rgb(255, 255, 245);
+}
+fieldset ul li {
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(62, 64, 149);
+}
+a:hover {
+  color: rgb(255, 242, 18);
+}
+
+select {
+  border: 1.5px solid rgb(62, 64, 149);
+}
+
+.navegador__links ul {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: normal;
+}
+.navegador__links ul li a {
+  height: 100%;
+}
+.navegador__links ul li a img {
+  width: 1.5rem;
+}
+
+.navegador__lista {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: centrado;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+/*a-textdeco mejora el contraste con el background claro*/
+.a--textdecoration {
+  text-decoration: underline;
+}
+.a--textdecoration:hover {
+  color: crimson;
+}
+
+/*formato para algunos headings*/
+.heading--decoration {
+  margin: 0;
+  padding: 0;
+  text-indent: 15px;
+  background-color: rgb(62, 64, 149);
+  color: rgb(255, 242, 18);
+}
+
+/*cambia el formato de la palabra dirección:, teléfono:, etc sin afectar lo demás*/
+.text--format {
+  font-size: 1.1em;
+  font-weight: 400;
+} /*alinea el texto a la izquierda*/
+.text--right {
+  text-align: right;
+}
+
+/*deja un pequeño margen entre el borde y la letra de los <input>*/
+.input--format {
+  border: 1.5px solid rgb(62, 64, 149);
+  padding: 0 3px;
+}
+.input--format:focus {
+  border-color: rgb(12, 14, 110);
+}
+
+/*formato de los botones*/
+.button--format {
+  border: 0;
+  padding: 1px 5px;
+  background-color: rgb(62, 64, 149);
+  color: rgb(247, 247, 247);
+}
+.button--format:hover {
+  color: rgb(255, 242, 18);
+}
+
+.pie form div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: normal;
+}
+.pie form div .input--format {
+  width: 70%;
+  padding: 0 5px;
+}
+
+/* Le saco el borde al botón hamburguesa */
+.navbar-toggler {
+  border: 0;
+  color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 10rem 5% auto 15rem;
+  grid-template-areas: "nav nav" "head head" "main aside" "footer footer";
+}
+
+/* defino z-index: 3 para que quede por encima del form de busqueda y de la nav del club */
+.navegador {
+  position: sticky;
+  top: 0;
+  height: 100%;
+  display: grid;
+  grid-area: nav;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 25% 75%;
+  grid-template-areas: "log alineadoderecha" "log  centrado";
+  padding: 5px 15px;
+  z-index: 3;
+}
+
+.encabezado {
+  grid-area: head;
+}
+
+.principal {
+  grid-area: main;
+}
+
+.lado {
+  grid-area: aside;
+}
+
+.pie {
+  grid-area: footer;
+}
+
+.navegador__links {
+  display: flex;
+  grid-area: alineadoderecha;
+  justify-content: flex-end;
+  padding-top: 5px;
+}
+
+.navegador__lista--grid {
+  grid-area: centrado;
+}
+
+.navegador__menu {
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  grid-area: centrado;
+}
+
+.navegador__logo {
+  height: 100%;
+  grid-area: log;
+}
+
+.club__grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 10rem auto auto 15rem;
+  grid-template-areas: "nav nav" "head head" "mainnav seccion" "footer footer";
+}
+
+.club__nav {
+  grid-area: mainnav;
+  position: sticky;
+  top: 10rem;
+  height: 10%;
+  padding: 0.5em;
+  border: 0;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 1.5em;
+  z-index: 1;
+}
+
+.club__section {
+  padding: 0 15px;
+  grid-area: seccion;
+}
+
+.other-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10rem auto auto 15rem;
+  grid-template-areas: "nav" "head" "main" "footer";
+}
+
+figure {
+  height: 100%;
+  margin: 3px 0;
+  border: dotted 1px rgb(62, 64, 149);
+  padding: 5%;
+  background-color: rgb(255, 255, 245);
+}
+figure figcaption {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: center;
+}
+figure figcaption p {
+  height: 100%;
+  margin: 0 0.5rem;
+  font-weight: 200;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.3rem;
+}
+
+/*Tamaño de las imágenes de la tienda*/
+figure img {
+  width: 80%;
+  margin: 0 3px;
+  border: solid 1px rgb(62, 64, 149);
+}
+
+/*Para que no quede atrás de la lupa el texto que se ingresa en el <input> "buscar"*/
+.buscar__input {
+  width: 10rem;
+  border: 1.5px solid rgb(62, 64, 149);
+  padding-right: 20px;
+  padding-left: 3px;
+  color: rgb(62, 64, 149);
+}
+
+/*formato de la lupa*/
+.buscar__button {
+  position: absolute;
+  width: 1rem;
+  left: 8.75rem;
+  top: 1.5px;
+  border-style: none;
+  background-image: url(img/srch.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  color: transparent;
+}
+.buscar__button:hover {
+  background-image: url(img/srchy.png);
+  color: transparent;
+}
+
+/*Para que el carrito pueda entrar en el botón de "añadir al carrito"*/
+.figure__button {
+  width: 8rem;
+  margin: 5px 0;
+  border-style: none;
+  padding-left: 0.2rem;
+  padding-right: 1.563rem;
+  background-image: url(img/crtdd.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: rgb(247, 247, 247);
+  font-size: 0.8em;
+}
+.figure__button:hover {
+  background-image: url(img/crtddy.png);
+  color: rgb(255, 242, 18);
+}
+
+/*Imágen para aviso de página en construcción*/
+.construction {
+  width: 30%;
+  margin: 5% 35% 0 35%;
+}
+
+.calendario {
+  border: solid 1px #777;
+  width: 800px;
+  height: 600px;
+}
+
+/* Uso display: contents para que me deje aplicar grid a los elementos que están dentro del main */
+.club__main {
+  display: contents;
+  position: relative;
+}
+
+.club__nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Uso margin-top: -10rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
+.club__a-position {
+  position: absolute;
+  margin-top: -10rem;
+}
+
+.encabezado--format {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado__img {
+  object-fit: contain;
+}
+
+.contacto__form {
+  width: 60%;
+}
+
+.contacto__inputs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: normal;
+  margin-top: 5px;
+}
+
+.contacto__inputs input {
+  margin-left: 10px;
+}
+
+.contacto__input-margin {
+  margin-left: 10px;
+}
+
+.contacto__mensaje {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Separa un poco los botones de prev y next del carousel */
+.carousel__button {
+  margin: 0 -10px;
+}
+
+/* Cambia el botón de cerrar del modal */
+.button__close-color {
+  background-image: url(img/cls.svg);
+  opacity: 1;
+}
+
+/* Saca el recuadro cuando haces click en el botón cerrar del modal de Bootstrap */
+.btn-close {
+  --bs-btn-close-focus-shadow: 0;
+}
+
+/* El puntero del mouse cambia a lupa encima de las imágenes del carousel */
+.lupa {
+  cursor: url(img/lupa.svg), auto;
+}
+
+/* Display: none para desktop */
+.navegador__accordion {
+  display: none;
+}
+
+/* Cambio algunos parámetros del botón del accordion de Bootstrap */
+.accordion-button {
+  background-color: transparent;
+  border-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+.accordion-button::after {
+  height: 3em;
+  width: 3em;
+  margin: auto;
+  background-image: url(img/arrowdwn.svg);
+  background-size: 100%;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url(img/arrowdwn.svg);
+}
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+.accordion-button .collapsed {
+  background-color: transparent;
+}
+
+.accordion-body {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion {
+  background-color: transparent;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-btn-focus-border-color: transparent;
+  --bs-accordion-btn-focus-box-shadow: transparent;
+  --bs-accordion-border-radius: 0;
+}
+
+.accordion__item {
+  background-color: transparent;
+}
+
+.accordion__ul {
+  padding: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .grid {
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-areas: "nav" "head" "main" "aside" "footer";
+  }
+  .navegador {
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 100%;
+    grid-area: nav;
+    grid-template-areas: "log menu";
+  }
+  .encabezado {
+    grid-area: head;
+  }
+  .encabezado img {
+    width: 100%;
+  }
+  .principal {
+    grid-area: main;
+  }
+  .lado {
+    align-content: center;
+    grid-area: aside;
+  }
+  .pie {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    grid-area: footer;
+    padding-top: 2%;
+  }
+  .navegador__links {
+    display: none;
+  }
+  aside section {
+    align-content: center;
+  }
+  aside section img {
+    width: 50vw;
+  }
+  aside section a img {
+    width: 50vw;
+  }
+  aside section button {
+    font-size: 1.5em;
+  }
+  table {
+    display: block;
+    height: 50vh;
+    width: 80vw;
+    overflow: auto;
+  }
+  footer form {
+    height: auto;
+    width: 80%;
+  }
+  footer section {
+    height: auto;
+  }
+  footer nav {
+    height: auto;
+    width: 80%;
+    margin: 20px;
+    padding: 20px 5px 0 5px;
+  }
+  footer nav ul li a img {
+    width: 2rem;
+  }
+  footer iframe {
+    width: 80%;
+    height: 300px;
+  }
+  .encabezado__img {
+    object-fit: contain;
+    height: 100%;
+  }
+  .club__nav {
+    display: none;
+  }
+  .accordion {
+    background-image: url(img/bck.svg);
+    background-color: white;
+  }
+  /* z-index para que esté por encima del form del footer */
+  .navegador__accordion {
+    position: sticky;
+    top: 10rem;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+  }
+  .accordion__club__nav {
+    height: 100%;
+    background-image: url(img/bck.svg);
+    background-color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    justify-content: center;
+    border: 0;
+  }
+  .accordion__ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid rgb(62, 64, 149);
+    padding: 10px;
+  }
+  /* Uso margin-top: -22.5rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
+  .club__a-position {
+    margin-top: -22.5rem;
+  }
+  .club-mobile__grid {
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
+  }
+  .calendario {
+    width: 80vw;
+    height: 50vh;
+  }
+  .video {
+    width: 80vw;
+  }
+  .pages__a_acompetir__mobile-grid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto;
+    grid-template-areas: "nav" "head" "main" "footer";
+  }
+  .contacto__form {
+    width: 90%;
+  }
+  fieldset {
+    min-inline-size: 90%;
+  }
+  fieldset ul {
+    width: 90%;
+  }
+  fieldset ul li {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contacto__li-row {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .contacto__mensaje {
+    width: 100%;
+  }
+  textarea {
+    width: 90%;
+  }
+  .hamburger__grid {
+    height: 100%;
+    width: 100%;
+    grid-area: menu;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .navegador__lista {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  figure {
+    margin: 3px 0;
+    border: dotted 1px rgb(62, 64, 149);
+    padding: 5%;
+    background-color: rgb(255, 255, 245);
+  }
+  figure figcaption {
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  figure figcaption p {
+    margin: 0 0.5rem;
+    font-weight: 200;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.3rem;
+  }
+}
+/*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
+@media only screen and (max-width: 575.98px) {
+  .grid {
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-areas: "nav" "head" "main" "aside" "footer";
+  }
+  .navegador {
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "log centrado";
+    position: sticky;
+    top: 0;
+  }
+  .encabezado {
+    grid-area: head;
+  }
+  .encabezado img {
+    height: 100%;
+  }
+  .principal {
+    grid-area: main;
+  }
+  .lado {
+    align-content: center;
+    grid-area: aside;
+  }
+  .pie {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    grid-area: footer;
+    padding-top: 2%;
+  }
+  .navegador__links {
+    display: none;
+  }
+  .navegador__menu {
+    grid-area: centrado;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  nav div ul {
+    background-image: url(img/bck.svg);
+    background-color: white;
+    font-size: 2em;
+  }
+  aside section button {
+    font-size: 1.5em;
+  }
+  table {
+    display: block;
+    height: 50vh;
+    width: 80vw;
+    overflow: auto;
+  }
+  footer form {
+    height: auto;
+    width: 100%;
+  }
+  footer section {
+    height: auto;
+  }
+  footer nav {
+    height: auto;
+    width: 80%;
+    padding: 15px 5px 0 5px;
+  }
+  footer iframe {
+    width: 80%;
+    height: 300px;
+  }
+  .navegador__logo a {
+    content: url(../img/logosnnmbr.svg);
+  }
+  .navegador__logo a img {
+    display: none;
+  }
+  textarea {
+    width: 100%;
+    height: 35%;
+  }
+  /* ayuda a crear espacio en el grid cuando se abre el botón hamburguesa */
+  .hamburger__grid {
+    grid-area: auto;
+  }
+  .navegador__lista {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  .club__nav {
+    top: 10rem;
+    height: 100%;
+    background-image: url(img/bck.svg);
+    background-color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    justify-content: center;
+  }
+  .navegador__accordion {
+    top: 10rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
