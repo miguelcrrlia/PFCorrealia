@@ -2,7 +2,7 @@
     box-sizing: border-box;
     font-family: $mainFont;
     scrollbar-width: auto;
-    scrollbar-color: $mainColor $backColor;
+    scrollbar-color: map-get($colors, uno) map-get($colors, tres);
 }
 /*formato scrollbar*/
 ::-webkit-scrollbar{
@@ -10,61 +10,66 @@
     width: 15px;
 }
 ::-webkit-scrollbar-track{
-    background-color: $backColor;
+    background-color: map-get($colors, tres);
 }
 ::-webkit-scrollbar-thumb{
-    background-color:$mainColor;
-}
-::-webkit-scrollbar-thumb:hover{
-    background-color: $darkblueColor;
+    background-color:map-get($colors, uno);
+    &:hover{
+        background-color: map-get($colors, cuatro);
+    }
 }
 ::-webkit-scrollbar-corner{
     width: 15px;
-    background-color: $backColor;
+    @extend ::-webkit-scrollbar-track;
 }
 ::-webkit-scrollbar-button{
-    height: 15px;
-    width: 15px;
-    background-color: $backColor;
-}
-::-webkit-scrollbar-button:single-button:vertical:decrement{
-    background-image: url(img/arrowup.svg);
-    background-size: 100%;
-}
-::-webkit-scrollbar-button:single-button:vertical:decrement:hover{
-    background-image: url(img/arrowupy.svg);
-    background-size: 100%;
-}
-::-webkit-scrollbar-button:single-button:vertical:increment{
-    background-image: url(img/arrowdwn.svg);
-    background-size: 100%;
-}
-::-webkit-scrollbar-button:single-button:vertical:increment:hover{
-    background-image: url(img/arrowdwny.svg);
-    background-size: 100%;
-}
-::-webkit-scrollbar-button:single-button:horizontal:decrement{
-    background-image: url(img/arrowlft.svg);
-    background-size: 100%;
-}
-::-webkit-scrollbar-button:single-button:horizontal:decrement:hover{
-    background-image: url(img/arrowlfty.svg);
-    background-size: 100%;
-}
-::-webkit-scrollbar-button:single-button:horizontal:increment{
-    background-image: url(img/arrowrgth.svg);
-    background-size: 100%;
-}
-::-webkit-scrollbar-button:single-button:horizontal:increment:hover{
-    background-image: url(img/arrowrgthy.svg);
-    background-size: 100%;
+    @extend ::-webkit-scrollbar;
+    background-color: map-get($colors, tres);
+    &:single-button{
+        &:vertical{
+            &:decrement{
+                background-image: url(img/arrowup.svg);
+                background-size: 100%;
+                &:hover{
+                    background-image: url(img/arrowupy.svg);
+                    background-size: 100%;
+                }
+            }
+            &:increment{
+                background-image: url(img/arrowdwn.svg);
+                background-size: 100%;
+                &:hover{
+                    background-image: url(img/arrowdwny.svg);
+                    background-size: 100%;
+                }
+            }
+        }
+        &:horizontal{
+            &:decrement{
+                background-image: url(img/arrowlft.svg);
+                background-size: 100%;
+                &:hover{
+                    background-image: url(img/arrowlfty.svg);
+                    background-size: 100%;
+                }
+            }
+            &:increment{
+                background-image: url(img/arrowrgth.svg);
+                background-size: 100%;
+                &:hover{
+                    background-image: url(img/arrowrgthy.svg);
+                    background-size: 100%;
+                }
+            }
+        }
+    }
 }
 /*line-height para sacar el que aplica bootstrap*/
 body{
     background-image: url(img/bck.svg);
     background-attachment: fixed;
-    color: $mainColor;
-    background-color: $backgroundColor;
+    color: map-get($colors, uno);
+    background-color: map-get($colors, ocho);
     line-height: normal;
 }
 main{
@@ -80,9 +85,9 @@ nav{
     display: flex;
     height: 100%;
     padding: 5px 0 5px 5px;
-    border-bottom: solid 25px $mainColor; 
+    border-bottom: solid 25px map-get($colors, uno); 
     background-image: url(img/bck.svg);
-    background-color: $backgroundColor;
+    background-color: map-get($colors, ocho);
     a{
         display: flex;
        @include fullWidthHeight;
@@ -93,7 +98,7 @@ nav{
 } 
 header{
     @include flex(column, nowrap, stretch, stretch);
-    background-color: $backgroundColor;
+    background-color: map-get($colors, ocho);
     img{
         height: 100%;
         object-fit: scale-down;
@@ -115,7 +120,7 @@ aside{
             width: 100%;
         }
         a img{
-            width: 100%;  
+            @extend img;  
             margin-bottom: 15px; 
             }
     }
@@ -123,7 +128,7 @@ aside{
 footer{
     height: 100%;
     @include flex(row, nowrap, space-around, center);
-    border-top: solid 25px $mainColor;
+    border-top: solid 25px map-get($colors, uno);
     padding: 5px 15px;
     form{
         width: 25%;
@@ -141,7 +146,7 @@ footer{
             padding: 0;
             li {
                 font-weight: $textLight;
-                font-size: 1em; 
+                font-size: map-get($fontSize, dos); 
                 img{
                     width: 0.8em;
                 }
@@ -160,8 +165,12 @@ footer{
         ul{
             width: 100%;
             @include flex(row, wrap, space-between, center);
-            li a img{
+            li a svg{
                 width: 1.5rem;
+                fill: map-get($colors, uno);
+                &:hover{
+                    fill: map-get($colors, dos);
+                }
             }
         }
     }
@@ -174,20 +183,20 @@ h1, h2, h3, h4{
     font-weight: $textBold;
 }
 h1{
-    font-size: 2em;
+    font-size: map-get($fontSize, ocho);
 }
 h2{
-    font-size: 1.85em;
+    font-size: map-get($fontSize, siete);
 }
 h3{
-    font-size: 1.4em;
+    font-size: map-get($fontSize, cinco);
 }
 h4{
-    font-size: 1.3em;
+    font-size: map-get($fontSize, cuatro);
 }
 p{
     font-weight: $textNormal;
-    font-size: 1.1em;
+    font-size: map-get($fontSize, tres);
 }
 /*saca al margin-botton que pone Bootstrap */
 ul{
@@ -210,18 +219,18 @@ dl{
 }
 table{
     width: 33%;
-    border: 3px solid $mainColor;
+    border: 3px solid map-get($colors, uno);
     border-collapse: collapse;
     font-weight: $textLight;
-    font-size: 1em;
+    font-size: map-get($fontSize, dos);
     text-align: center;
-    background-color: $backColor;
+    background-color: map-get($colors, tres);
 } 
 
 th{
     border: 2px solid;
     padding: 10px;
-    background-color: $remarkColor;
+    background-color: map-get($colors, cinco);
 }
 
 td{
@@ -232,8 +241,8 @@ td{
 form{
     position: relative;
     font-weight: $textNormal;
-    font-size: 1em;
-    color: $mainColor;
+    font-size: map-get($fontSize, dos);
+    color: map-get($colors, uno);
     z-index: 0;
     ul li{
         line-height: 2em;
@@ -247,22 +256,22 @@ fieldset{
     width: 100%;
     border: 2px;
     border-style: solid;
-    border-color: $mainColor;
+    border-color: map-get($colors, uno);
     padding: 10px;
-    background-color: $backColor;
+    background-color: map-get($colors, tres);
     ul li{
         padding: 5px;
     }
 }
 a{
     text-decoration: none;
-    color: $mainColor;
+    color: map-get($colors, uno);
     &:hover{
-        color: $secundaryColor;
+        color: map-get($colors, dos);
     }
 }
 select{
-    border: 1.5px solid $mainColor;
+    border: 1.5px solid map-get($colors, uno);
 }
 //Class
 .navegador__links ul{
@@ -270,8 +279,19 @@ select{
     @include flex(row, nowrap, space-around, normal);
     li a{
         height: 100%;
+        svg{
+            height: auto;
+            width: 1.5rem;
+            fill: map-get($colors, uno);
+            &:hover{
+        fill: map-get($colors, dos);
+            }
+        }
         img{
             width: 1.5rem;
+            &:hover{
+        fill: map-get($colors, cuatro);
+    }
         }   
     }
 }
@@ -281,26 +301,26 @@ select{
     @include flex(row, wrap, space-around, center);
     grid-area: centrado;
     font-weight: 700;
-    font-size: 2em;
+    font-size: map-get($fontSize, ocho);
 }
 
 /*a-textdeco mejora el contraste con el background claro*/
 .a--textdecoration{
     text-decoration: underline;
     &:hover{
-        color: $auxColor;
+        color: map-get($colors, seis);
     }
 }/*formato para algunos headings*/
 .heading--decoration{
     margin: 0;
     padding: 0;
     text-indent: 15px;
-    background-color: $mainColor;
-    color: $secundaryColor;
+    background-color: map-get($colors, uno);
+    color: map-get($colors, dos);
 }
 /*cambia el formato de la palabra dirección:, teléfono:, etc sin afectar lo demás*/
 .text--format{
-    font-size: 1.1em;
+    font-size: map-get($fontSize, tres);
     font-weight: $textNormal;
 }/*alinea el texto a la izquierda*/
 .text--right{
@@ -311,17 +331,17 @@ select{
     border: 1.5px solid rgb(62, 64, 149);
     padding: 0 3px;
     &:focus{
-        border-color: $darkblueColor;
+        border-color: map-get($colors, cuatro);
     }
 }
 /*formato de los botones*/
 .button--format{
     border: 0;
     padding: 1px 5px;
-    background-color: $mainColor;
-    color: $specialfontColor;
+    background-color: map-get($colors, uno);
+    color: map-get($colors, siete);
     &:hover{
-        color: $secundaryColor;
+        color: map-get($colors, dos);
     }
 }
 .pie form div{
@@ -337,5 +357,6 @@ select{
     border: 0;
     color: transparent;
 }
+/*Animaciones*/
 
 

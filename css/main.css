@@ -8,69 +8,57 @@
 }
 
 /*formato scrollbar*/
-::-webkit-scrollbar {
+::-webkit-scrollbar, ::-webkit-scrollbar-button {
   height: 15px;
   width: 15px;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
   background-color: rgb(255, 255, 245);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(62, 64, 149);
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(12, 14, 110);
 }
 
 ::-webkit-scrollbar-corner {
   width: 15px;
-  background-color: rgb(255, 255, 245);
 }
 
 ::-webkit-scrollbar-button {
-  height: 15px;
-  width: 15px;
   background-color: rgb(255, 255, 245);
 }
-
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
   background-image: url(img/arrowup.svg);
   background-size: 100%;
 }
-
 ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
   background-image: url(img/arrowupy.svg);
   background-size: 100%;
 }
-
 ::-webkit-scrollbar-button:single-button:vertical:increment {
   background-image: url(img/arrowdwn.svg);
   background-size: 100%;
 }
-
 ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
   background-image: url(img/arrowdwny.svg);
   background-size: 100%;
 }
-
 ::-webkit-scrollbar-button:single-button:horizontal:decrement {
   background-image: url(img/arrowlft.svg);
   background-size: 100%;
 }
-
 ::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
   background-image: url(img/arrowlfty.svg);
   background-size: 100%;
 }
-
 ::-webkit-scrollbar-button:single-button:horizontal:increment {
   background-image: url(img/arrowrgth.svg);
   background-size: 100%;
 }
-
 ::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
   background-image: url(img/arrowrgthy.svg);
   background-size: 100%;
@@ -108,7 +96,7 @@ nav a {
   height: 100%;
   width: 100%;
 }
-nav img {
+nav img, nav aside section a img, aside section a nav img {
   height: 100%;
   width: 100%;
 }
@@ -121,7 +109,7 @@ header {
   align-items: stretch;
   background-color: white;
 }
-header img {
+header img, header aside section a img, aside section a header img {
   height: 100%;
   object-fit: scale-down;
 }
@@ -145,11 +133,10 @@ aside section {
   align-content: flex-start;
   padding-bottom: 15px;
 }
-aside section img {
+aside section img, aside section a img {
   width: 100%;
 }
 aside section a img {
-  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -212,8 +199,12 @@ footer nav ul {
   justify-content: space-between;
   align-items: center;
 }
-footer nav ul li a img {
+footer nav ul li a svg {
   width: 1.5rem;
+  fill: rgb(62, 64, 149);
+}
+footer nav ul li a svg:hover {
+  fill: rgb(255, 242, 18);
 }
 footer iframe {
   width: 13%;
@@ -339,8 +330,19 @@ select {
 .navegador__links ul li a {
   height: 100%;
 }
+.navegador__links ul li a svg {
+  height: auto;
+  width: 1.5rem;
+  fill: rgb(62, 64, 149);
+}
+.navegador__links ul li a svg:hover {
+  fill: rgb(255, 242, 18);
+}
 .navegador__links ul li a img {
   width: 1.5rem;
+}
+.navegador__links ul li a img:hover {
+  fill: rgb(12, 14, 110);
 }
 
 .navegador__lista {
@@ -421,6 +423,7 @@ select {
   color: transparent;
 }
 
+/*Animaciones*/
 .grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -462,7 +465,6 @@ select {
   display: flex;
   grid-area: alineadoderecha;
   justify-content: flex-end;
-  padding-top: 5px;
 }
 
 .navegador__lista--grid {
@@ -539,10 +541,22 @@ figure figcaption p {
 }
 
 /*Tamaño de las imágenes de la tienda*/
-figure img {
+figure img, figure aside section a img, aside section a figure img {
   width: 80%;
   margin: 0 3px;
   border: solid 1px rgb(62, 64, 149);
+}
+
+/*Pone hacia la derecha el form para buscar en la tienda*/
+.tienda__buscar--flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: normal;
+}
+.tienda__buscar--flex div {
+  position: relative;
 }
 
 /*Para que no quede atrás de la lupa el texto que se ingresa en el <input> "buscar"*/
@@ -561,7 +575,7 @@ figure img {
   left: 8.75rem;
   top: 1.5px;
   border-style: none;
-  background-image: url(img/srch.png);
+  background-image: url(img/srch.svg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -569,7 +583,7 @@ figure img {
   color: transparent;
 }
 .buscar__button:hover {
-  background-image: url(img/srchy.png);
+  background-image: url(img/srchy.svg);
   color: transparent;
 }
 
@@ -580,7 +594,7 @@ figure img {
   border-style: none;
   padding-left: 0.2rem;
   padding-right: 1.563rem;
-  background-image: url(img/crtdd.png);
+  background-image: url(img/crtdd.svg);
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -588,7 +602,7 @@ figure img {
   font-size: 0.8em;
 }
 .figure__button:hover {
-  background-image: url(img/crtddy.png);
+  background-image: url(img/crtddy.svg);
   color: rgb(255, 242, 18);
 }
 
@@ -630,6 +644,7 @@ figure img {
 }
 
 .encabezado__img {
+  height: auto;
   object-fit: contain;
 }
 
@@ -768,7 +783,7 @@ figure img {
   aside section {
     align-content: center;
   }
-  aside section img {
+  aside section img, aside section a img {
     width: 50vw;
   }
   aside section a img {
@@ -796,7 +811,7 @@ figure img {
     margin: 20px;
     padding: 20px 5px 0 5px;
   }
-  footer nav ul li a img {
+  footer nav ul li a svg {
     width: 2rem;
   }
   footer iframe {

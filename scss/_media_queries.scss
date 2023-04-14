@@ -48,7 +48,7 @@
             width: 50vw;
         }
         & button{
-            font-size: 1.5em;
+            font-size: map-get($fontSize, seis);
         }
     }
     table{
@@ -70,7 +70,7 @@
             width: 80%;
             margin: 20px;
             padding: 20px 5px 0 5px;
-             & ul li a img{
+             & ul li a svg{
                 width: 2rem;
             }
         }
@@ -88,7 +88,7 @@
     }
     .accordion{
         background-image: url(img/bck.svg);
-        background-color: $backgroundColor;
+        background-color: map-get($colors, ocho);
     }
     /* z-index para que esté por encima del form del footer */
     .navegador__accordion{
@@ -103,9 +103,9 @@
     .accordion__club__nav{   
         height: 100%;
         background-image: url(img/bck.svg);
-        background-color: $backgroundColor;
+        background-color: map-get($colors, ocho);
         font-weight: 700;
-        font-size: 1.5em;
+        font-size: map-get($fontSize, seis);
         justify-content: center;
         border: 0;
     }
@@ -114,7 +114,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        border: 1px solid $mainColor;
+        border: 1px solid map-get($colors, uno);
         padding: 10px;
     }
     /* Uso margin-top: -22.5rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
@@ -178,7 +178,7 @@
         width: 100%;
         grid-area: menu;
         font-weight: 700;
-        font-size: 1em;
+        font-size: map-get($fontSize, dos);
     }
     .navegador__lista{
         height: 100%;
@@ -189,9 +189,9 @@
     }
     figure{
         margin: 3px 0;
-        border: dotted 1px $mainColor;
+        border: dotted 1px map-get($colors, uno);
         padding: 5%;
-        background-color: $backColor;
+        background-color: map-get($colors, tres);
         & figcaption{
             font-weight: 700;
             font-size: 1.3rem;
@@ -260,11 +260,11 @@
      }
      nav div ul{
          background-image: url(img/bck.svg);
-         background-color: $backgroundColor;
-         font-size: 2em;
+         background-color: map-get($colors, ocho);
+         font-size: map-get($fontSize, ocho);
      }
      aside section button{
-         font-size: 1.5em;
+         font-size: map-get($fontSize, seis);
      }
      table{
          display: block;
@@ -309,15 +309,15 @@
          flex-direction: column;
          flex-wrap: nowrap;
          font-weight: 700;
-         font-size: 2em;
+         font-size: map-get($fontSize, ocho);
      }
      .club__nav{
          top: 10rem;   
          height: 100%;
          background-image: url(img/bck.svg);
-         background-color: $backgroundColor;
+         background-color: map-get($colors, ocho);
          font-weight: 700;
-         font-size: 1.5em;
+         font-size: map-get($fontSize, seis);
          justify-content: center;
      }
      .navegador__accordion{

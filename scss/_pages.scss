@@ -1,9 +1,9 @@
 figure{
     height: 100%;
     margin: 3px 0;
-    border: dotted 1px $mainColor;
+    border: dotted 1px map-get($colors, uno);
     padding: 5%;
-    background-color: $backColor;
+    background-color: map-get($colors, tres);
     figcaption{
         height: 20%;
         width: 100%;
@@ -28,13 +28,20 @@ figure img{
     margin:  0 3px;
     border: solid 1px rgb(62, 64, 149);
 }
+/*Pone hacia la derecha el form para buscar en la tienda*/
+.tienda__buscar--flex{
+    @include flex(row, nowrap, flex-end, normal);
+    & div{
+        position: relative;
+    }
+}
 /*Para que no quede atrás de la lupa el texto que se ingresa en el <input> "buscar"*/
 .buscar__input{
     width: 10rem;
-    border: 1.5px solid $mainColor;
+    border: 1.5px solid map-get($colors, uno);
     padding-right: 20px;
     padding-left: 3px;
-    color: $mainColor;
+    color: map-get($colors, uno);
 }
 /*formato de la lupa*/
 .buscar__button{
@@ -43,14 +50,14 @@ figure img{
     left: 8.75rem;
     top: 1.5px;
     border-style: none;
-    background-image: url(img/srch.png);
+    background-image: url(img/srch.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
     color: transparent;
     &:hover{
-        background-image: url(img/srchy.png);
+        background-image: url(img/srchy.svg);
         color: transparent;
     }
 }
@@ -61,15 +68,15 @@ figure img{
     border-style: none;
     padding-left: 0.20rem;
     padding-right: 1.563rem;
-    background-image: url(img/crtdd.png);
+    background-image: url(img/crtdd.svg);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    color: $specialfontColor;
-    font-size: 0.8em;
+    color: map-get($colors, siete);
+    font-size: map-get($fontSize, uno);
     &:hover{
-    background-image: url(img/crtddy.png);
-    color: $secundaryColor;
+    background-image: url(img/crtddy.svg);
+    color: map-get($colors, dos);
     }
 }
 /*Imágen para aviso de página en construcción*/
@@ -103,6 +110,7 @@ figure img{
     flex-direction: column;
 }
 .encabezado__img{
+    height: auto;
     object-fit: contain;
 }
 .contacto__form{
