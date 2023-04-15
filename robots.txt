@@ -1,0 +1,13 @@
+#robots.txt
+User-agent: *
+#reduce la sobre carga del editor
+Crawl-delay: 10
+#directorios
+disallow: /img/
+disallow: /js/
+disallow: /scss/
+disallow: /css/
+#archivos
+disallow: cart.html
+disallow: /package-lock.json
+disallow: /package.json
