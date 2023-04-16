@@ -6,6 +6,7 @@
     justify-content: $justify;
     align-items: $align;
 }
+//@include flex(row, wrap, center, stretch)
 @mixin fullWidthHeight()
 {
     height: 100%;
