@@ -8,6 +8,6 @@ disallow: /js/
 disallow: /scss/
 disallow: /css/
 #archivos
-disallow: cart.html
+disallow: error.html
 disallow: /package-lock.json
 disallow: /package.json

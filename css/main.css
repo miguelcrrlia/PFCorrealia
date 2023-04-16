@@ -11751,11 +11751,6 @@ figure img, figure aside section a img, aside section a figure img {
   opacity: 1;
 }
 
-/* Saca el recuadro cuando haces click en el botón cerrar del modal de Bootstrap */
-.btn-close {
-  --bs-btn-close-focus-shadow: 0;
-}
-
 /* El puntero del mouse cambia a lupa encima de las imágenes del carousel */
 .lupa {
   cursor: url(img/lupa.svg), auto;
@@ -11809,11 +11804,6 @@ figure img, figure aside section a img, aside section a figure img {
 
 .accordion__ul {
   padding: 0;
-}
-
-/*clases que se van cuando purgé bootstrap y las preciso*/
-.modal.show .modal-dialog {
-  transform: none;
 }
 
 @media only screen and (max-width: 992px) {
