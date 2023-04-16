@@ -88,10 +88,14 @@ figure img{
         animation-timing-function: linear; 
     }
 }
-/*Imágen para aviso de página en construcción*/
+/*Imágen para aviso de página error 404*/
 .construction{
-    width: 30%;
-    margin: 5% 35% 0 35%;
+    height: 100vh;
+    margin: 0;
+    padding-bottom: 5%;
+}
+.a--format{
+    width: 100px;
 }
 .calendario{
     border:solid 1px #777;
