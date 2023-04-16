@@ -46,7 +46,7 @@
     display: flex;
     grid-area: alineadoderecha;
     justify-content: flex-end;
-    // padding-top: 5px;
+    padding-top: 5px;
 }
 .navegador__lista--grid{
     grid-area: centrado;
@@ -60,11 +60,13 @@
 .navegador__logo{
     height: 100%;
     grid-area: log;
-    transition: all 0.1s;
+    a img{
+    height: 100%;
     width: 100%;
+    transition: all 0.1s;
     &:hover{
-        height: 105%;
-        width: 105%;
+        transform: scale(1.1);
+    }
     }
 }
 .club__grid{
@@ -79,6 +81,8 @@
 }
 .club__nav{
     grid-area: mainnav;
+    display: flex;
+    justify-content: space-around;
     position: sticky;   
     top: 10rem;
     height: 10%;

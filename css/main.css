@@ -200,7 +200,7 @@ footer nav ul {
   align-items: center;
 }
 footer nav ul li a svg {
-  width: 1.5rem;
+  width: 1.7rem;
   fill: rgb(62, 64, 149);
 }
 footer nav ul li a svg:hover {
@@ -239,6 +239,7 @@ p {
 /*saca al margin-botton que pone Bootstrap */
 ul {
   margin-bottom: 0;
+  padding: 0;
 }
 ul li {
   list-style: none;
@@ -795,6 +796,7 @@ select {
   display: flex;
   grid-area: alineadoderecha;
   justify-content: flex-end;
+  padding-top: 5px;
 }
 
 .navegador__lista--grid {
@@ -811,12 +813,14 @@ select {
 .navegador__logo {
   height: 100%;
   grid-area: log;
-  transition: all 0.1s;
-  width: 100%;
 }
-.navegador__logo:hover {
-  height: 105%;
-  width: 105%;
+.navegador__logo a img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.1s;
+}
+.navegador__logo a img:hover {
+  transform: scale(1.1);
 }
 
 .club__grid {
@@ -828,6 +832,8 @@ select {
 
 .club__nav {
   grid-area: mainnav;
+  display: flex;
+  justify-content: space-around;
   position: sticky;
   top: 10rem;
   height: 10%;
@@ -890,6 +896,9 @@ figure img, figure aside section a img, aside section a figure img {
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: normal;
+  position: sticky;
+  top: 10.3rem;
+  z-index: 4;
 }
 .tienda__buscar--flex div {
   position: relative;
@@ -1214,7 +1223,7 @@ figure img, figure aside section a img, aside section a figure img {
   .video {
     width: 80vw;
   }
-  .pages__a_acompetir__mobile-grid {
+  .pages-mobile__grid {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 10rem auto auto auto;

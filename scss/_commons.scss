@@ -166,7 +166,7 @@ footer{
             width: 100%;
             @include flex(row, wrap, space-between, center);
             li a svg{
-                width: 1.5rem;
+                width: 1.7rem;
                 fill: map-get($colors, uno);
                 &:hover{
                     fill: map-get($colors, dos);
@@ -201,6 +201,7 @@ p{
 /*saca al margin-botton que pone Bootstrap */
 ul{
     margin-bottom: 0;
+    padding: 0;
     li{
         list-style: none;
     }    

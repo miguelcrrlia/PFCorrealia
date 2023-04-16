@@ -31,6 +31,9 @@ figure img{
 /*Pone hacia la derecha el form para buscar en la tienda*/
 .tienda__buscar--flex{
     @include flex(row, nowrap, flex-end, normal);
+    position: sticky;   
+    top: 10.3rem;
+    z-index: 4;
     & div{
         position: relative;
     }
