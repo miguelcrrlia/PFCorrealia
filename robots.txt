@@ -11,3 +11,5 @@ disallow: /css/
 disallow: error.html
 disallow: /package-lock.json
 disallow: /package.json
+#dirección del sitemap.xml
+sitemap: https://miguelcrrlia.github.io/PreEntrega3Correalia/sitemap.xml
