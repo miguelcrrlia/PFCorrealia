@@ -2,4 +2,4 @@
 # HTID:21541784: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
 php_value display_errors 1
 # DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:21541784:
-ErrorDocument 404 /pages/error.htmlt
+ErrorDocument 404 /pages/404.html
