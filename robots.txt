@@ -8,7 +8,7 @@ disallow: /js/
 disallow: /scss/
 disallow: /css/
 #archivos
-disallow: error.html
+disallow: 404.html
 disallow: /package-lock.json
 disallow: /package.json
 #dirección del sitemap.xml
