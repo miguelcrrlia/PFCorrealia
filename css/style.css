@@ -2416,3 +2416,9 @@ figure img, figure aside section a img, aside section a figure img {
     top: 10rem;
   }
 }
+/* Saca la marca de agua de 00webhost -aprovecho el selector de css '>' para aplicar
+el atributo display: none, ya que en mi página no se encuentra ningun contenido 
+con ese orden de etiquetas */
+body>div>a>img {
+  display: none !important; 
+}
