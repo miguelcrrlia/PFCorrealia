@@ -11148,6 +11148,21 @@ select {
   color: transparent;
 }
 
+/*Clases para que la tabla de horarios sea más fácil de leer en responsive*/
+.schedules--relative {
+  position: relative;
+}
+
+.schedules__days--sticky {
+  position: sticky;
+  top: 0;
+}
+
+.schedules__hours--sticky {
+  position: sticky;
+  left: 0;
+}
+
 /*Animaciones*/
 /*Agrego esta class de Bootstrap que la saca el purgecss*/
 .collapsing {
