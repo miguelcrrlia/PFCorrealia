@@ -11884,10 +11884,12 @@ figure img, figure aside section a img, aside section a figure img {
     align-content: center;
   }
   aside section img, aside section a img {
-    width: 50vw;
+    height: auto;
+    width: 80vw;
   }
   aside section a img {
-    width: 50vw;
+    height: 60vh;
+    width: auto;
   }
   aside section button {
     font-size: 1.5em;
@@ -12090,6 +12092,14 @@ figure img, figure aside section a img, aside section a figure img {
     background-color: white;
     font-size: 2em;
   }
+  aside section img, aside section a img {
+    height: auto;
+    width: 90vw;
+  }
+  aside section a img {
+    height: auto;
+    width: 75vw;
+  }
   aside section button {
     font-size: 1.5em;
   }
@@ -12204,10 +12214,12 @@ figure img, figure aside section a img, aside section a figure img {
     align-content: center;
   }
   aside section img, aside section a img {
-    width: 50vw;
+    height: auto;
+    width: 80vw;
   }
   aside section a img {
-    width: 50vw;
+    height: 60vh;
+    width: auto;
   }
   aside section button {
     font-size: 1.5em;
@@ -12362,6 +12374,21 @@ figure img, figure aside section a img, aside section a figure img {
   .navegador {
     position: static;
   }
+  aside section {
+    margin-bottom: 5%;
+    align-content: center;
+  }
+  aside section img, aside section a img {
+    height: 75vh;
+    width: auto;
+  }
+  aside section a {
+    margin-top: 5%;
+  }
+  aside section a img {
+    height: 90vh;
+    width: auto;
+  }
 }
 @media only screen and (orientation: landscape) and (max-width: 575.98px) {
   .grid {
@@ -12412,6 +12439,14 @@ figure img, figure aside section a img, aside section a figure img {
     background-image: url(img/bck.svg);
     background-color: white;
     font-size: 2em;
+  }
+  aside section img, aside section a img {
+    height: auto;
+    width: 90vw;
+  }
+  aside section a img {
+    height: auto;
+    width: 75vw;
   }
   aside section button {
     font-size: 1.5em;
@@ -12489,6 +12524,14 @@ figure img, figure aside section a img, aside section a figure img {
   }
   .navegador {
     position: static;
+  }
+  aside section img, aside section a img {
+    height: 80vh;
+    width: auto;
+  }
+  aside section a img {
+    height: 90vh;
+    width: auto;
   }
 }
 

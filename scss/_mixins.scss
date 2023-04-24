@@ -58,16 +58,20 @@
     .navegador__links{
         display: none;
     }
-    aside section{
-        align-content: center;
-        & img{
-            width: 50vw;
+    aside {
+        section{
+            align-content: center;
+         img{
+            height: auto;
+            width: 80vw;
         }
-        & a img{
-            width: 50vw;
+         a img{
+            height: 60vh;
+            width: auto;
         }
-        & button{
+        button{
             font-size: map-get($fontSize, seis);
+        }
         }
     }
     table{
@@ -281,9 +285,23 @@
             background-color: map-get($colors, ocho);
             font-size: map-get($fontSize, ocho);
         }
-        aside section button{
-            font-size: map-get($fontSize, seis);
-        }
+        aside{
+            section{
+                img{
+                    height: auto;
+                    width: 90vw;
+                }
+                a{
+                    img{
+                        height: auto;
+                        width: 75vw;
+                    }
+                }       
+                button{
+                    font-size: map-get($fontSize, seis);
+                }
+            }
+        } 
         table{
             display: block;
             height: 50vh;
