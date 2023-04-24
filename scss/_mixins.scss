@@ -228,6 +228,10 @@
             }
         }
     }
+    /*Saca el ítem Menú del accordion*/
+    .nav__item{
+        display: none;
+    }
 }
 @mixin mobile{
     .grid{

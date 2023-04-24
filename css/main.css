@@ -12041,6 +12041,10 @@ figure img, figure aside section a img, aside section a figure img {
     text-align: left;
     line-height: 1.3rem;
   }
+  /*Saca el ítem Menú del accordion*/
+  .nav__item {
+    display: none;
+  }
 }
 @media only screen and (orientation: portrait) and (max-width: 575.98px) {
   .grid {
@@ -12378,6 +12382,10 @@ figure img, figure aside section a img, aside section a figure img {
     text-align: left;
     line-height: 1.3rem;
   }
+  /*Saca el ítem Menú del accordion*/
+  .nav__item {
+    display: none;
+  }
   .navegador {
     position: static;
   }
@@ -12401,7 +12409,11 @@ figure img, figure aside section a img, aside section a figure img {
     top: 0;
   }
   .club__a-position {
-    margin-top: -12.5rem;
+    margin-top: -15rem;
+  }
+  /*Agrega el ítem Menú del accordion*/
+  .nav__item {
+    display: block;
   }
 }
 @media only screen and (orientation: landscape) and (max-width: 575.98px) {
@@ -12553,6 +12565,11 @@ figure img, figure aside section a img, aside section a figure img {
   aside section a img {
     height: 90vh;
     width: auto;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .club__a-position {
+    margin-top: -15rem;
   }
 }
 
