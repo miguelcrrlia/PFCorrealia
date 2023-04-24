@@ -88,6 +88,7 @@ figure img{
         animation-timing-function: linear; 
     }
 }
+
 /*Imágen para aviso de página error 404*/
 .construction{
     height: 100vh;
@@ -145,7 +146,7 @@ figure img{
 }
 /* Separa un poco los botones de prev y next del carousel */
 .carousel__button{
-    margin: 0 -10px;
+    margin: 0 -20px;
 }
 /* Cambia el botón de cerrar del modal */
 .button__close-color{
