@@ -304,7 +304,11 @@ select{
     font-weight: 700;
     font-size: map-get($fontSize, ocho);
 }
-
+.navegador__lista--row{
+    @include fullWidthHeight();
+    display: flex;
+    flex-direction: row;
+}
 /*a-textdeco mejora el contraste con el background claro*/
 .a--textdecoration{
     text-decoration: underline;
@@ -364,6 +368,12 @@ select{
     color: transparent;
 }
 /*Animaciones*/
+/*Agrego esta class de Bootstrap que la saca el purgecss*/
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+  }
 @keyframes achicar{
     0%{transform: scale(1);}
     25%{transform: scale(0.95);}

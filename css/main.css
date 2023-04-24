@@ -3770,6 +3770,7 @@ textarea.form-control-lg {
 }
 
 .navbar-collapse {
+  height: 100%;
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
@@ -11070,6 +11071,13 @@ select {
   font-size: 2em;
 }
 
+.navegador__lista--row {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
 /*a-textdeco mejora el contraste con el background claro*/
 .a--textdecoration {
   text-decoration: underline;
@@ -11141,6 +11149,13 @@ select {
 }
 
 /*Animaciones*/
+/*Agrego esta class de Bootstrap que la saca el purgecss*/
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
 @keyframes achicar {
   0% {
     transform: scale(1);
@@ -12097,6 +12112,10 @@ figure img, figure aside section a img, aside section a figure img {
     flex-wrap: nowrap;
     font-weight: 700;
     font-size: 2em;
+  }
+  /*Aquí saco el height: 100% para que la animación trabaje bien*/
+  .navegador__lista--row {
+    height: auto;
   }
   .club__nav {
     top: 10rem;

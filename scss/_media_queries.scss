@@ -311,6 +311,10 @@
          font-weight: 700;
          font-size: map-get($fontSize, ocho);
      }
+     /*Aquí saco el height: 100% para que la animación trabaje bien*/
+     .navegador__lista--row{
+        height: auto;
+     }
      .club__nav{
          top: 10rem;   
          height: 100%;
