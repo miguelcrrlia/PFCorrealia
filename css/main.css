@@ -12043,14 +12043,14 @@ figure img, figure aside section a img, aside section a figure img {
 @media only screen and (orientation: portrait) and (max-width: 575.98px) {
   .grid {
     grid-template-columns: 100vw;
-    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: "nav" "head" "main" "aside" "footer";
   }
   .navegador {
     padding: 5px 0;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
+    grid-template-rows: auto;
     grid-template-areas: "log centrado";
     position: sticky;
     top: 0;
@@ -12139,6 +12139,18 @@ figure img, figure aside section a img, aside section a figure img {
   /*Aquí saco el height: 100% para que la animación trabaje bien*/
   .navegador__lista--row {
     height: auto;
+  }
+  .pages-mobile__grid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "nav" "head" "main" "footer";
+  }
+  .club-mobile__grid {
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
   }
   .club__nav {
     top: 10rem;
@@ -12354,14 +12366,14 @@ figure img, figure aside section a img, aside section a figure img {
 @media only screen and (orientation: landscape) and (max-width: 575.98px) {
   .grid {
     grid-template-columns: 100vw;
-    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: "nav" "head" "main" "aside" "footer";
   }
   .navegador {
     padding: 5px 0;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
+    grid-template-rows: auto;
     grid-template-areas: "log centrado";
     position: sticky;
     top: 0;
@@ -12450,6 +12462,18 @@ figure img, figure aside section a img, aside section a figure img {
   /*Aquí saco el height: 100% para que la animación trabaje bien*/
   .navegador__lista--row {
     height: auto;
+  }
+  .pages-mobile__grid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "nav" "head" "main" "footer";
+  }
+  .club-mobile__grid {
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
   }
   .club__nav {
     top: 10rem;
