@@ -11682,7 +11682,7 @@ figure img, figure aside section a img, aside section a figure img {
 /*Para que el carrito pueda entrar en el botón de "añadir al carrito"*/
 .figure__button {
   width: 8rem;
-  margin: 5px 0;
+  margin: 4% 0;
   border-style: none;
   padding-left: 0.2rem;
   padding-right: 1.563rem;
@@ -12161,6 +12161,10 @@ figure img, figure aside section a img, aside section a figure img {
     grid-template-columns: 100vw;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
+    /*Elijo position: static ya que el accordion está sticky y el navegador está en un grid con row auto*/
+  }
+  .club-mobile__grid .navegador {
+    position: static;
   }
   .club__nav {
     top: 10rem;
@@ -12172,7 +12176,10 @@ figure img, figure aside section a img, aside section a figure img {
     justify-content: center;
   }
   .navegador__accordion {
-    top: 10rem;
+    top: 0;
+  }
+  .club__a-position {
+    margin-top: -12.5rem;
   }
 }
 @media only screen and (orientation: landscape) and (max-width: 992px) {
@@ -12389,6 +12396,13 @@ figure img, figure aside section a img, aside section a figure img {
     height: 90vh;
     width: auto;
   }
+  .navegador__accordion {
+    position: sticky;
+    top: 0;
+  }
+  .club__a-position {
+    margin-top: -12.5rem;
+  }
 }
 @media only screen and (orientation: landscape) and (max-width: 575.98px) {
   .grid {
@@ -12509,6 +12523,10 @@ figure img, figure aside section a img, aside section a figure img {
     grid-template-columns: 100vw;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
+    /*Elijo position: static ya que el accordion está sticky y el navegador está en un grid con row auto*/
+  }
+  .club-mobile__grid .navegador {
+    position: static;
   }
   .club__nav {
     top: 10rem;
@@ -12520,7 +12538,10 @@ figure img, figure aside section a img, aside section a figure img {
     justify-content: center;
   }
   .navegador__accordion {
-    top: 10rem;
+    top: 0;
+  }
+  .club__a-position {
+    margin-top: -12.5rem;
   }
   .navegador {
     position: static;

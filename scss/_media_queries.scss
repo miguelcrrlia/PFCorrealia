@@ -30,6 +30,13 @@
             }
             }
         }
+        .navegador__accordion{
+            position: sticky;
+            top: 0;
+        }
+        .club__a-position{
+            margin-top: -12.5rem;
+        }
     } 
     @media only screen and (max-width: 575.98px){
         @include mobile();

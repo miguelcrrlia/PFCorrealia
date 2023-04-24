@@ -371,6 +371,10 @@
             "mainnav"
             "seccion"
             "footer";
+            /*Elijo position: static ya que el accordion está sticky y el navegador está en un grid con row auto*/
+            .navegador{
+                position: static;
+            }
         }
         .club__nav{
             top: 10rem;   
@@ -382,6 +386,9 @@
             justify-content: center;
         }
         .navegador__accordion{
-            top: 10rem;
+            top: 0;
+        }
+        .club__a-position{
+            margin-top: -12.5rem;
         }
 }
