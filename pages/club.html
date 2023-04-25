@@ -14,6 +14,39 @@
     <link href="../css/main.css" rel="stylesheet">
 </head>
 <body class="club__grid club-mobile__grid">
+    <!--Los modals para las imágenes de los <a>-->
+    <div class="modal fade" id="anciano_jugando_ajedrez" tabindex="-1" aria-hidden="true">
+        <div class="modal-xl modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="carousel-inner">
+                    <div class="d-flex justify-content-center carousel-item active">
+                        <img src="../img/anciano_jugando_ajedrez.webp" class="img-fluid" alt="Anciano jugando ajedrez">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>  
+    <div class="modal fade" id="jugador_de_ajedrez_tendido_en_la_mesa" tabindex="-1" aria-hidden="true">
+        <div class="modal-xl modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="carousel-inner">
+                    <div class="d-flex justify-content-center carousel-item active">
+                        <img src="../img/jugador_de_ajedrez_tendido_en_la_mesa.webp" class="img-fluid" alt="Jugador de ajedrez tendido en la mesa">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>  
     <!-- Nav con logo y links. Nav de Bootstrap -->
     <a id="menu" class="club__a-position"></a>
     <nav class="navbar navbar-expand-sm navegador">
@@ -223,14 +256,14 @@
                         Allá por el año 1995, a <em>Mario Roque Rey Gamboa</em> y <em>Alberto Torres Caballero</em>,
                         les nace la inquietud de formar un club de ajedrez producto del cruce de ciertas adversidades.
                         En 1994 fallece 
-                        <a class="a--textdecoration" href="../img/anciano_jugando_ajedrez.webp" title="foto de nestor">
+                        <a class="a--textdecoration" href="../img/anciano_jugando_ajedrez.webp" title="foto de nestor" data-bs-toggle="modal" data-bs-target="#anciano_jugando_ajedrez">
                             <em>Nestor Lorenzo Trebejos Escaques</em>
                         </a>, 
                         mentor ajedrecistico de <i>Mario</i> y <i>Alberto</i>,
                         dejando en ellos sin lugar a duda un gran vacio. Luego, un tiempo después, se suma la expulsión de 
                         <i>Mario</i> de un torneo por parte de un club del centro capitalino, a causa de quedarse dormido 
                         durante la partida en reiteradas ocaciones, molestando con sus ronquidos a los demás participantes
-                        <a href="../img/jugador_de_ajedrez_tendido_en_la_mesa.webp" title="jugador tendido en la mesa">
+                        <a href="../img/jugador_de_ajedrez_tendido_en_la_mesa.webp" title="jugador tendido en la mesa" data-bs-toggle="modal" data-bs-target="#jugador_de_ajedrez_tendido_en_la_mesa">
                             <sup class="a--textdecoration">ref</sup>
                         </a>. 
                         Y aunque Mario haya alegado que el viaje al club era largo, lo cual le generaba un gran cansancio, 

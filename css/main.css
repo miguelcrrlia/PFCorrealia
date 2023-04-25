@@ -11879,6 +11879,10 @@ figure img, figure aside section a img, aside section a figure img {
   justify-content: flex-end;
 }
 
+.hamburger-error__grid {
+  grid-area: drop;
+}
+
 .navegador-error__lista {
   padding-left: 2%;
   display: flex;
@@ -11888,10 +11892,6 @@ figure img, figure aside section a img, aside section a figure img {
   align-items: flex-start;
   font-weight: 700;
   font-size: 2em;
-}
-
-.hamburger-error__grid {
-  grid-area: drop;
 }
 
 /*Imágen para aviso de página error 404*/
@@ -11917,6 +11917,7 @@ figure img, figure aside section a img, aside section a figure img {
   margin-bottom: 1.5%;
   height: 50vh;
 }
+
 @media only screen and (orientation: portrait) {
   /*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
 }
