@@ -10,13 +10,51 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <main class="construction d-flex flex-column justify-content-between">
-        <div>
-            <h1 class="lh-lg">ERROR 404</h1>
-            <h2 class="lh-1">Lo sentimos, la página que estás buscando pudo ser removida o estar temporalmente inhabilitada.</h2>
+    <nav class="navbar navegador-error">
+        <div class="navegador-error__logo">
+            <!--Logo-->
+            <a href="../index.html" title="Inicio">
+                <img src="../img/logosnnmbr.svg" alt="logo">
+            </a>
         </div>
-        <img class="mx-auto d-block" src="../img/construccion.svg" alt="piezas de ajedrez trabajando">
-        <a class="button--format a--format mx-auto d-block text-center" href="../index.html" title="Inicio">Inicio</a>
+        <div class="navegador-error__menu">
+            <!-- Botón hamburguesa de Bootstrap -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon" alt="Botón hamburguesa">
+            </button>
+        </div>
+        <div class="hamburger-error__grid">
+            <div class= "collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navegador__lista--row">
+                    <!-- Lista para navegar dentro del sitio-->
+                    <ul class="navegador-error__lista">
+                        <li class="nav-item">
+                            <a href="club.html" title="Club">Club</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="tienda.html" title="Tienda">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacto.html" title="Contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="error__main">
+        <div class="error__ad">
+            <h1>ERROR 404</h1>
+            <h2>Lo sentimos, la página que estás buscando pudo ser removida o estar temporalmente inhabilitada.</h2>
+        </div>
+        <div class="error__image">
+            <img src="../img/construccion.svg" alt="piezas de ajedrez trabajando">
+            <a class="button--format a--format mx-auto d-block text-center" href="../index.html" title="Inicio">Inicio</a>
+        </div>
     </main>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

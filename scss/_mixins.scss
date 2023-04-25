@@ -232,6 +232,9 @@
     .nav__item{
         display: none;
     }
+    /*Clases de la página de error 404*/
+
+
 }
 @mixin mobile{
     .grid{
@@ -281,7 +284,6 @@
         }
         .navegador__menu{
             grid-area: centrado;
-            height: 100%;
             display: flex;
             flex-wrap: nowrap;
             justify-content: flex-end;
@@ -394,5 +396,11 @@
         }
         .club__a-position{
             margin-top: -12.5rem;
+        }
+        .error__main{
+            height: 79vh;
+        }
+        .error__image{
+            height: 46vh;
         }
 }
