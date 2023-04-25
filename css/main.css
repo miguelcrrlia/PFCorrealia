@@ -12268,6 +12268,14 @@ figure img, figure aside section a img, aside section a figure img {
   .error__image {
     height: 46vh;
   }
+  /*Agrega el ítem Menú del accordion*/
+  .nav__item {
+    display: block;
+  }
+  /*Queda static porque el heigth de la nav es auto*/
+  .tienda__buscar--flex {
+    position: static;
+  }
 }
 @media only screen and (orientation: landscape) and (max-width: 992px) {
   .grid {
@@ -12498,6 +12506,9 @@ figure img, figure aside section a img, aside section a figure img {
   /*Agrega el ítem Menú del accordion*/
   .nav__item {
     display: block;
+  }
+  .tienda__buscar--flex {
+    top: 0;
   }
 }
 @media only screen and (orientation: landscape) and (max-width: 575.98px) {
