@@ -5,14 +5,6 @@
     /*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
     @media only screen and (max-width: 575.98px){
         @include mobile();
-        /*Agrega el ítem Menú del accordion*/
-        .nav__item{
-            display: block;
-            }
-        /*Queda static porque el heigth de la nav es auto*/
-        .tienda__buscar--flex{
-            position: static;
-        }
      }
 }
 @media only screen and (orientation: landscape){

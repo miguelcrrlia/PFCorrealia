@@ -233,7 +233,12 @@
         display: none;
     }
     /*Clases de la página de error 404*/
-
+    .error__image{
+        margin-top: 7.5%;
+        img{
+            height: 60vh;
+        }
+    }
 
 }
 @mixin mobile{
@@ -397,10 +402,18 @@
         .club__a-position{
             margin-top: -12.5rem;
         }
-        .error__main{
-            height: 79vh;
+        /*Agrega el ítem Menú del accordion*/
+        .nav__item{
+            display: block;
+            }
+        /*Queda static porque el heigth de la nav es auto*/
+        .tienda__buscar--flex{
+            position: static;
         }
         .error__image{
-            height: 46vh;
+            img{
+                height: 35vh;
+                margin-bottom: 5.5%;
+            }
         }
 }
