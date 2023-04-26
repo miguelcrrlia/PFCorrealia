@@ -84,22 +84,28 @@
         & form{
             height: auto;
             width: 80%;
+            margin: 10px 0;
+            padding-bottom: 2%;
+            label{
+                padding-bottom: 1%;
+            }
         }
         & section{
             height: auto;
         }
         & nav{
             height: auto;
-            width: 80%;
-            margin: 20px;
-            padding: 20px 5px 0 5px;
+            width: 60%;
+            margin: 10px;
              & ul li a svg{
+                height: auto;
                 width: 2rem;
             }
         }
         & iframe{
             width: 80%;
             height: 300px;
+            margin: 10px;
         }
     }
     .encabezado__img{
@@ -110,7 +116,6 @@
         display: none;
     }
     .accordion{
-        background-image: url(img/bck.svg);
         background-color: map-get($colors, ocho);
     }
     /* z-index para que esté por encima del form del footer */
@@ -125,7 +130,6 @@
     }
     .accordion__club__nav{   
         height: 100%;
-        background-image: url(img/bck.svg);
         background-color: map-get($colors, ocho);
         font-weight: 700;
         font-size: map-get($fontSize, seis);
@@ -294,7 +298,6 @@
             justify-content: flex-end;
         }
         nav div ul{
-            background-image: url(img/bck.svg);
             background-color: map-get($colors, ocho);
             font-size: map-get($fontSize, ocho);
         }
@@ -325,6 +328,7 @@
            & form{
                height: auto;
                width: 100%;
+               margin: 10px 0;
            }
            & section{
                height: auto;
@@ -332,11 +336,11 @@
            & nav{
                height: auto;
                width: 80%;
-               padding: 15px 5px 0 5px;
            }
            & iframe{
                width: 80%;
                height: 300px;
+               margin: 10px 0;
            }
         }
         .navegador__logo a{
@@ -390,7 +394,6 @@
         .club__nav{
             top: 10rem;   
             height: 100%;
-            background-image: url(img/bck.svg);
             background-color: map-get($colors, ocho);
             font-weight: 700;
             font-size: map-get($fontSize, seis);

@@ -42,7 +42,7 @@
         display: block;
         }
         .tienda__buscar--flex{
-            top: 0;
+            top: 5px;
         }
     } 
     @media only screen and (max-width: 575.98px){
@@ -70,5 +70,9 @@
     }
     .navegador-error{
         position: static;
+    }
+    .tienda__buscar--flex{
+        position: sticky;
+        top: 5px;
     }
 }

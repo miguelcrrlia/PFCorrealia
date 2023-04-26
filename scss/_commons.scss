@@ -66,7 +66,6 @@
 }
 /*line-height para sacar el que aplica bootstrap*/
 body{
-    background-image: url(img/bck.svg);
     background-attachment: fixed;
     color: map-get($colors, uno);
     background-color: map-get($colors, ocho);
@@ -86,7 +85,6 @@ nav{
     height: 100%;
     padding: 5px 0 5px 5px;
     border-bottom: solid 25px map-get($colors, uno);
-    background-image: url(img/bck.svg);
     background-color: map-get($colors, ocho);
     a{
         display: flex;
@@ -378,6 +376,10 @@ select{
 .schedules__hours--sticky{
     position: sticky;
     left: 0;
+}
+.borde__bajo{
+    border-bottom: solid 3.1px map-get($colors, uno);
+    margin-bottom: 40px;
 }
 /*Animaciones*/
 /*Agrego esta class de Bootstrap que la saca el purgecss*/

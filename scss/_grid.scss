@@ -106,4 +106,61 @@
     "main"
     "footer";
 }
+/*Grids de la página 404*/
+.error__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "nav-err"
+    "main-err";
+}
+.navegador-error{
+    padding: 5px 0;
+    grid-area: nav-err;
+    display: grid;
+    grid-template-columns: 35% 50%;
+    grid-template-rows: 7.8rem auto;
+    grid-template-areas: 
+    "log centrado"
+    "drop drop";
+    position: sticky;
+    top: 0;
+    animation-name: reflejo;
+    animation-delay: 0.17s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}   
+.navegador-error__logo{
+    height: 100%;
+    padding-left: 5px;
+    grid-area: log;
+        a{
+            
+            img{
+                width: auto;
+                transition: all 0.1s;
+                &:hover{
+                    transform: scale(1.07);
+                }
+           }
+        }
+}
+.navegador-error__menu{
+    margin-right: 2%;
+    grid-area: centrado;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+.hamburger-error__grid{
+    grid-area: drop;
+}
+.error__main{
+    grid-area: main-err;
+    margin: 0;
+    @include flex(column, nowrap, space-between, normal);
+}
 

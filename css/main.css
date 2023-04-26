@@ -10784,7 +10784,6 @@ textarea.form-control-lg {
 
 /*line-height para sacar el que aplica bootstrap*/
 body {
-  background-image: url(img/bck.svg);
   background-attachment: fixed;
   color: rgb(62, 64, 149);
   background-color: white;
@@ -10806,7 +10805,6 @@ nav {
   height: 100%;
   padding: 5px 0 5px 5px;
   border-bottom: solid 25px rgb(62, 64, 149);
-  background-image: url(img/bck.svg);
   background-color: white;
 }
 nav a {
@@ -11167,6 +11165,11 @@ select {
 .schedules__hours--sticky {
   position: sticky;
   left: 0;
+}
+
+.borde__bajo {
+  border-bottom: solid 3.1px rgb(62, 64, 149);
+  margin-bottom: 40px;
 }
 
 /*Animaciones*/
@@ -11603,6 +11606,66 @@ select {
   grid-template-areas: "nav" "head" "main" "footer";
 }
 
+/*Grids de la página 404*/
+.error__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "nav-err" "main-err";
+}
+
+.navegador-error {
+  padding: 5px 0;
+  grid-area: nav-err;
+  display: grid;
+  grid-template-columns: 35% 50%;
+  grid-template-rows: 7.8rem auto;
+  grid-template-areas: "log centrado" "drop drop";
+  position: sticky;
+  top: 0;
+  animation-name: reflejo;
+  animation-delay: 0.17s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+.navegador-error__logo {
+  height: 100%;
+  padding-left: 5px;
+  grid-area: log;
+}
+.navegador-error__logo a img {
+  width: auto;
+  transition: all 0.1s;
+}
+.navegador-error__logo a img:hover {
+  transform: scale(1.07);
+}
+
+.navegador-error__menu {
+  margin-right: 2%;
+  grid-area: centrado;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.hamburger-error__grid {
+  grid-area: drop;
+}
+
+.error__main {
+  grid-area: main-err;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: normal;
+}
+
 figure {
   height: 100%;
   margin: 3px 0;
@@ -11835,54 +11898,6 @@ figure img, figure aside section a img, aside section a figure img {
 }
 
 /*Clases para la página error 404*/
-.error__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: "nav-err" "main-err";
-}
-
-.navegador-error {
-  padding: 5px 0;
-  grid-area: nav-err;
-  display: grid;
-  grid-template-columns: 35% 50%;
-  grid-template-rows: 7.8rem auto;
-  grid-template-areas: "log centrado" "drop drop";
-  position: sticky;
-  top: 0;
-  animation-name: reflejo;
-  animation-delay: 0.17s;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  animation-duration: 0.6s;
-  animation-timing-function: ease-in-out;
-}
-
-.navegador-error__logo {
-  height: 100%;
-  padding-left: 5px;
-}
-.navegador-error__logo a img {
-  width: auto;
-  transition: all 0.1s;
-}
-.navegador-error__logo a img:hover {
-  transform: scale(1.07);
-}
-
-.navegador-error__menu {
-  margin-right: 2%;
-  grid-area: centrado;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-}
-
-.hamburger-error__grid {
-  grid-area: drop;
-}
-
 .navegador-error__lista {
   padding-left: 2%;
   display: flex;
@@ -11895,16 +11910,6 @@ figure img, figure aside section a img, aside section a figure img {
 }
 
 /*Imágen para aviso de página error 404*/
-.error__main {
-  grid-area: main-err;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: normal;
-}
-
 .error__image {
   margin-top: 1.5%;
   display: flex;
@@ -11979,22 +11984,28 @@ figure img, figure aside section a img, aside section a figure img {
   footer form {
     height: auto;
     width: 80%;
+    margin: 10px 0;
+    padding-bottom: 2%;
+  }
+  footer form label {
+    padding-bottom: 1%;
   }
   footer section {
     height: auto;
   }
   footer nav {
     height: auto;
-    width: 80%;
-    margin: 20px;
-    padding: 20px 5px 0 5px;
+    width: 60%;
+    margin: 10px;
   }
   footer nav ul li a svg {
+    height: auto;
     width: 2rem;
   }
   footer iframe {
     width: 80%;
     height: 300px;
+    margin: 10px;
   }
   .encabezado__img {
     object-fit: contain;
@@ -12004,7 +12015,6 @@ figure img, figure aside section a img, aside section a figure img {
     display: none;
   }
   .accordion {
-    background-image: url(img/bck.svg);
     background-color: white;
   }
   /* z-index para que esté por encima del form del footer */
@@ -12019,7 +12029,6 @@ figure img, figure aside section a img, aside section a figure img {
   }
   .accordion__club__nav {
     height: 100%;
-    background-image: url(img/bck.svg);
     background-color: white;
     font-weight: 700;
     font-size: 1.5em;
@@ -12175,7 +12184,6 @@ figure img, figure aside section a img, aside section a figure img {
     justify-content: flex-end;
   }
   nav div ul {
-    background-image: url(img/bck.svg);
     background-color: white;
     font-size: 2em;
   }
@@ -12199,6 +12207,7 @@ figure img, figure aside section a img, aside section a figure img {
   footer form {
     height: auto;
     width: 100%;
+    margin: 10px 0;
   }
   footer section {
     height: auto;
@@ -12206,11 +12215,11 @@ figure img, figure aside section a img, aside section a figure img {
   footer nav {
     height: auto;
     width: 80%;
-    padding: 15px 5px 0 5px;
   }
   footer iframe {
     width: 80%;
     height: 300px;
+    margin: 10px 0;
   }
   .navegador__logo a {
     content: url(../img/logosnnmbr.svg);
@@ -12258,7 +12267,6 @@ figure img, figure aside section a img, aside section a figure img {
   .club__nav {
     top: 10rem;
     height: 100%;
-    background-image: url(img/bck.svg);
     background-color: white;
     font-weight: 700;
     font-size: 1.5em;
@@ -12341,22 +12349,28 @@ figure img, figure aside section a img, aside section a figure img {
   footer form {
     height: auto;
     width: 80%;
+    margin: 10px 0;
+    padding-bottom: 2%;
+  }
+  footer form label {
+    padding-bottom: 1%;
   }
   footer section {
     height: auto;
   }
   footer nav {
     height: auto;
-    width: 80%;
-    margin: 20px;
-    padding: 20px 5px 0 5px;
+    width: 60%;
+    margin: 10px;
   }
   footer nav ul li a svg {
+    height: auto;
     width: 2rem;
   }
   footer iframe {
     width: 80%;
     height: 300px;
+    margin: 10px;
   }
   .encabezado__img {
     object-fit: contain;
@@ -12366,7 +12380,6 @@ figure img, figure aside section a img, aside section a figure img {
     display: none;
   }
   .accordion {
-    background-image: url(img/bck.svg);
     background-color: white;
   }
   /* z-index para que esté por encima del form del footer */
@@ -12381,7 +12394,6 @@ figure img, figure aside section a img, aside section a figure img {
   }
   .accordion__club__nav {
     height: 100%;
-    background-image: url(img/bck.svg);
     background-color: white;
     font-weight: 700;
     font-size: 1.5em;
@@ -12520,7 +12532,7 @@ figure img, figure aside section a img, aside section a figure img {
     display: block;
   }
   .tienda__buscar--flex {
-    top: 0;
+    top: 5px;
   }
 }
 @media only screen and (orientation: landscape) and (max-width: 575.98px) {
@@ -12569,7 +12581,6 @@ figure img, figure aside section a img, aside section a figure img {
     justify-content: flex-end;
   }
   nav div ul {
-    background-image: url(img/bck.svg);
     background-color: white;
     font-size: 2em;
   }
@@ -12593,6 +12604,7 @@ figure img, figure aside section a img, aside section a figure img {
   footer form {
     height: auto;
     width: 100%;
+    margin: 10px 0;
   }
   footer section {
     height: auto;
@@ -12600,11 +12612,11 @@ figure img, figure aside section a img, aside section a figure img {
   footer nav {
     height: auto;
     width: 80%;
-    padding: 15px 5px 0 5px;
   }
   footer iframe {
     width: 80%;
     height: 300px;
+    margin: 10px 0;
   }
   .navegador__logo a {
     content: url(../img/logosnnmbr.svg);
@@ -12652,7 +12664,6 @@ figure img, figure aside section a img, aside section a figure img {
   .club__nav {
     top: 10rem;
     height: 100%;
-    background-image: url(img/bck.svg);
     background-color: white;
     font-weight: 700;
     font-size: 1.5em;
@@ -12694,6 +12705,10 @@ figure img, figure aside section a img, aside section a figure img {
   }
   .navegador-error {
     position: static;
+  }
+  .tienda__buscar--flex {
+    position: sticky;
+    top: 5px;
   }
 }
 
