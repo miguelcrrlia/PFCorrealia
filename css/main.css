@@ -304,7 +304,6 @@ svg {
 
 table {
   caption-side: bottom;
-  border-collapse: collapse;
 }
 
 caption {
@@ -10984,10 +10983,12 @@ table {
   background-color: rgb(255, 255, 245);
 }
 
+/*Uso background-clip: padding-box en especial porque en Firefox el borde quedaba detrás del background-color*/
 th {
   border: 2px solid;
   padding: 10px;
   background-color: rgb(245, 245, 255);
+  background-clip: padding-box;
 }
 
 td {
@@ -12027,6 +12028,14 @@ figure img, figure aside section a img, aside section a figure img {
     margin: 0;
     padding: 0;
   }
+  .accordion--border {
+    border-color: rgb(62, 64, 149);
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1.5px;
+    border-left: 0;
+    border-style: solid;
+  }
   .accordion__club__nav {
     height: 100%;
     background-color: white;
@@ -12040,7 +12049,6 @@ figure img, figure aside section a img, aside section a figure img {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    border: 1px solid rgb(62, 64, 149);
     padding: 10px;
   }
   /* Uso margin-top: -22.5rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
@@ -12221,6 +12229,9 @@ figure img, figure aside section a img, aside section a figure img {
     height: 300px;
     margin: 10px 0;
   }
+  .navegador__logo {
+    margin-left: 5px;
+  }
   .navegador__logo a {
     content: url(../img/logosnnmbr.svg);
   }
@@ -12244,9 +12255,16 @@ figure img, figure aside section a img, aside section a figure img {
     font-weight: 700;
     font-size: 2em;
   }
-  /*Aquí saco el height: 100% para que la animación trabaje bien*/
+  /*Aquí saco el height: 100% para que la animación trabaje bien. 
+  Además uso !important ya que no pude encontrar que hace que el borde no aparezca*/
   .navegador__lista--row {
     height: auto;
+    margin-top: 5px;
+    border-style: dashed !important;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 1.5px;
+    border-bottom: 0;
   }
   .pages-mobile__grid {
     display: grid;
@@ -12392,6 +12410,14 @@ figure img, figure aside section a img, aside section a figure img {
     margin: 0;
     padding: 0;
   }
+  .accordion--border {
+    border-color: rgb(62, 64, 149);
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1.5px;
+    border-left: 0;
+    border-style: solid;
+  }
   .accordion__club__nav {
     height: 100%;
     background-color: white;
@@ -12405,7 +12431,6 @@ figure img, figure aside section a img, aside section a figure img {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    border: 1px solid rgb(62, 64, 149);
     padding: 10px;
   }
   /* Uso margin-top: -22.5rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
@@ -12618,6 +12643,9 @@ figure img, figure aside section a img, aside section a figure img {
     height: 300px;
     margin: 10px 0;
   }
+  .navegador__logo {
+    margin-left: 5px;
+  }
   .navegador__logo a {
     content: url(../img/logosnnmbr.svg);
   }
@@ -12641,9 +12669,16 @@ figure img, figure aside section a img, aside section a figure img {
     font-weight: 700;
     font-size: 2em;
   }
-  /*Aquí saco el height: 100% para que la animación trabaje bien*/
+  /*Aquí saco el height: 100% para que la animación trabaje bien. 
+  Además uso !important ya que no pude encontrar que hace que el borde no aparezca*/
   .navegador__lista--row {
     height: auto;
+    margin-top: 5px;
+    border-style: dashed !important;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 1.5px;
+    border-bottom: 0;
   }
   .pages-mobile__grid {
     display: grid;

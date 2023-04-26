@@ -225,11 +225,12 @@ table{
     text-align: center;
     background-color: map-get($colors, tres);
 } 
-
+/*Uso background-clip: padding-box en especial porque en Firefox el borde quedaba detrás del background-color*/
 th{
     border: 2px solid;
     padding: 10px;
     background-color: map-get($colors, cinco);
+    background-clip: padding-box;
 }
 
 td{
