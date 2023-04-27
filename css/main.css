@@ -11500,6 +11500,311 @@ select {
     border-image: linear-gradient(90deg, rgb(62, 64, 149) 100.03003003%, rgb(255, 255, 255) 110.03003003%, rgb(252, 242, 18) 120.03003003%, rgb(62, 64, 149) 100%) 100% 0 100% 0/0 0 25px 0 stretch;
   }
 }
+@keyframes beacon {
+  1% {
+    fill: white;
+  }
+  2% {
+    fill: white;
+  }
+  3% {
+    fill: white;
+  }
+  4% {
+    fill: white;
+  }
+  5% {
+    fill: white;
+  }
+  6% {
+    fill: white;
+  }
+  7% {
+    fill: white;
+  }
+  8% {
+    fill: white;
+  }
+  9% {
+    fill: white;
+  }
+  10% {
+    fill: white;
+  }
+  11% {
+    fill: white;
+  }
+  12% {
+    fill: white;
+  }
+  13% {
+    fill: white;
+  }
+  14% {
+    fill: white;
+  }
+  15% {
+    fill: white;
+  }
+  16% {
+    fill: white;
+  }
+  17% {
+    fill: white;
+  }
+  18% {
+    fill: white;
+  }
+  19% {
+    fill: white;
+  }
+  20% {
+    fill: white;
+  }
+  21% {
+    fill: white;
+  }
+  22% {
+    fill: white;
+  }
+  23% {
+    fill: white;
+  }
+  24% {
+    fill: white;
+  }
+  25% {
+    fill: white;
+  }
+  26% {
+    fill: white;
+  }
+  27% {
+    fill: white;
+  }
+  28% {
+    fill: white;
+  }
+  29% {
+    fill: white;
+  }
+  30% {
+    fill: white;
+  }
+  31% {
+    fill: white;
+  }
+  32% {
+    fill: white;
+  }
+  33% {
+    fill: white;
+  }
+  34% {
+    fill: white;
+  }
+  35% {
+    fill: white;
+  }
+  36% {
+    fill: white;
+  }
+  37% {
+    fill: white;
+  }
+  38% {
+    fill: white;
+  }
+  39% {
+    fill: white;
+  }
+  40% {
+    fill: white;
+  }
+  41% {
+    fill: white;
+  }
+  42% {
+    fill: white;
+  }
+  43% {
+    fill: white;
+  }
+  44% {
+    fill: white;
+  }
+  45% {
+    fill: white;
+  }
+  46% {
+    fill: white;
+  }
+  47% {
+    fill: white;
+  }
+  48% {
+    fill: white;
+  }
+  49% {
+    fill: white;
+  }
+  50% {
+    fill: white;
+  }
+  50% {
+    fill: rgb(255, 242, 18);
+  }
+  51% {
+    fill: rgb(255, 242, 18);
+  }
+  52% {
+    fill: rgb(255, 242, 18);
+  }
+  53% {
+    fill: rgb(255, 242, 18);
+  }
+  54% {
+    fill: rgb(255, 242, 18);
+  }
+  55% {
+    fill: rgb(255, 242, 18);
+  }
+  56% {
+    fill: rgb(255, 242, 18);
+  }
+  57% {
+    fill: rgb(255, 242, 18);
+  }
+  58% {
+    fill: rgb(255, 242, 18);
+  }
+  59% {
+    fill: rgb(255, 242, 18);
+  }
+  60% {
+    fill: rgb(255, 242, 18);
+  }
+  61% {
+    fill: rgb(255, 242, 18);
+  }
+  62% {
+    fill: rgb(255, 242, 18);
+  }
+  63% {
+    fill: rgb(255, 242, 18);
+  }
+  64% {
+    fill: rgb(255, 242, 18);
+  }
+  65% {
+    fill: rgb(255, 242, 18);
+  }
+  66% {
+    fill: rgb(255, 242, 18);
+  }
+  67% {
+    fill: rgb(255, 242, 18);
+  }
+  68% {
+    fill: rgb(255, 242, 18);
+  }
+  69% {
+    fill: rgb(255, 242, 18);
+  }
+  70% {
+    fill: rgb(255, 242, 18);
+  }
+  71% {
+    fill: rgb(255, 242, 18);
+  }
+  72% {
+    fill: rgb(255, 242, 18);
+  }
+  73% {
+    fill: rgb(255, 242, 18);
+  }
+  74% {
+    fill: rgb(255, 242, 18);
+  }
+  75% {
+    fill: rgb(255, 242, 18);
+  }
+  76% {
+    fill: rgb(255, 242, 18);
+  }
+  77% {
+    fill: rgb(255, 242, 18);
+  }
+  78% {
+    fill: rgb(255, 242, 18);
+  }
+  79% {
+    fill: rgb(255, 242, 18);
+  }
+  80% {
+    fill: rgb(255, 242, 18);
+  }
+  81% {
+    fill: rgb(255, 242, 18);
+  }
+  82% {
+    fill: rgb(255, 242, 18);
+  }
+  83% {
+    fill: rgb(255, 242, 18);
+  }
+  84% {
+    fill: rgb(255, 242, 18);
+  }
+  85% {
+    fill: rgb(255, 242, 18);
+  }
+  86% {
+    fill: rgb(255, 242, 18);
+  }
+  87% {
+    fill: rgb(255, 242, 18);
+  }
+  88% {
+    fill: rgb(255, 242, 18);
+  }
+  89% {
+    fill: rgb(255, 242, 18);
+  }
+  90% {
+    fill: rgb(255, 242, 18);
+  }
+  91% {
+    fill: rgb(255, 242, 18);
+  }
+  92% {
+    fill: rgb(255, 242, 18);
+  }
+  93% {
+    fill: rgb(255, 242, 18);
+  }
+  94% {
+    fill: rgb(255, 242, 18);
+  }
+  95% {
+    fill: rgb(255, 242, 18);
+  }
+  96% {
+    fill: rgb(255, 242, 18);
+  }
+  97% {
+    fill: rgb(255, 242, 18);
+  }
+  98% {
+    fill: rgb(255, 242, 18);
+  }
+  99% {
+    fill: rgb(255, 242, 18);
+  }
+  100% {
+    fill: rgb(255, 242, 18);
+  }
+}
 .grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -11917,11 +12222,221 @@ figure img, figure aside section a img, aside section a figure img {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: normal;
+  align-items: center;
 }
-.error__image img {
+.error__image svg {
   margin-bottom: 1.5%;
   height: 50vh;
+}
+
+/*Aqui pongo todos los estilos del archivo svg de la imagen de la página error 
+(me pareció pertinente ya que si cambia la paleta de colores del sitio esta imagen también debe sufrir cambios)*/
+.str16 {
+  stroke: #FEFEFE;
+  stroke-width: 10.51;
+  stroke-miterlimit: 22.9256;
+}
+
+.str18 {
+  stroke: #FEFEFE;
+  stroke-width: 10.51;
+  stroke-miterlimit: 22.9256;
+}
+
+.str17 {
+  stroke: #FEFEFE;
+  stroke-width: 10.51;
+  stroke-miterlimit: 22.9256;
+}
+
+.str22 {
+  stroke: #FEFEFE;
+  stroke-width: 52.56;
+  stroke-miterlimit: 22.9256;
+}
+
+.str21 {
+  stroke: #FEFEFE;
+  stroke-width: 52.56;
+  stroke-miterlimit: 22.9256;
+}
+
+.str15 {
+  stroke: #FEFEFE;
+  stroke-width: 19.86;
+  stroke-miterlimit: 22.9256;
+}
+
+.str19 {
+  stroke: rgb(62, 64, 149);
+  stroke-width: 19.86;
+  stroke-miterlimit: 22.9256;
+}
+
+.str0 {
+  stroke: #FEFEFE;
+  stroke-width: 52.56;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str20 {
+  stroke: rgb(62, 64, 149);
+  stroke-width: 10.51;
+  stroke-miterlimit: 22.9256;
+}
+
+.str2 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-miterlimit: 22.9256;
+}
+
+.str8 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str3 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str1 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str13 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str9 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str10 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str5 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str12 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str14 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str7 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str6 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str11 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str4 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.fil2 {
+  fill: none;
+}
+
+.fil6 {
+  fill: #FEFEFE;
+}
+
+.fil3 {
+  fill: rgb(255, 242, 18);
+}
+
+.fil5 {
+  fill: rgb(255, 242, 18);
+}
+
+.fil0 {
+  fill: rgb(62, 64, 149);
+}
+
+.fil4 {
+  fill: rgb(255, 242, 18);
+}
+
+.fil7 {
+  fill: #FEFEFE;
+  fill-rule: nonzero;
+}
+
+.fil1 {
+  fill: #FEFEFE;
+  fill-rule: nonzero;
+}
+
+.svg--animation {
+  animation-name: beacon;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 @media only screen and (orientation: portrait) {

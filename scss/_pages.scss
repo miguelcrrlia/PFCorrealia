@@ -204,9 +204,49 @@ figure img{
 /*Imágen para aviso de página error 404*/
 .error__image{
     margin-top: 1.5%;
-    @include flex(column, nowrap, space-between, normal);
-    img{
+    @include flex(column, nowrap, space-between, center);
+    svg{
         margin-bottom: 1.5%;
         height: 50vh;
     }
 }
+/*Aqui pongo todos los estilos del archivo svg de la imagen de la página error 
+(me pareció pertinente ya que si cambia la paleta de colores del sitio esta imagen también debe sufrir cambios)*/
+.str16 {stroke:#FEFEFE;stroke-width:10.51;stroke-miterlimit:22.9256}
+    .str18 {stroke:#FEFEFE;stroke-width:10.51;stroke-miterlimit:22.9256}
+    .str17 {stroke:#FEFEFE;stroke-width:10.51;stroke-miterlimit:22.9256}
+    .str22 {stroke:#FEFEFE;stroke-width:52.56;stroke-miterlimit:22.9256}
+    .str21 {stroke:#FEFEFE;stroke-width:52.56;stroke-miterlimit:22.9256}
+    .str15 {stroke:#FEFEFE;stroke-width:19.86;stroke-miterlimit:22.9256}
+    .str19 {stroke: map-get($colors, uno);stroke-width:19.86;stroke-miterlimit:22.9256}
+    .str0 {stroke:#FEFEFE;stroke-width:52.56;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str20 {stroke: map-get($colors, uno);stroke-width:10.51;stroke-miterlimit:22.9256}
+    .str2 {stroke:#FEFEFE;stroke-width:29.89;stroke-miterlimit:22.9256}
+    .str8 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str3 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str1 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str13 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str9 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str10 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str5 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str12 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str14 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str7 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str6 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str11 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str4 {stroke:#FEFEFE;stroke-width:29.89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .fil2 {fill:none}
+    .fil6 {fill:#FEFEFE}
+    .fil3 {fill: map-get($colors, dos)}
+    .fil5 {fill: map-get($colors, dos)}
+    .fil0 {fill: map-get($colors, uno)}
+    .fil4 {fill: map-get($colors, dos)}
+    .fil7 {fill:#FEFEFE;fill-rule:nonzero}
+    .fil1 {fill:#FEFEFE;fill-rule:nonzero}
+    .svg--animation{
+        animation-name: beacon;
+        animation-delay: 0;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
