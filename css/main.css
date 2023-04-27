@@ -12449,10 +12449,16 @@ figure img, figure aside section a img, aside section a figure img {
     grid-template-areas: "nav" "head" "main" "aside" "footer";
   }
   .navegador {
-    grid-template-columns: 35% 65%;
-    grid-template-rows: 100%;
+    grid-template-columns: 25% 55% 20%;
+    grid-template-rows: 25% 75%;
     grid-area: nav;
-    grid-template-areas: "log menu";
+  }
+  .navegador__logo {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
   .encabezado {
     grid-area: head;
@@ -12475,7 +12481,24 @@ figure img, figure aside section a img, aside section a figure img {
     padding-top: 2%;
   }
   .navegador__links {
+    height: 100%;
+    margin-top: 5px;
+    padding: 0;
+    display: flex;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: flex-end;
+  }
+  .navegador__links ul li {
     display: none;
+  }
+  /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
+  .navegador__links .cart {
+    height: 100%;
+    display: flex;
+    z-index: 2;
   }
   aside section {
     align-content: center;
@@ -12614,9 +12637,13 @@ figure img, figure aside section a img, aside section a figure img {
     width: 90%;
   }
   .hamburger__grid {
+    display: flex;
     height: 100%;
     width: 100%;
-    grid-area: menu;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
     font-weight: 700;
     font-size: 1em;
   }
@@ -12746,6 +12773,7 @@ figure img, figure aside section a img, aside section a figure img {
   }
   .navegador__logo {
     margin-left: 5px;
+    grid-area: log;
   }
   .navegador__logo a {
     content: url(../img/logosnnmbr.svg);
@@ -12831,10 +12859,16 @@ figure img, figure aside section a img, aside section a figure img {
     grid-template-areas: "nav" "head" "main" "aside" "footer";
   }
   .navegador {
-    grid-template-columns: 35% 65%;
-    grid-template-rows: 100%;
+    grid-template-columns: 25% 55% 20%;
+    grid-template-rows: 25% 75%;
     grid-area: nav;
-    grid-template-areas: "log menu";
+  }
+  .navegador__logo {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
   .encabezado {
     grid-area: head;
@@ -12857,7 +12891,24 @@ figure img, figure aside section a img, aside section a figure img {
     padding-top: 2%;
   }
   .navegador__links {
+    height: 100%;
+    margin-top: 5px;
+    padding: 0;
+    display: flex;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: flex-end;
+  }
+  .navegador__links ul li {
     display: none;
+  }
+  /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
+  .navegador__links .cart {
+    height: 100%;
+    display: flex;
+    z-index: 2;
   }
   aside section {
     align-content: center;
@@ -12996,9 +13047,13 @@ figure img, figure aside section a img, aside section a figure img {
     width: 90%;
   }
   .hamburger__grid {
+    display: flex;
     height: 100%;
     width: 100%;
-    grid-area: menu;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
     font-weight: 700;
     font-size: 1em;
   }
@@ -13160,6 +13215,7 @@ figure img, figure aside section a img, aside section a figure img {
   }
   .navegador__logo {
     margin-left: 5px;
+    grid-area: log;
   }
   .navegador__logo a {
     content: url(../img/logosnnmbr.svg);
