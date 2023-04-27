@@ -462,4 +462,34 @@
                 margin-bottom: 5.5%;
             }
         }
+        .lista__buscar{
+            width: 100%;
+            @include flex (row, nowrap, space-between, normal);
+            form{
+                display: flex;
+                align-items: center;
+            }
+            a{
+                width: auto;
+                margin-right: 10px;
+                svg{
+                    width: 1em;
+                    fill: map-get($colors, uno);
+                }
+            }
+        }
+        .tienda__buscar--flex{
+            display: none;
+        }
+        .buscar__input{
+            height: 1.4em;
+            width: 65%;
+            padding-right: 47px;
+        }
+        .buscar__button{
+            width: 2rem;
+            left: auto;
+            right: 37%;
+            top: 9.5px;
+        }
 }

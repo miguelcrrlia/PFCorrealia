@@ -12019,6 +12019,10 @@ figure img, figure aside section a img, aside section a figure img {
   position: relative;
 }
 
+.lista__buscar {
+  display: none;
+}
+
 /*Para que no quede atrás de la lupa el texto que se ingresa en el <input> "buscar"*/
 .buscar__input {
   width: 10rem;
@@ -12851,6 +12855,40 @@ figure img, figure aside section a img, aside section a figure img {
     height: 35vh;
     margin-bottom: 5.5%;
   }
+  .lista__buscar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: normal;
+  }
+  .lista__buscar form {
+    display: flex;
+    align-items: center;
+  }
+  .lista__buscar a {
+    width: auto;
+    margin-right: 10px;
+  }
+  .lista__buscar a svg {
+    width: 1em;
+    fill: rgb(62, 64, 149);
+  }
+  .tienda__buscar--flex {
+    display: none;
+  }
+  .buscar__input {
+    height: 1.4em;
+    width: 65%;
+    padding-right: 47px;
+  }
+  .buscar__button {
+    width: 2rem;
+    left: auto;
+    right: 37%;
+    top: 9.5px;
+  }
 }
 @media only screen and (orientation: landscape) and (max-width: 992px) {
   .grid {
@@ -13292,6 +13330,40 @@ figure img, figure aside section a img, aside section a figure img {
   .error__image img {
     height: 35vh;
     margin-bottom: 5.5%;
+  }
+  .lista__buscar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: normal;
+  }
+  .lista__buscar form {
+    display: flex;
+    align-items: center;
+  }
+  .lista__buscar a {
+    width: auto;
+    margin-right: 10px;
+  }
+  .lista__buscar a svg {
+    width: 1em;
+    fill: rgb(62, 64, 149);
+  }
+  .tienda__buscar--flex {
+    display: none;
+  }
+  .buscar__input {
+    height: 1.4em;
+    width: 65%;
+    padding-right: 47px;
+  }
+  .buscar__button {
+    width: 2rem;
+    left: auto;
+    right: 37%;
+    top: 9.5px;
   }
   .navegador {
     position: static;

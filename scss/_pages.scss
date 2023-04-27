@@ -38,6 +38,9 @@ figure img{
         position: relative;
     }
 }
+.lista__buscar{
+    display: none;
+}
 /*Para que no quede atrás de la lupa el texto que se ingresa en el <input> "buscar"*/
 .buscar__input{
     width: 10rem;
