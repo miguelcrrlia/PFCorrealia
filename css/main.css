@@ -10747,6 +10747,7 @@ textarea.form-control-lg {
 
 ::-webkit-scrollbar-button {
   background-color: rgb(255, 255, 245);
+  /*Quita el double-button*/
 }
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
   background-image: url(img/arrowup.svg);
@@ -10780,8 +10781,10 @@ textarea.form-control-lg {
   background-image: url(img/arrowrgthy.svg);
   background-size: 100%;
 }
+::-webkit-scrollbar-button:vertical:start:increment, ::-webkit-scrollbar-button:vertical:end:decrement, ::-webkit-scrollbar-button:horizontal:start:increment, ::-webkit-scrollbar-button:horizontal:end:decrement {
+  display: none;
+}
 
-/*line-height para sacar el que aplica bootstrap*/
 body {
   background-attachment: fixed;
   color: rgb(62, 64, 149);
@@ -11652,157 +11655,157 @@ select {
     fill: white;
   }
   50% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   51% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   52% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   53% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   54% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   55% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   56% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   57% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   58% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   59% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   60% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   61% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   62% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   63% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   64% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   65% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   66% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   67% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   68% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   69% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   70% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   71% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   72% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   73% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   74% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   75% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   76% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   77% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   78% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   79% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   80% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   81% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   82% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   83% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   84% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   85% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   86% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   87% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   88% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   89% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   90% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   91% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   92% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   93% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   94% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   95% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   96% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   97% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   98% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   99% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
   100% {
-    fill: rgb(255, 242, 18);
+    fill: crimson;
   }
 }
 .grid {
@@ -11914,17 +11917,19 @@ select {
 
 /*Grids de la página 404*/
 .error__grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: auto auto;
   grid-template-areas: "nav-err" "main-err";
 }
 
 .navegador-error {
+  width: 100%;
   padding: 5px 0;
   grid-area: nav-err;
   display: grid;
-  grid-template-columns: 35% 50%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 7.8rem auto;
   grid-template-areas: "log centrado" "drop drop";
   position: sticky;
@@ -12841,7 +12846,7 @@ figure img, figure aside section a img, aside section a figure img {
     top: 0;
   }
   .club__a-position {
-    margin-top: -12.5rem;
+    margin-top: -14.5rem;
   }
   /*Agrega el ítem Menú del accordion*/
   .nav__item {
@@ -12888,6 +12893,16 @@ figure img, figure aside section a img, aside section a figure img {
     left: auto;
     right: 37%;
     top: 9.5px;
+  }
+  .error__main {
+    align-items: center;
+  }
+  .error__image {
+    width: 70%;
+  }
+  .error__image svg {
+    height: auto;
+    width: 100%;
   }
 }
 @media only screen and (orientation: landscape) and (max-width: 992px) {
@@ -13317,7 +13332,7 @@ figure img, figure aside section a img, aside section a figure img {
     top: 0;
   }
   .club__a-position {
-    margin-top: -12.5rem;
+    margin-top: -14.5rem;
   }
   /*Agrega el ítem Menú del accordion*/
   .nav__item {
@@ -13365,6 +13380,16 @@ figure img, figure aside section a img, aside section a figure img {
     right: 37%;
     top: 9.5px;
   }
+  .error__main {
+    align-items: center;
+  }
+  .error__image {
+    width: 70%;
+  }
+  .error__image svg {
+    height: auto;
+    width: 100%;
+  }
   .navegador {
     position: static;
   }
@@ -13376,17 +13401,11 @@ figure img, figure aside section a img, aside section a figure img {
     height: 90vh;
     width: auto;
   }
-}
-@media only screen and (orientation: landscape) {
   .club__a-position {
     margin-top: -15rem;
   }
   .navegador-error {
     position: static;
-  }
-  .tienda__buscar--flex {
-    position: sticky;
-    top: 5px;
   }
 }
 

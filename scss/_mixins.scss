@@ -446,7 +446,7 @@
             top: 0;
         }
         .club__a-position{
-            margin-top: -12.5rem;
+            margin-top: -14.5rem;
         }
         /*Agrega el ítem Menú del accordion*/
         .nav__item{
@@ -491,5 +491,15 @@
             left: auto;
             right: 37%;
             top: 9.5px;
+        }
+        .error__main{
+            align-items: center;
+        }
+        .error__image{
+            width: 70%;
+            svg{
+                height: auto;
+                width: 100%;
+            }
         }
 }

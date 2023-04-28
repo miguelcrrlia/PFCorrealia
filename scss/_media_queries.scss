@@ -64,15 +64,11 @@
                 }
             }
         }
+        .club__a-position{
+            margin-top: -15rem;
+        }
+        .navegador-error{
+            position: static;
+        }
      }
-     .club__a-position{
-        margin-top: -15rem;
-    }
-    .navegador-error{
-        position: static;
-    }
-    .tienda__buscar--flex{
-        position: sticky;
-        top: 5px;
-    }
 }
