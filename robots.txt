@@ -12,4 +12,4 @@ disallow: 404.html
 disallow: /package-lock.json
 disallow: /package.json
 #dirección del sitemap.xml
-sitemap: https://miguelcrrlia.github.io/PreEntrega3Correalia/sitemap.xml
+https://miguelcrrlia.github.io/PFCorrealia/sitemap.xml
