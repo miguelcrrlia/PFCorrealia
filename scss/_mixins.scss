@@ -269,7 +269,11 @@
             }
         }
     }
-    /*Clases de la página de error 404*/
+    .a__formulario{
+        position: absolute;
+        margin-top: -3rem;
+    }
+    /*Clase de la página de error 404*/
     .error__image{
         margin-top: 7.5%;
         img{
@@ -501,5 +505,10 @@
                 height: auto;
                 width: 100%;
             }
+        }
+        /*Este margin-top trata de ser lo más conveniente ya que la nav tiene height:auto*/
+        .a__formulario{
+            position: absolute;
+            margin-top: -10rem;
         }
 }

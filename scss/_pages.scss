@@ -213,6 +213,11 @@ figure img{
         height: 50vh;
     }
 }
+/*Te lleva al formulario compensando la nav*/
+.a__formulario{
+    position: absolute;
+    margin-top: -11rem;
+}
 /*Aqui pongo todos los estilos del archivo svg de la imagen de la página error 
 (me pareció pertinente ya que si cambia la paleta de colores del sitio esta imagen también debe sufrir cambios)*/
 .str16 {stroke:#FEFEFE;stroke-width:10.51;stroke-miterlimit:22.9256}
