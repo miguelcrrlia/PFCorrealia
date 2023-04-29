@@ -11066,19 +11066,6 @@ select {
   fill: rgb(12, 14, 110);
 }
 
-.navegador__lista {
-  height: 100%;
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  grid-area: centrado;
-  font-weight: 700;
-  font-size: 2em;
-}
-
 .navegador__lista--row {
   height: 100%;
   width: 100%;
@@ -11858,13 +11845,7 @@ select {
   padding-top: 5px;
 }
 
-.navegador__lista--grid {
-  grid-area: centrado;
-}
-
 .navegador__menu {
-  align-items: center;
-  justify-content: flex-start;
   grid-area: centrado;
 }
 
@@ -11879,6 +11860,19 @@ select {
 }
 .navegador__logo a img:hover {
   transform: scale(1.07);
+}
+
+.navegador__lista {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: centrado;
+  font-weight: 700;
+  font-size: 2em;
 }
 
 .club__grid {
@@ -11908,7 +11902,7 @@ select {
   grid-area: seccion;
 }
 
-.other-grid {
+.pages__grid {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 10rem auto auto 15rem;
@@ -11955,7 +11949,7 @@ select {
   transform: scale(1.07);
 }
 
-.navegador-error__menu {
+.navegador-error__hamburger {
   margin-right: 2%;
   grid-area: centrado;
   display: flex;
@@ -11963,7 +11957,7 @@ select {
   justify-content: flex-end;
 }
 
-.hamburger-error__grid {
+.navegador-error__menu {
   grid-area: drop;
 }
 
@@ -12499,15 +12493,37 @@ figure img, figure aside section a img, aside section a figure img {
     grid-row-start: 1;
     grid-row-end: 2;
     justify-content: flex-end;
+    /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
   }
   .navegador__links ul li {
     display: none;
   }
-  /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
   .navegador__links .cart {
     height: 100%;
     display: flex;
     z-index: 2;
+  }
+  .navegador__menu {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .navegador__lista {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
   aside section {
     align-content: center;
@@ -12559,6 +12575,12 @@ figure img, figure aside section a img, aside section a figure img {
     object-fit: contain;
     height: 100%;
   }
+  .club__grid {
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
+  }
   .club__nav {
     display: none;
   }
@@ -12583,7 +12605,7 @@ figure img, figure aside section a img, aside section a figure img {
     border-left: 0;
     border-style: solid;
   }
-  .accordion__club__nav {
+  .navegador__accordion--format {
     height: 100%;
     background-color: white;
     font-weight: 700;
@@ -12598,15 +12620,13 @@ figure img, figure aside section a img, aside section a figure img {
     align-items: center;
     padding: 10px;
   }
+  /*Saca el ítem Menú del accordion*/
+  .nav__item {
+    display: none;
+  }
   /* Uso margin-top: -22.5rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
   .club__a-position {
     margin-top: -22.5rem;
-  }
-  .club-mobile__grid {
-    position: relative;
-    grid-template-columns: 100vw;
-    grid-template-rows: 10rem auto auto auto auto;
-    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
   }
   .calendario {
     width: 80vw;
@@ -12615,7 +12635,7 @@ figure img, figure aside section a img, aside section a figure img {
   .video {
     width: 80vw;
   }
-  .pages-mobile__grid {
+  .pages__grid {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 10rem auto auto auto;
@@ -12645,28 +12665,6 @@ figure img, figure aside section a img, aside section a figure img {
   textarea {
     width: 90%;
   }
-  .hamburger__grid {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    font-weight: 700;
-    font-size: 1em;
-  }
-  .navegador__lista {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
   figure {
     margin: 3px 0;
     border: dotted 1px rgb(62, 64, 149);
@@ -12684,10 +12682,6 @@ figure img, figure aside section a img, aside section a figure img {
     font-size: 1rem;
     text-align: left;
     line-height: 1.3rem;
-  }
-  /*Saca el ítem Menú del accordion*/
-  .nav__item {
-    display: none;
   }
   /*Clases de la página de error 404*/
   .error__image {
@@ -12736,7 +12730,7 @@ figure img, figure aside section a img, aside section a figure img {
   .navegador__links {
     display: none;
   }
-  .navegador__menu {
+  .navegador__hamburger {
     grid-area: centrado;
     display: flex;
     flex-wrap: nowrap;
@@ -12794,7 +12788,7 @@ figure img, figure aside section a img, aside section a figure img {
     width: 100%;
     height: 35%;
   }
-  .hamburger__grid {
+  .navegador__menu {
     grid-area: drop;
   }
   .navegador__lista {
@@ -12818,20 +12812,20 @@ figure img, figure aside section a img, aside section a figure img {
     border-top: 1.5px;
     border-bottom: 0;
   }
-  .pages-mobile__grid {
+  .pages__grid {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "nav" "head" "main" "footer";
   }
-  .club-mobile__grid {
+  .club__grid {
     position: relative;
     grid-template-columns: 100vw;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
     /*Elijo position: static ya que el accordion está sticky y el navegador está en un grid con row auto*/
   }
-  .club-mobile__grid .navegador {
+  .club__grid .navegador {
     position: static;
   }
   .club__nav {
@@ -12953,15 +12947,37 @@ figure img, figure aside section a img, aside section a figure img {
     grid-row-start: 1;
     grid-row-end: 2;
     justify-content: flex-end;
+    /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
   }
   .navegador__links ul li {
     display: none;
   }
-  /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
   .navegador__links .cart {
     height: 100%;
     display: flex;
     z-index: 2;
+  }
+  .navegador__menu {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .navegador__lista {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
   aside section {
     align-content: center;
@@ -13013,6 +13029,12 @@ figure img, figure aside section a img, aside section a figure img {
     object-fit: contain;
     height: 100%;
   }
+  .club__grid {
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
+  }
   .club__nav {
     display: none;
   }
@@ -13037,7 +13059,7 @@ figure img, figure aside section a img, aside section a figure img {
     border-left: 0;
     border-style: solid;
   }
-  .accordion__club__nav {
+  .navegador__accordion--format {
     height: 100%;
     background-color: white;
     font-weight: 700;
@@ -13052,15 +13074,13 @@ figure img, figure aside section a img, aside section a figure img {
     align-items: center;
     padding: 10px;
   }
+  /*Saca el ítem Menú del accordion*/
+  .nav__item {
+    display: none;
+  }
   /* Uso margin-top: -22.5rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
   .club__a-position {
     margin-top: -22.5rem;
-  }
-  .club-mobile__grid {
-    position: relative;
-    grid-template-columns: 100vw;
-    grid-template-rows: 10rem auto auto auto auto;
-    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
   }
   .calendario {
     width: 80vw;
@@ -13069,7 +13089,7 @@ figure img, figure aside section a img, aside section a figure img {
   .video {
     width: 80vw;
   }
-  .pages-mobile__grid {
+  .pages__grid {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 10rem auto auto auto;
@@ -13099,28 +13119,6 @@ figure img, figure aside section a img, aside section a figure img {
   textarea {
     width: 90%;
   }
-  .hamburger__grid {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    font-weight: 700;
-    font-size: 1em;
-  }
-  .navegador__lista {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
   figure {
     margin: 3px 0;
     border: dotted 1px rgb(62, 64, 149);
@@ -13138,10 +13136,6 @@ figure img, figure aside section a img, aside section a figure img {
     font-size: 1rem;
     text-align: left;
     line-height: 1.3rem;
-  }
-  /*Saca el ítem Menú del accordion*/
-  .nav__item {
-    display: none;
   }
   /*Clases de la página de error 404*/
   .error__image {
@@ -13222,7 +13216,7 @@ figure img, figure aside section a img, aside section a figure img {
   .navegador__links {
     display: none;
   }
-  .navegador__menu {
+  .navegador__hamburger {
     grid-area: centrado;
     display: flex;
     flex-wrap: nowrap;
@@ -13280,7 +13274,7 @@ figure img, figure aside section a img, aside section a figure img {
     width: 100%;
     height: 35%;
   }
-  .hamburger__grid {
+  .navegador__menu {
     grid-area: drop;
   }
   .navegador__lista {
@@ -13304,20 +13298,20 @@ figure img, figure aside section a img, aside section a figure img {
     border-top: 1.5px;
     border-bottom: 0;
   }
-  .pages-mobile__grid {
+  .pages__grid {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "nav" "head" "main" "footer";
   }
-  .club-mobile__grid {
+  .club__grid {
     position: relative;
     grid-template-columns: 100vw;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
     /*Elijo position: static ya que el accordion está sticky y el navegador está en un grid con row auto*/
   }
-  .club-mobile__grid .navegador {
+  .club__grid .navegador {
     position: static;
   }
   .club__nav {

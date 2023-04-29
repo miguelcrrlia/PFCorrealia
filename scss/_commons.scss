@@ -299,14 +299,6 @@ select{
         }   
     }
 }
-.navegador__lista{
-    height: 100%;
-    width: 80%;
-    @include flex(row, wrap, space-around, center);
-    grid-area: centrado;
-    font-weight: 700;
-    font-size: map-get($fontSize, ocho);
-}
 .navegador__lista--row{
     @include fullWidthHeight();
     display: flex;

@@ -73,12 +73,30 @@
         ul li{
             display: none;
         }
+        /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
+        .cart{
+            height: 100%;
+            display: flex;
+            z-index: 2;
+        }
     }
-    /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
-    .navegador__links .cart{
-        height: 100%;
+    .navegador__menu{
         display: flex;
-        z-index: 2;
+        height: 100%;
+        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        font-weight: 700;
+        font-size: map-get($fontSize, dos);
+    }
+    .navegador__lista{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        @include flex(column, wrap, center, center);
+        padding: 0;
     }
     aside {
         section{
@@ -134,6 +152,17 @@
         object-fit: contain;
         height: 100%;
     }
+    .club__grid{
+        position: relative;
+        grid-template-columns: 100vw;
+        grid-template-rows: 10rem auto auto auto auto;
+        grid-template-areas: 
+        "nav"
+        "head"
+        "mainnav"
+        "seccion"
+        "footer";
+    }
     .club__nav{
         display: none;
     }
@@ -158,7 +187,7 @@
         border-left: 0;
         border-style: solid;
     }
-    .accordion__club__nav{   
+    .navegador__accordion--format{   
         height: 100%;
         background-color: map-get($colors, ocho);
         font-weight: 700;
@@ -173,20 +202,13 @@
         align-items: center;
         padding: 10px;
     }
+    /*Saca el ítem Menú del accordion*/
+    .nav__item{
+        display: none;
+    }
     /* Uso margin-top: -22.5rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
     .club__a-position{
         margin-top: -22.5rem;
-    }
-    .club-mobile__grid{
-        position: relative;
-        grid-template-columns: 100vw;
-        grid-template-rows: 10rem auto auto auto auto;
-        grid-template-areas: 
-        "nav"
-        "head"
-        "mainnav"
-        "seccion"
-        "footer";
     }
     .calendario{
         width: 80vw;
@@ -195,7 +217,7 @@
     .video{
         width: 80vw;
     }
-    .pages-mobile__grid{
+    .pages__grid{
         display: grid;
         grid-template-columns: 100vw;
         grid-template-rows: 10rem auto auto auto;
@@ -229,24 +251,6 @@
     textarea{
         width: 90%;
     }
-    .hamburger__grid{
-        display: flex;
-        height: 100%;
-        width: 100%;
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        font-weight: 700;
-        font-size: map-get($fontSize, dos);
-    }
-    .navegador__lista{
-        height: 100%;
-        width: 100%;
-        position: relative;
-        @include flex(column, wrap, center, center);
-        padding: 0;
-    }
     figure{
         margin: 3px 0;
         border: dotted 1px map-get($colors, uno);
@@ -264,10 +268,6 @@
                 line-height: 1.3rem;
             }
         }
-    }
-    /*Saca el ítem Menú del accordion*/
-    .nav__item{
-        display: none;
     }
     /*Clases de la página de error 404*/
     .error__image{
@@ -323,7 +323,7 @@
         .navegador__links{
             display: none;
         }
-        .navegador__menu{
+        .navegador__hamburger{
             grid-area: centrado;
             display: flex;
             flex-wrap: nowrap;
@@ -389,7 +389,7 @@
             width: 100%;
             height: 35%;
         }
-        .hamburger__grid{
+        .navegador__menu{
             grid-area: drop;
         }
         .navegador__lista{ 
@@ -409,7 +409,7 @@
            border-top: 1.5px;
            border-bottom: 0;
         }
-        .pages-mobile__grid{
+        .pages__grid{
             display: grid;
             grid-template-columns: 100vw;
             grid-template-rows: auto auto auto auto;
@@ -419,7 +419,7 @@
             "main"
             "footer";
         }
-        .club-mobile__grid{
+        .club__grid{
             position: relative;
             grid-template-columns: 100vw;
             grid-template-rows: auto auto auto auto auto;

@@ -48,13 +48,8 @@
     justify-content: flex-end;
     padding-top: 5px;
 }
-.navegador__lista--grid{
-    grid-area: centrado;
-}
 .navegador__menu{
-    align-items: center;
-    justify-content: flex-start;
-    grid-area: centrado;    
+    grid-area: centrado;
 }
 .navegador__logo{
     height: 100%;
@@ -67,6 +62,14 @@
         transform: scale(1.07);
     }
     }
+}
+.navegador__lista{
+    height: 100%;
+    width: 80%;
+    @include flex(row, wrap, space-around, center);
+    grid-area: centrado;
+    font-weight: 700;
+    font-size: map-get($fontSize, ocho);
 }
 .club__grid{
     display: grid;
@@ -96,7 +99,7 @@
     padding: 0 15px;
     grid-area: seccion;
 }
-.other-grid{
+.pages__grid{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10rem auto auto 15rem;
@@ -150,14 +153,14 @@
            }
         }
 }
-.navegador-error__menu{
+.navegador-error__hamburger{
     margin-right: 2%;
     grid-area: centrado;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
 }
-.hamburger-error__grid{
+.navegador-error__menu{
     grid-area: drop;
 }
 .error__main{
