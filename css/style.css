@@ -2979,7 +2979,7 @@ figure img, figure aside section a img, aside section a figure img {
   }
   .a__formulario {
     position: absolute;
-    margin-top: -3rem;
+    margin-top: -10rem;
   }
   /*Clase de la página de error 404*/
   .error__image {
