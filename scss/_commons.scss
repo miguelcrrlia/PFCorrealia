@@ -63,10 +63,13 @@
             }
         }
     }
+    /*Quita el double-button*/
+    &:vertical:start:increment, &:vertical:end:decrement, 
+    &:horizontal:start:increment, &:horizontal:end:decrement{
+        display: none;
+    }
 }
-/*line-height para sacar el que aplica bootstrap*/
 body{
-    background-image: url(img/bck.svg);
     background-attachment: fixed;
     color: map-get($colors, uno);
     background-color: map-get($colors, ocho);
@@ -86,7 +89,6 @@ nav{
     height: 100%;
     padding: 5px 0 5px 5px;
     border-bottom: solid 25px map-get($colors, uno);
-    background-image: url(img/bck.svg);
     background-color: map-get($colors, ocho);
     a{
         display: flex;
@@ -227,18 +229,19 @@ table{
     text-align: center;
     background-color: map-get($colors, tres);
 } 
-
+/*Uso background-clip: padding-box en especial porque en Firefox el borde quedaba detrás del background-color*/
 th{
     border: 2px solid;
     padding: 10px;
     background-color: map-get($colors, cinco);
+    background-clip: padding-box;
 }
 
 td{
     border: 1px solid;
     padding: 10px;
 }
-/* Para poner la lupa dentro del <input> buscar, z-index:0; para que quede atrás de la nav*/
+/* Para poner la lupa dentro del <input> buscar*/
 form{
     position: relative;
     font-weight: $textNormal;
@@ -296,15 +299,11 @@ select{
         }   
     }
 }
-.navegador__lista{
-    height: 100%;
-    width: 80%;
-    @include flex(row, wrap, space-around, center);
-    grid-area: centrado;
-    font-weight: 700;
-    font-size: map-get($fontSize, ocho);
+.navegador__lista--row{
+    @include fullWidthHeight();
+    display: flex;
+    flex-direction: row;
 }
-
 /*a-textdeco mejora el contraste con el background claro*/
 .a--textdecoration{
     text-decoration: underline;
@@ -363,7 +362,29 @@ select{
     border: 0;
     color: transparent;
 }
+/*Clases para que la tabla de horarios sea más fácil de leer en responsive*/
+.schedules--relative{
+    position: relative;
+}
+.schedules__days--sticky{
+    position: sticky;
+    top: 0;
+}
+.schedules__hours--sticky{
+    position: sticky;
+    left: 0;
+}
+.borde__bajo{
+    border-bottom: solid 3.1px map-get($colors, uno);
+    margin-bottom: 40px;
+}
 /*Animaciones*/
+/*Agrego esta class de Bootstrap que la saca el purgecss*/
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+  }
 @keyframes achicar{
     0%{transform: scale(1);}
     25%{transform: scale(0.95);}
@@ -371,13 +392,30 @@ select{
     75%{transform: scale(0.85);}
     100%{transform: scale(0.8);}
 }
-@keyframes reflejo {
+@keyframes reflejo{
     @for $i from 1% through 100%{
         #{$i} {
             //divido $i por 3.33 para que el 30% del linear-gradient recorra todo el 100% de los keyframes (100/30=3.33) 
             border-image: linear-gradient(90deg, rgba(62,64,149,1) #{$i+((-30)+((calc(1 / 3.33))*$i))}, rgba(255,255,255,1) 
+<<<<<<< HEAD
             #{$i+((-20)+((calc(1 / 3.33))*$i))}, rgba(252,242,18,1) #{$i+((-10)+((calc(1 / 3.33))*$i))}, rgba(62,64,149,1) #{$i}) 
                 100% 0 100% 0/0 0 25px 0 stretch;
+=======
+            #{$i+((-20)+((calc(1 / 3.33))*$i))}, rgba(252,242,18,1) #{$i+((-10)+((calc(1 / 3.33))*$i))}, rgba(62,64,149,1) 
+            #{$i}) 100% 0 100% 0/0 0 25px 0 stretch;
+>>>>>>> main
+        }
+    }
+}
+@keyframes beacon{
+    @for $i from 1% through 50%{
+        #{$i} {
+            fill: white;
+        }
+    }
+    @for $i from 50% through 100%{
+        #{$i} {
+            fill: map-get($colors, seis);
         }
     }
 }

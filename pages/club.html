@@ -4,16 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nuestro club lleva ya una larga trayectoria en la enseñanza del ajedrez, contamos
-    con una basta biblioteca y las ganas para que encuentres en nuestro club no solo un lugar para jugar, sino también para hacer 
-    amigos en un entorno familiar">
+    <meta name="description" content="description" content="Nuestro club lleva una 
+    larga trayectoria en la enseñanza del ajedrez, contamos con una basta biblioteca y 
+    las ganas para que encuentres en nuestro club no solo un lugar para jugar, sino 
+    también para hacer amigos en un entorno familiar">
+    <meta name="author" content="Miguel Correa">
+    <meta name="copyright" content="Club de ajedrez Bella Vista">  
     <meta name="keywords" content="club, historia, enseñanza, biblioteca">
     <title>Club | Club de Ajedrez Bella Vista</title>
     <link type="image/x-icon" href="../img/favinco.ico" rel="shortcut icon">
     <link href="../css/style.css" rel="stylesheet">
 </head>
-<body class="club__grid club-mobile__grid">
+<body class="club__grid">
+    <!--Los modals para las imágenes de los <a>-->
+    <div class="modal fade" id="anciano_jugando_ajedrez" tabindex="-1" aria-hidden="true">
+        <div class="modal-xl modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="carousel-inner">
+                    <div class="d-flex justify-content-center carousel-item active">
+                        <img src="../img/anciano_jugando_ajedrez.webp" class="img-fluid" alt="Anciano jugando ajedrez">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>  
+    <div class="modal fade" id="jugador_de_ajedrez_tendido_en_la_mesa" tabindex="-1" aria-hidden="true">
+        <div class="modal-xl modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close button__close-color" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="carousel-inner">
+                    <div class="d-flex justify-content-center carousel-item active">
+                        <img src="../img/jugador_de_ajedrez_tendido_en_la_mesa.webp" class="img-fluid" alt="Jugador de ajedrez tendido en la mesa">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>  
     <!-- Nav con logo y links. Nav de Bootstrap -->
+    <a id="menu" class="club__a-position"></a>
     <nav class="navbar navbar-expand-sm navegador">
         <div class="navegador__logo">
             <!--Logo-->
@@ -26,7 +63,8 @@
             <ul>
                 <li>
                     <a href="https://www.facebook.com/" title="Facebook" target="_blank">
-                        <svg width="19.753mm" height="19.7698mm" viewBox="0 0 1219.61 1220.65">
+                        <svg aria-labelledby="title-facebook-nav" width="19.753mm" height="19.7698mm" viewBox="0 0 1219.61 1220.65">
+                            <title id="title-facebook-nav">ícono de Facebook</title>
                             <path  d="M1219.61 625.98c0,-343.75 -265.58,-625.98 -609.32,-625.98 
                             -329.06,0 -610.29,282.23 -610.29,625.98 0,281.23 218.74,532.15 484.33,594.67l0 
                             -422.84 -109.35 0 0 -171.83 109.35 0c0,-161.87 -14.5,-374.97 219.7,-374.97l156.27 0 0 187.48 
@@ -37,50 +75,53 @@
                 </li>
                 <li>
                     <a href="https://www.instagram.com/" title="Instagram" target="_blank">
-                        <svg width="19.753mm" height="19.753mm" version="1.1" style="shape-rendering:geometricPrecision; 
-                            text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; 
-                            clip-rule:evenodd" viewBox="0 0 1961.14 1961.14">
+                        <svg aria-labelledby="title-instagram-nav" width="19.753mm" height="19.753mm" version="1.1" style="shape-rendering:geometricPrecision; 
+                        text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; 
+                        clip-rule:evenodd" viewBox="0 0 1961.14 1961.14">
+                            <title id="title-instagram-nav">ícono de Instagram</title>
                             <path d="M1961.14 980.57c0,-541.55 -439.02,-980.57 -980.57,-980.57 -541.55,0 -980.57,439.02 
-                                -980.57,980.57 0,541.55 439.02,980.57 980.57,980.57 541.55,0 980.57,-439.02 980.57,
-                                -980.57zm-1242.92 -630.93l526.94 0c203.31,0 369.66,166.34 369.66,369.66l0 526.93c0,203.32 
-                                -166.35,369.66 -369.66,369.66l-526.94 0c-203.31,0 -369.66,-166.34 -369.66,-369.66l0 
-                                -526.93c0,-203.32 166.35,-369.66 369.66,-369.66zm-14.98 103.32l556.92 0c138.24,0 251.35,113.1 
-                                251.35,251.35l0 556.91c0,138.24 -113.1,251.35 -251.35,251.35l-556.92 0c-138.24,0 -251.35,
-                                -113.1 -251.35,-251.35l0 -556.91c0,-138.24 113.1,-251.35 251.35,-251.35zm277.33 204.44c178.47,
-                                0 323.16,144.69 323.16,323.16 0,178.47 -144.69,323.16 -323.16,323.16 -178.47,0 -323.16,-144.69 
-                                -323.16,-323.16 0,-178.47 144.69,-323.16 323.16,-323.16zm0 104.88c120.55,0 218.27,97.72 218.27,
-                                218.27 0,120.55 -97.72,218.27 -218.27,218.27 -120.55,0 -218.27,-97.72 -218.27,-218.27 0,
-                                -120.55 97.72,-218.27 218.27,-218.27zm419.35 -125.76c0,-43.11 -34.94,-78.05 -78.05,-78.05 
-                                -43.11,0 -78.05,34.94 -78.05,78.05 0,43.11 34.94,78.05 78.05,78.05 43.11,0 78.05,-34.94 78.05,-78.05z"/>
+                            -980.57,980.57 0,541.55 439.02,980.57 980.57,980.57 541.55,0 980.57,-439.02 980.57,
+                            -980.57zm-1242.92 -630.93l526.94 0c203.31,0 369.66,166.34 369.66,369.66l0 526.93c0,203.32 
+                            -166.35,369.66 -369.66,369.66l-526.94 0c-203.31,0 -369.66,-166.34 -369.66,-369.66l0 
+                            -526.93c0,-203.32 166.35,-369.66 369.66,-369.66zm-14.98 103.32l556.92 0c138.24,0 251.35,113.1 
+                            251.35,251.35l0 556.91c0,138.24 -113.1,251.35 -251.35,251.35l-556.92 0c-138.24,0 -251.35,
+                            -113.1 -251.35,-251.35l0 -556.91c0,-138.24 113.1,-251.35 251.35,-251.35zm277.33 204.44c178.47,
+                            0 323.16,144.69 323.16,323.16 0,178.47 -144.69,323.16 -323.16,323.16 -178.47,0 -323.16,-144.69 
+                            -323.16,-323.16 0,-178.47 144.69,-323.16 323.16,-323.16zm0 104.88c120.55,0 218.27,97.72 218.27,
+                            218.27 0,120.55 -97.72,218.27 -218.27,218.27 -120.55,0 -218.27,-97.72 -218.27,-218.27 0,
+                            -120.55 97.72,-218.27 218.27,-218.27zm419.35 -125.76c0,-43.11 -34.94,-78.05 -78.05,-78.05 
+                            -43.11,0 -78.05,34.94 -78.05,78.05 0,43.11 34.94,78.05 78.05,78.05 43.11,0 78.05,-34.94 78.05,-78.05z"/>
                         </svg>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
-                        <svg width="19.7532mm" height="19.7532mm" version="1.1" style="shape-rendering:geometricPrecision; 
-                            text-rendering:geometricPrecision;image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 1975.34 1975.34">
-                            <path class="fil0" d="M1975.34 987.67c0,-545.48 -442.19,-987.67 -987.67,-987.67 -545.48,0 -987.67,442.19 
-                                -987.67,987.67 0,545.48 442.19,987.67 987.67,987.67 545.48,0 987.67,-442.19 987.67,-987.67zm-1363.05 429.23l177.79 -56.89c74.56,49.09 
-                                160.91,76.3 253.8,79.47 258.54,0 468.12,-208.26 468.12,-465.17 0,-256.91 -209.58,-465.17 -468.12,-465.17 -257.26,-0.09 
-                                -465.78,208.08 -464.5,464.9 5.68,105.65 36.16,199.82 86.79,267.99 4.54,8.13 -46.82,153.37 -53.87,174.86l-0.01 0.01zm-37.7 
-                                -157.16l-101.75 289.78 307.25 -95.58c78.75,42.92 169.15,67.33 265.3,67.33 305.18,0 552.6,-245.85 552.6,-549.14 0,-303.27 
-                                -247.41,-549.12 -552.6,-549.12 -305.2,0 -552.63,245.85 -552.63,549.12 0,103.27 28.71,199.91 78.61,282.4 1.06,1.74 2.12,
-                                3.46 3.17,5.18l0.04 0.02zm343.61 -319.11c-15.05,-26 50.48,-51.14 43.74,-76.39 -12.14,-45.52 -35.8,-94.48 -58.67,-136.17 
-                                -4.63,-8.44 -19.39,-7.2 -30.89,-7.69 -11.52,-0.48 -24.5,-2.07 -32.76,5.46 -32.74,29.92 -59.82,67.55 -64.78,118.45 
-                                -4.96,50.92 30.14,118.36 102.96,209.25 72.82,90.89 226.26,176.75 310.56,178.16 84.28,1.41 106.49,-33.71 123.74,
-                                -56.1 17.23,-22.36 26.86,-64.4 10.51,-76.68 -30.19,-22.69 -106.6,-66.12 -128.98,-62.27 -32.08,5.53 -45.48,68.68 
-                                -72.8,70.86 -27.3,2.18 -152.54,-80.42 -202.62,-166.9l-0.01 0.02z"/>
+                        <svg aria-labelledby="title-whatsapp-nav" width="19.7532mm" height="19.7532mm" version="1.1" style="shape-rendering:geometricPrecision; 
+                        text-rendering:geometricPrecision;image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 1975.34 1975.34">
+                            <title id="title-whatsapp-nav">ícono de Whatsapp</title>
+                            <path d="M1975.34 987.67c0,-545.48 -442.19,-987.67 -987.67,-987.67 -545.48,0 -987.67,442.19 
+                            -987.67,987.67 0,545.48 442.19,987.67 987.67,987.67 545.48,0 987.67,-442.19 987.67,-987.67zm-1363.05 429.23l177.79 -56.89c74.56,49.09 
+                            160.91,76.3 253.8,79.47 258.54,0 468.12,-208.26 468.12,-465.17 0,-256.91 -209.58,-465.17 -468.12,-465.17 -257.26,-0.09 
+                            -465.78,208.08 -464.5,464.9 5.68,105.65 36.16,199.82 86.79,267.99 4.54,8.13 -46.82,153.37 -53.87,174.86l-0.01 0.01zm-37.7 
+                            -157.16l-101.75 289.78 307.25 -95.58c78.75,42.92 169.15,67.33 265.3,67.33 305.18,0 552.6,-245.85 552.6,-549.14 0,-303.27 
+                            -247.41,-549.12 -552.6,-549.12 -305.2,0 -552.63,245.85 -552.63,549.12 0,103.27 28.71,199.91 78.61,282.4 1.06,1.74 2.12,
+                            3.46 3.17,5.18l0.04 0.02zm343.61 -319.11c-15.05,-26 50.48,-51.14 43.74,-76.39 -12.14,-45.52 -35.8,-94.48 -58.67,-136.17 
+                            -4.63,-8.44 -19.39,-7.2 -30.89,-7.69 -11.52,-0.48 -24.5,-2.07 -32.76,5.46 -32.74,29.92 -59.82,67.55 -64.78,118.45 
+                            -4.96,50.92 30.14,118.36 102.96,209.25 72.82,90.89 226.26,176.75 310.56,178.16 84.28,1.41 106.49,-33.71 123.74,
+                            -56.1 17.23,-22.36 26.86,-64.4 10.51,-76.68 -30.19,-22.69 -106.6,-66.12 -128.98,-62.27 -32.08,5.53 -45.48,68.68 
+                            -72.8,70.86 -27.3,2.18 -152.54,-80.42 -202.62,-166.9l-0.01 0.02z"/>
                         </svg>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
-                        <svg  width="19.753mm" height="19.7531mm" version="1.1" style="shape-rendering:geometricPrecision; 
+                        <svg aria-labelledby="title-chess.com-nav" width="19.753mm" height="19.7531mm" version="1.1" style="shape-rendering:geometricPrecision; 
                         text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                         viewBox="0 0 1975.3 1975.31">
+                        <title id="title-chess.com-nav">ícono de Chess.com</title>
                             <rect style="fill:none;"  y="0.01" width="1975.3" height="1973.84"/>
-                            <path  class="fil5" d="M808.62 862.13l0 71.51c55.16,4 135.98,23.06 180.67,44.34 
+                            <path d="M808.62 862.13l0 71.51c55.16,4 135.98,23.06 180.67,44.34 
                             25.8,12.29 49.03,29.8 62.06,50.63 19.02,30.41 13.83,57.38 7.24,93.17 -13.43,72.91 -72.85,406.12 
                             -97.02,462.64 -36.92,86.33 -118.12,116.1 -215.52,121.09 -92.43,4.73 -219.47,0.02 -309.25,-24.81 
                             -45.64,-12.63 -45.83,-16.65 -80.94,-29.73 -0.27,0.42 -0.55,0.63 -0.65,1.34l-10.82 36.63c-10.63,42.39 
@@ -115,45 +156,52 @@
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="cart">
                     <a href="404.html" rel="nofollow" title="Carrito de compras">
-                        <svg width="19.7527mm" height="19.9558mm" version="1.1" style="shape-rendering:geometricPrecision; 
-                            text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 1975.26 1995.57">
+                        <svg aria-labelledby="title-carrito-nav" width="19.7527mm" height="19.9558mm" version="1.1" style="shape-rendering:geometricPrecision; 
+                        text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 1975.26 1995.57">
+                            <title id="title-carrito-nav">ícono de carrito</title>
                             <path d="M606.81 1592.05c-127.66,0 -203.33,75.67 -203.33,201.73 0,100.94 75.67,201.79 203.33,201.79 100.92,0 
-                                176.58,-100.85 176.58, -201.79 0,-126.06 -75.67,-201.73 -176.58,-201.73zm-505.97 -1390.27l100.85 0 354.7 758.21 
-                                -127.72 226.98c-75.67,151.31 25.25,302.64 178.14,302.64l1084.5 0c50.4,0 75.67,-50.46 75.67,-100.85 0,-50.46 
-                                -25.25,-100.92 -75.67,-100.92l-1084.5 0 100.92 -201.73 731.34 0c75.67,0 151.31,-25.25 176.58,-100.92l353.04 
-                                -630.47c25.25,-75.67 -25.21,-152.93 -100.85,-152.93l-1439.15 0 -75.67 -126.12c-25.21,
-                                -50.46 -50.4,-75.67 -100.85,-75.67l-151.31 0c-50.46,0 -100.85,50.46 -100.85,100.85 0,75.67 
-                                50.4,100.92 100.85,100.92l-0.01 0.01zm1489.55 1390.27c-126.06,0 -201.73,75.67 -201.73,201.73 0,100.94 
-                                75.67,201.79 201.73,201.79 100.92,0 176.58,-100.85 176.58,-201.79 0,-126.06 -75.67,-201.73 -176.58,-201.73z"/>
+                            176.58,-100.85 176.58, -201.79 0,-126.06 -75.67,-201.73 -176.58,-201.73zm-505.97 -1390.27l100.85 0 354.7 758.21 
+                            -127.72 226.98c-75.67,151.31 25.25,302.64 178.14,302.64l1084.5 0c50.4,0 75.67,-50.46 75.67,-100.85 0,-50.46 
+                            -25.25,-100.92 -75.67,-100.92l-1084.5 0 100.92 -201.73 731.34 0c75.67,0 151.31,-25.25 176.58,-100.92l353.04 
+                            -630.47c25.25,-75.67 -25.21,-152.93 -100.85,-152.93l-1439.15 0 -75.67 -126.12c-25.21,
+                            -50.46 -50.4,-75.67 -100.85,-75.67l-151.31 0c-50.46,0 -100.85,50.46 -100.85,100.85 0,75.67 
+                            50.4,100.92 100.85,100.92l-0.01 0.01zm1489.55 1390.27c-126.06,0 -201.73,75.67 -201.73,201.73 0,100.94 
+                            75.67,201.79 201.73,201.79 100.92,0 176.58,-100.85 176.58,-201.79 0,-126.06 -75.67,-201.73 -176.58,-201.73z"/>
                         </svg>
                     </a>
                 </li>
             </ul>
         </div>
-        <!-- Botón hamburguesa de Bootstrap -->
-        <button class="navbar-toggler navegador__menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon" alt="Botón hamburguesa">
-        </button>
-        <div class= "collapse navbar-collapse hamburger__grid navegador__lista--grid" id="navbarSupportedContent">
-            <!-- Lista para navegar dentro del sitio -->
-            <ul class="navegador__lista">
-                <li class="nav-item">
-                    <a href="club.html" title="Club">Club</a>
-                </li>
-                <li class="nav-item">
-                    <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
-                </li>
-                <li class="nav-item">
-                    <a href="tienda.html" title="Tienda">Tienda</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contacto.html" title="Contacto">Contacto</a>
-                </li>
-            </ul>
+        <div class="navegador__hamburger">
+            <!-- Botón hamburguesa de Bootstrap -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Botón hamburguesa">
+                <img src="../img/links/button-hamb.svg" class="navbar-toggler-icon" alt="Botón hamburguesa">
+            </button>
+        </div>
+        <div class="navegador__menu">
+            <div class= "collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navegador__lista--row">
+                    <!-- Lista para navegar dentro del sitio -->
+                    <ul class="navegador__lista">
+                        <li class="nav-item">
+                            <a aria-current="page" href="club.html" title="Club">Club</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="a_competir.html" title="¡A competir!">¡A competir!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="tienda.html" title="Tienda">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacto.html" title="Contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
     <!-- Header -->
@@ -163,7 +211,7 @@
     </header>
     <main class="club__main">
         <!-- Nav para navegar dentro de la página. Accordion de Bootstrap (aparece en max-width: 992px) -->
-        <div class="navegador__accordion accordion border-0" id="accordionButton">
+        <div class="navegador__accordion accordion accordion--border" id="accordionButton">
             <div class="accordion-item accordion__item border-0">
                 <div class="accordion-header">
                     <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" 
@@ -172,7 +220,7 @@
                 </div>
                 <div id="collapseNav" class="accordion-collapse collapse border-0" data-bs-parent="#accordionButton">
                 <div class="accordion-body">
-                    <nav class="accordion__club__nav" >
+                    <nav class="navegador__accordion--format" >
                         <ul class="accordion__ul">
                             <li>
                                 <a href="#anioranza" title="Añoranza">Añoranza</a>
@@ -182,6 +230,9 @@
                             </li>
                             <li>
                                 <a href="#leyendo" title="Leyendo">Leyendo</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#menu" title="Menú">Menú</a>
                             </li>
                         </ul>
                     </nav>
@@ -212,14 +263,14 @@
                         Allá por el año 1995, a <em>Mario Roque Rey Gamboa</em> y <em>Alberto Torres Caballero</em>,
                         les nace la inquietud de formar un club de ajedrez producto del cruce de ciertas adversidades.
                         En 1994 fallece 
-                        <a class="a--textdecoration" href="../img/anciano_jugando_ajedrez.jpg" title="foto de nestor">
+                        <a class="a--textdecoration" href="../img/anciano_jugando_ajedrez.webp" title="foto de nestor" data-bs-toggle="modal" data-bs-target="#anciano_jugando_ajedrez">
                             <em>Nestor Lorenzo Trebejos Escaques</em>
                         </a>, 
                         mentor ajedrecistico de <i>Mario</i> y <i>Alberto</i>,
                         dejando en ellos sin lugar a duda un gran vacio. Luego, un tiempo después, se suma la expulsión de 
                         <i>Mario</i> de un torneo por parte de un club del centro capitalino, a causa de quedarse dormido 
                         durante la partida en reiteradas ocaciones, molestando con sus ronquidos a los demás participantes
-                        <a href="../img/jugador_de_ajedrez_tendido_en_la_mesa.jpg" title="jugador tendido en la mesa">
+                        <a href="../img/jugador_de_ajedrez_tendido_en_la_mesa.webp" title="jugador tendido en la mesa" data-bs-toggle="modal" data-bs-target="#jugador_de_ajedrez_tendido_en_la_mesa">
                             <sup class="a--textdecoration">ref</sup>
                         </a>. 
                         Y aunque Mario haya alegado que el viaje al club era largo, lo cual le generaba un gran cansancio, 
@@ -299,7 +350,8 @@
             <ul>
                 <li>
                     <a href="https://www.facebook.com/" title="Facebook" target="_blank">
-                        <svg width="19.753mm" height="19.7698mm" viewBox="0 0 1219.61 1220.65">
+                        <svg aria-labelledby="title-facebook-footer" width="19.753mm" height="19.7698mm" viewBox="0 0 1219.61 1220.65">
+                            <title id="title-facebook-footer">ícono de Facebook</title>
                             <path  d="M1219.61 625.98c0,-343.75 -265.58,-625.98 -609.32,-625.98 
                             -329.06,0 -610.29,282.23 -610.29,625.98 0,281.23 218.74,532.15 484.33,594.67l0 
                             -422.84 -109.35 0 0 -171.83 109.35 0c0,-161.87 -14.5,-374.97 219.7,-374.97l156.27 0 0 187.48 
@@ -310,51 +362,53 @@
                 </li>
                 <li>
                     <a href="https://www.instagram.com/" title="Instagram" target="_blank">
-                        <svg width="19.753mm" height="19.753mm" version="1.1" style="shape-rendering:geometricPrecision; 
-                            text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; 
-                            clip-rule:evenodd" viewBox="0 0 1961.14 1961.14">
+                        <svg aria-labelledby="title-instagram-footer" width="19.753mm" height="19.753mm" version="1.1" style="shape-rendering:geometricPrecision; 
+                        text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; 
+                        clip-rule:evenodd" viewBox="0 0 1961.14 1961.14">
+                            <title id="title-instagram-footer">ícono de Instagram</title>
                             <path d="M1961.14 980.57c0,-541.55 -439.02,-980.57 -980.57,-980.57 -541.55,0 -980.57,439.02 
-                                -980.57,980.57 0,541.55 439.02,980.57 980.57,980.57 541.55,0 980.57,-439.02 980.57,
-                                -980.57zm-1242.92 -630.93l526.94 0c203.31,0 369.66,166.34 369.66,369.66l0 526.93c0,203.32 
-                                -166.35,369.66 -369.66,369.66l-526.94 0c-203.31,0 -369.66,-166.34 -369.66,-369.66l0 
-                                -526.93c0,-203.32 166.35,-369.66 369.66,-369.66zm-14.98 103.32l556.92 0c138.24,0 251.35,113.1 
-                                251.35,251.35l0 556.91c0,138.24 -113.1,251.35 -251.35,251.35l-556.92 0c-138.24,0 -251.35,
-                                -113.1 -251.35,-251.35l0 -556.91c0,-138.24 113.1,-251.35 251.35,-251.35zm277.33 204.44c178.47,
-                                0 323.16,144.69 323.16,323.16 0,178.47 -144.69,323.16 -323.16,323.16 -178.47,0 -323.16,-144.69 
-                                -323.16,-323.16 0,-178.47 144.69,-323.16 323.16,-323.16zm0 104.88c120.55,0 218.27,97.72 218.27,
-                                218.27 0,120.55 -97.72,218.27 -218.27,218.27 -120.55,0 -218.27,-97.72 -218.27,-218.27 0,
-                                -120.55 97.72,-218.27 218.27,-218.27zm419.35 -125.76c0,-43.11 -34.94,-78.05 -78.05,-78.05 
-                                -43.11,0 -78.05,34.94 -78.05,78.05 0,43.11 34.94,78.05 78.05,78.05 43.11,0 78.05,-34.94 78.05,-78.05z"/>
+                            -980.57,980.57 0,541.55 439.02,980.57 980.57,980.57 541.55,0 980.57,-439.02 980.57,
+                            -980.57zm-1242.92 -630.93l526.94 0c203.31,0 369.66,166.34 369.66,369.66l0 526.93c0,203.32 
+                            -166.35,369.66 -369.66,369.66l-526.94 0c-203.31,0 -369.66,-166.34 -369.66,-369.66l0 
+                            -526.93c0,-203.32 166.35,-369.66 369.66,-369.66zm-14.98 103.32l556.92 0c138.24,0 251.35,113.1 
+                            251.35,251.35l0 556.91c0,138.24 -113.1,251.35 -251.35,251.35l-556.92 0c-138.24,0 -251.35,
+                            -113.1 -251.35,-251.35l0 -556.91c0,-138.24 113.1,-251.35 251.35,-251.35zm277.33 204.44c178.47,
+                            0 323.16,144.69 323.16,323.16 0,178.47 -144.69,323.16 -323.16,323.16 -178.47,0 -323.16,-144.69 
+                            -323.16,-323.16 0,-178.47 144.69,-323.16 323.16,-323.16zm0 104.88c120.55,0 218.27,97.72 218.27,
+                            218.27 0,120.55 -97.72,218.27 -218.27,218.27 -120.55,0 -218.27,-97.72 -218.27,-218.27 0,
+                            -120.55 97.72,-218.27 218.27,-218.27zm419.35 -125.76c0,-43.11 -34.94,-78.05 -78.05,-78.05 
+                            -43.11,0 -78.05,34.94 -78.05,78.05 0,43.11 34.94,78.05 78.05,78.05 43.11,0 78.05,-34.94 78.05,-78.05z"/>
                         </svg>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank">
-                        <svg width="19.7532mm" height="19.7532mm" version="1.1" style="shape-rendering:geometricPrecision; 
-                            text-rendering:geometricPrecision;image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 1975.34 1975.34">
-                            <title>icono de whatsapp</title>
-                            <path class="fil0" d="M1975.34 987.67c0,-545.48 -442.19,-987.67 -987.67,-987.67 -545.48,0 -987.67,442.19 
-                                -987.67,987.67 0,545.48 442.19,987.67 987.67,987.67 545.48,0 987.67,-442.19 987.67,-987.67zm-1363.05 429.23l177.79 -56.89c74.56,49.09 
-                                160.91,76.3 253.8,79.47 258.54,0 468.12,-208.26 468.12,-465.17 0,-256.91 -209.58,-465.17 -468.12,-465.17 -257.26,-0.09 
-                                -465.78,208.08 -464.5,464.9 5.68,105.65 36.16,199.82 86.79,267.99 4.54,8.13 -46.82,153.37 -53.87,174.86l-0.01 0.01zm-37.7 
-                                -157.16l-101.75 289.78 307.25 -95.58c78.75,42.92 169.15,67.33 265.3,67.33 305.18,0 552.6,-245.85 552.6,-549.14 0,-303.27 
-                                -247.41,-549.12 -552.6,-549.12 -305.2,0 -552.63,245.85 -552.63,549.12 0,103.27 28.71,199.91 78.61,282.4 1.06,1.74 2.12,
-                                3.46 3.17,5.18l0.04 0.02zm343.61 -319.11c-15.05,-26 50.48,-51.14 43.74,-76.39 -12.14,-45.52 -35.8,-94.48 -58.67,-136.17 
-                                -4.63,-8.44 -19.39,-7.2 -30.89,-7.69 -11.52,-0.48 -24.5,-2.07 -32.76,5.46 -32.74,29.92 -59.82,67.55 -64.78,118.45 
-                                -4.96,50.92 30.14,118.36 102.96,209.25 72.82,90.89 226.26,176.75 310.56,178.16 84.28,1.41 106.49,-33.71 123.74,
-                                -56.1 17.23,-22.36 26.86,-64.4 10.51,-76.68 -30.19,-22.69 -106.6,-66.12 -128.98,-62.27 -32.08,5.53 -45.48,68.68 
-                                -72.8,70.86 -27.3,2.18 -152.54,-80.42 -202.62,-166.9l-0.01 0.02z"/>
+                        <svg aria-labelledby="title-whatsapp-footer" width="19.7532mm" height="19.7532mm" version="1.1" style="shape-rendering:geometricPrecision; 
+                        text-rendering:geometricPrecision;image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 1975.34 1975.34">
+                            <title id="title-whatsapp-footer">ícono de whatsapp</title>
+                            <path d="M1975.34 987.67c0,-545.48 -442.19,-987.67 -987.67,-987.67 -545.48,0 -987.67,442.19 
+                            -987.67,987.67 0,545.48 442.19,987.67 987.67,987.67 545.48,0 987.67,-442.19 987.67,-987.67zm-1363.05 429.23l177.79 -56.89c74.56,49.09 
+                            160.91,76.3 253.8,79.47 258.54,0 468.12,-208.26 468.12,-465.17 0,-256.91 -209.58,-465.17 -468.12,-465.17 -257.26,-0.09 
+                            -465.78,208.08 -464.5,464.9 5.68,105.65 36.16,199.82 86.79,267.99 4.54,8.13 -46.82,153.37 -53.87,174.86l-0.01 0.01zm-37.7 
+                            -157.16l-101.75 289.78 307.25 -95.58c78.75,42.92 169.15,67.33 265.3,67.33 305.18,0 552.6,-245.85 552.6,-549.14 0,-303.27 
+                            -247.41,-549.12 -552.6,-549.12 -305.2,0 -552.63,245.85 -552.63,549.12 0,103.27 28.71,199.91 78.61,282.4 1.06,1.74 2.12,
+                            3.46 3.17,5.18l0.04 0.02zm343.61 -319.11c-15.05,-26 50.48,-51.14 43.74,-76.39 -12.14,-45.52 -35.8,-94.48 -58.67,-136.17 
+                            -4.63,-8.44 -19.39,-7.2 -30.89,-7.69 -11.52,-0.48 -24.5,-2.07 -32.76,5.46 -32.74,29.92 -59.82,67.55 -64.78,118.45 
+                            -4.96,50.92 30.14,118.36 102.96,209.25 72.82,90.89 226.26,176.75 310.56,178.16 84.28,1.41 106.49,-33.71 123.74,
+                            -56.1 17.23,-22.36 26.86,-64.4 10.51,-76.68 -30.19,-22.69 -106.6,-66.12 -128.98,-62.27 -32.08,5.53 -45.48,68.68 
+                            -72.8,70.86 -27.3,2.18 -152.54,-80.42 -202.62,-166.9l-0.01 0.02z"/>
                         </svg>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.chess.com/" title="Nuestro club en Chess.com" target="_blank">
-                        <svg  width="19.753mm" height="19.7531mm" version="1.1" style="shape-rendering:geometricPrecision; 
+                        <svg aria-labelledby="title-chess.com-footer" width="19.753mm" height="19.7531mm" version="1.1" style="shape-rendering:geometricPrecision; 
                         text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                         viewBox="0 0 1975.3 1975.31">
+                        <title id="title-chess.com-footer">ícono de Chess.com</title>
                             <rect style="fill:none;"  y="0.01" width="1975.3" height="1973.84"/>
-                            <path  class="fil5" d="M808.62 862.13l0 71.51c55.16,4 135.98,23.06 180.67,44.34 
+                            <path d="M808.62 862.13l0 71.51c55.16,4 135.98,23.06 180.67,44.34 
                             25.8,12.29 49.03,29.8 62.06,50.63 19.02,30.41 13.83,57.38 7.24,93.17 -13.43,72.91 -72.85,406.12 
                             -97.02,462.64 -36.92,86.33 -118.12,116.1 -215.52,121.09 -92.43,4.73 -219.47,0.02 -309.25,-24.81 
                             -45.64,-12.63 -45.83,-16.65 -80.94,-29.73 -0.27,0.42 -0.55,0.63 -0.65,1.34l-10.82 36.63c-10.63,42.39 
@@ -391,17 +445,18 @@
                 </li>
                 <li>
                     <a href="404.html" rel="nofollow" title="Carrito de compras">
-                        <svg width="19.7527mm" height="19.9558mm" version="1.1" style="shape-rendering:geometricPrecision; 
-                            text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-                            viewBox="0 0 1975.26 1995.57">
+                        <svg aria-labelledby="title-carrito-footer" width="19.7527mm" height="19.9558mm" version="1.1" style="shape-rendering:geometricPrecision; 
+                        text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 1975.26 1995.57">
+                            <title id="title-carrito-footer">ícono de carrito</title>
                             <path d="M606.81 1592.05c-127.66,0 -203.33,75.67 -203.33,201.73 0,100.94 75.67,201.79 203.33,201.79 100.92,0 
-                                176.58,-100.85 176.58, -201.79 0,-126.06 -75.67,-201.73 -176.58,-201.73zm-505.97 -1390.27l100.85 0 354.7 758.21 
-                                -127.72 226.98c-75.67,151.31 25.25,302.64 178.14,302.64l1084.5 0c50.4,0 75.67,-50.46 75.67,-100.85 0,-50.46 
-                                -25.25,-100.92 -75.67,-100.92l-1084.5 0 100.92 -201.73 731.34 0c75.67,0 151.31,-25.25 176.58,-100.92l353.04 
-                                -630.47c25.25,-75.67 -25.21,-152.93 -100.85,-152.93l-1439.15 0 -75.67 -126.12c-25.21,
-                                -50.46 -50.4,-75.67 -100.85,-75.67l-151.31 0c-50.46,0 -100.85,50.46 -100.85,100.85 0,75.67 
-                                50.4,100.92 100.85,100.92l-0.01 0.01zm1489.55 1390.27c-126.06,0 -201.73,75.67 -201.73,201.73 0,100.94 
-                                75.67,201.79 201.73,201.79 100.92,0 176.58,-100.85 176.58,-201.79 0,-126.06 -75.67,-201.73 -176.58,-201.73z"/>
+                            176.58,-100.85 176.58, -201.79 0,-126.06 -75.67,-201.73 -176.58,-201.73zm-505.97 -1390.27l100.85 0 354.7 758.21 
+                            -127.72 226.98c-75.67,151.31 25.25,302.64 178.14,302.64l1084.5 0c50.4,0 75.67,-50.46 75.67,-100.85 0,-50.46 
+                            -25.25,-100.92 -75.67,-100.92l-1084.5 0 100.92 -201.73 731.34 0c75.67,0 151.31,-25.25 176.58,-100.92l353.04 
+                            -630.47c25.25,-75.67 -25.21,-152.93 -100.85,-152.93l-1439.15 0 -75.67 -126.12c-25.21,
+                            -50.46 -50.4,-75.67 -100.85,-75.67l-151.31 0c-50.46,0 -100.85,50.46 -100.85,100.85 0,75.67 
+                            50.4,100.92 100.85,100.92l-0.01 0.01zm1489.55 1390.27c-126.06,0 -201.73,75.67 -201.73,201.73 0,100.94 
+                            75.67,201.79 201.73,201.79 100.92,0 176.58,-100.85 176.58,-201.79 0,-126.06 -75.67,-201.73 -176.58,-201.73z"/>
                         </svg>
                     </a>
                 </li>

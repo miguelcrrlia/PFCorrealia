@@ -221,7 +221,6 @@ svg {
 
 table {
   caption-side: bottom;
-  border-collapse: collapse;
 }
 
 th {
@@ -438,6 +437,7 @@ iframe {
 .nav {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-link-color);
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
   --bs-nav-link-disabled-color: #6c757d;
@@ -478,6 +478,7 @@ iframe {
 }
 
 .navbar-collapse {
+  height: 100%;
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
@@ -524,6 +525,7 @@ iframe {
     justify-content: flex-start;
   }
   .navbar-expand-sm .navbar-collapse {
+    height: 100%;
     display: flex !important;
     flex-basis: auto;
   }
@@ -674,9 +676,10 @@ iframe {
 
 .modal {
   --bs-modal-zindex: 1055;
-  --bs-modal-width: 500px;
+  --bs-modal-width: 75vw;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
+  --bs-modal-color: ;
   --bs-modal-bg: #fff;
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: 1px;
@@ -690,6 +693,7 @@ iframe {
   --bs-modal-header-border-width: 1px;
   --bs-modal-title-line-height: 1.5;
   --bs-modal-footer-gap: 0.5rem;
+  --bs-modal-footer-bg: ;
   --bs-modal-footer-border-color: var(--bs-border-color);
   --bs-modal-footer-border-width: 1px;
   position: fixed;
@@ -776,12 +780,12 @@ iframe {
 @media (min-width: 992px) {
   
   .modal-xl {
-    --bs-modal-width: 800px;
+    --bs-modal-width: 50vw;
   }
 }
 @media (min-width: 1200px) {
   .modal-xl {
-    --bs-modal-width: 1140px;
+    --bs-modal-width: 50vw;
   }
 }
 
@@ -973,10 +977,6 @@ iframe {
   justify-content: center !important;
 }
 
-.justify-content-between {
-  justify-content: space-between !important;
-}
-
 .align-items-center {
   align-items: center !important;
 }
@@ -986,16 +986,8 @@ iframe {
   margin-left: auto !important;
 }
 
-.mb-3 {
-  margin-bottom: 1rem !important;
-}
-
-.lh-1 {
-  line-height: 1 !important;
-}
-
-.lh-lg {
-  line-height: 2 !important;
+.mb-4 {
+  margin-bottom: 1.5rem !important;
 }
 
 .text-center {
@@ -1008,6 +1000,12 @@ iframe {
 
 .rounded-0 {
   border-radius: 0 !important;
+}
+
+@media (min-width: 576px) {
+  .mb-sm-3 {
+    margin-bottom: 1rem !important;
+  }
 }
 * {
   box-sizing: border-box;
@@ -1039,6 +1037,7 @@ iframe {
 
 ::-webkit-scrollbar-button {
   background-color: rgb(255, 255, 245);
+  /*Quita el double-button*/
 }
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
   background-image: url(img/arrowup.svg);
@@ -1072,10 +1071,11 @@ iframe {
   background-image: url(img/arrowrgthy.svg);
   background-size: 100%;
 }
+::-webkit-scrollbar-button:vertical:start:increment, ::-webkit-scrollbar-button:vertical:end:decrement, ::-webkit-scrollbar-button:horizontal:start:increment, ::-webkit-scrollbar-button:horizontal:end:decrement {
+  display: none;
+}
 
-/*line-height para sacar el que aplica bootstrap*/
 body {
-  background-image: url(img/bck.svg);
   background-attachment: fixed;
   color: rgb(62, 64, 149);
   background-color: white;
@@ -1097,7 +1097,6 @@ nav {
   height: 100%;
   padding: 5px 0 5px 5px;
   border-bottom: solid 25px rgb(62, 64, 149);
-  background-image: url(img/bck.svg);
   background-color: white;
 }
 nav a {
@@ -1277,10 +1276,12 @@ table {
   background-color: rgb(255, 255, 245);
 }
 
+/*Uso background-clip: padding-box en especial porque en Firefox el borde quedaba detrás del background-color*/
 th {
   border: 2px solid;
   padding: 10px;
   background-color: rgb(245, 245, 255);
+  background-clip: padding-box;
 }
 
 td {
@@ -1288,7 +1289,7 @@ td {
   padding: 10px;
 }
 
-/* Para poner la lupa dentro del <input> buscar, z-index:0; para que quede atrás de la nav*/
+/* Para poner la lupa dentro del <input> buscar*/
 form {
   position: relative;
   font-weight: 400;
@@ -1355,17 +1356,11 @@ select {
   fill: rgb(12, 14, 110);
 }
 
-.navegador__lista {
+.navegador__lista--row {
   height: 100%;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  grid-area: centrado;
-  font-weight: 700;
-  font-size: 2em;
 }
 
 /*a-textdeco mejora el contraste con el background claro*/
@@ -1438,7 +1433,29 @@ select {
   color: transparent;
 }
 
+/*Clases para que la tabla de horarios sea más fácil de leer en responsive*/
+.schedules--relative {
+  position: relative;
+}
+
+.schedules__days--sticky {
+  position: sticky;
+  top: 0;
+}
+
+.schedules__hours--sticky {
+  position: sticky;
+  left: 0;
+}
+
+.borde__bajo {
+  border-bottom: solid 3.1px rgb(62, 64, 149);
+  margin-bottom: 40px;
+}
+
 /*Animaciones*/
+/*Agrego esta class de Bootstrap que la saca el purgecss*/
+
 @keyframes achicar {
   0% {
     transform: scale(1);
@@ -1758,6 +1775,317 @@ select {
     border-image: linear-gradient(90deg, rgb(62, 64, 149) 100.03003003%, rgb(255, 255, 255) 110.03003003%, rgb(252, 242, 18) 120.03003003%, rgb(62, 64, 149) 100%) 100% 0 100% 0/0 0 25px 0 stretch;
   }
 }
+@keyframes beacon {
+  1% {
+    fill: white;
+  }
+  2% {
+    fill: white;
+  }
+  3% {
+    fill: white;
+  }
+  4% {
+    fill: white;
+  }
+  5% {
+    fill: white;
+  }
+  6% {
+    fill: white;
+  }
+  7% {
+    fill: white;
+  }
+  8% {
+    fill: white;
+  }
+  9% {
+    fill: white;
+  }
+  10% {
+    fill: white;
+  }
+  11% {
+    fill: white;
+  }
+  12% {
+    fill: white;
+  }
+  13% {
+    fill: white;
+  }
+  14% {
+    fill: white;
+  }
+  15% {
+    fill: white;
+  }
+  16% {
+    fill: white;
+  }
+  17% {
+    fill: white;
+  }
+  18% {
+    fill: white;
+  }
+  19% {
+    fill: white;
+  }
+  20% {
+    fill: white;
+  }
+  21% {
+    fill: white;
+  }
+  22% {
+    fill: white;
+  }
+  23% {
+    fill: white;
+  }
+  24% {
+    fill: white;
+  }
+  25% {
+    fill: white;
+  }
+  26% {
+    fill: white;
+  }
+  27% {
+    fill: white;
+  }
+  28% {
+    fill: white;
+  }
+  29% {
+    fill: white;
+  }
+  30% {
+    fill: white;
+  }
+  31% {
+    fill: white;
+  }
+  32% {
+    fill: white;
+  }
+  33% {
+    fill: white;
+  }
+  34% {
+    fill: white;
+  }
+  35% {
+    fill: white;
+  }
+  36% {
+    fill: white;
+  }
+  37% {
+    fill: white;
+  }
+  38% {
+    fill: white;
+  }
+  39% {
+    fill: white;
+  }
+  40% {
+    fill: white;
+  }
+  41% {
+    fill: white;
+  }
+  42% {
+    fill: white;
+  }
+  43% {
+    fill: white;
+  }
+  44% {
+    fill: white;
+  }
+  45% {
+    fill: white;
+  }
+  46% {
+    fill: white;
+  }
+  47% {
+    fill: white;
+  }
+  48% {
+    fill: white;
+  }
+  49% {
+    fill: white;
+  }
+  50% {
+    fill: white;
+  }
+  50% {
+    fill: crimson;
+  }
+  51% {
+    fill: crimson;
+  }
+  52% {
+    fill: crimson;
+  }
+  53% {
+    fill: crimson;
+  }
+  54% {
+    fill: crimson;
+  }
+  55% {
+    fill: crimson;
+  }
+  56% {
+    fill: crimson;
+  }
+  57% {
+    fill: crimson;
+  }
+  58% {
+    fill: crimson;
+  }
+  59% {
+    fill: crimson;
+  }
+  60% {
+    fill: crimson;
+  }
+  61% {
+    fill: crimson;
+  }
+  62% {
+    fill: crimson;
+  }
+  63% {
+    fill: crimson;
+  }
+  64% {
+    fill: crimson;
+  }
+  65% {
+    fill: crimson;
+  }
+  66% {
+    fill: crimson;
+  }
+  67% {
+    fill: crimson;
+  }
+  68% {
+    fill: crimson;
+  }
+  69% {
+    fill: crimson;
+  }
+  70% {
+    fill: crimson;
+  }
+  71% {
+    fill: crimson;
+  }
+  72% {
+    fill: crimson;
+  }
+  73% {
+    fill: crimson;
+  }
+  74% {
+    fill: crimson;
+  }
+  75% {
+    fill: crimson;
+  }
+  76% {
+    fill: crimson;
+  }
+  77% {
+    fill: crimson;
+  }
+  78% {
+    fill: crimson;
+  }
+  79% {
+    fill: crimson;
+  }
+  80% {
+    fill: crimson;
+  }
+  81% {
+    fill: crimson;
+  }
+  82% {
+    fill: crimson;
+  }
+  83% {
+    fill: crimson;
+  }
+  84% {
+    fill: crimson;
+  }
+  85% {
+    fill: crimson;
+  }
+  86% {
+    fill: crimson;
+  }
+  87% {
+    fill: crimson;
+  }
+  88% {
+    fill: crimson;
+  }
+  89% {
+    fill: crimson;
+  }
+  90% {
+    fill: crimson;
+  }
+  91% {
+    fill: crimson;
+  }
+  92% {
+    fill: crimson;
+  }
+  93% {
+    fill: crimson;
+  }
+  94% {
+    fill: crimson;
+  }
+  95% {
+    fill: crimson;
+  }
+  96% {
+    fill: crimson;
+  }
+  97% {
+    fill: crimson;
+  }
+  98% {
+    fill: crimson;
+  }
+  99% {
+    fill: crimson;
+  }
+  100% {
+    fill: crimson;
+  }
+}
+/*Está clase la agrego manual ya que me la quita el purgecss*/
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
 .grid {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -1808,14 +2136,7 @@ select {
   padding-top: 5px;
 }
 
-.navegador__lista--grid {
-  grid-area: centrado;
-}
-
 .navegador__menu {
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
   grid-area: centrado;
 }
 
@@ -1830,6 +2151,19 @@ select {
 }
 .navegador__logo a img:hover {
   transform: scale(1.07);
+}
+
+.navegador__lista {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: centrado;
+  font-weight: 700;
+  font-size: 2em;
 }
 
 .club__grid {
@@ -1859,11 +2193,73 @@ select {
   grid-area: seccion;
 }
 
-.other-grid {
+.pages__grid {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 10rem auto auto 15rem;
   grid-template-areas: "nav" "head" "main" "footer";
+}
+
+/*Grids de la página 404*/
+.error__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "nav-err" "main-err";
+}
+
+.navegador-error {
+  width: 100%;
+  padding: 5px 0;
+  grid-area: nav-err;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 7.8rem auto;
+  grid-template-areas: "log centrado" "drop drop";
+  position: sticky;
+  top: 0;
+  animation-name: reflejo;
+  animation-delay: 0.17s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+.navegador-error__logo {
+  height: 100%;
+  padding-left: 5px;
+  grid-area: log;
+}
+.navegador-error__logo a img {
+  width: auto;
+  transition: all 0.1s;
+}
+.navegador-error__logo a img:hover {
+  transform: scale(1.07);
+}
+
+.navegador-error__hamburger {
+  margin-right: 2%;
+  grid-area: centrado;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.navegador-error__menu {
+  grid-area: drop;
+}
+
+.error__main {
+  grid-area: main-err;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: normal;
 }
 
 figure {
@@ -1913,6 +2309,10 @@ figure img, figure aside section a img, aside section a figure img {
   position: relative;
 }
 
+.lista__buscar {
+  display: none;
+}
+
 /*Para que no quede atrás de la lupa el texto que se ingresa en el <input> "buscar"*/
 .buscar__input {
   width: 10rem;
@@ -1944,7 +2344,7 @@ figure img, figure aside section a img, aside section a figure img {
 /*Para que el carrito pueda entrar en el botón de "añadir al carrito"*/
 .figure__button {
   width: 8rem;
-  margin: 5px 0;
+  margin: 4% 0;
   border-style: none;
   padding-left: 0.2rem;
   padding-right: 1.563rem;
@@ -1963,13 +2363,6 @@ figure img, figure aside section a img, aside section a figure img {
   animation-name: achicar;
   animation-duration: 0.2s;
   animation-timing-function: linear;
-}
-
-/*Imágen para aviso de página error 404*/
-.construction {
-  height: 100vh;
-  margin: 0;
-  padding-bottom: 5%;
 }
 
 .a--format {
@@ -2040,18 +2433,13 @@ figure img, figure aside section a img, aside section a figure img {
 
 /* Separa un poco los botones de prev y next del carousel */
 .carousel__button {
-  margin: 0 -10px;
+  margin: 0 -20px;
 }
 
 /* Cambia el botón de cerrar del modal */
 .button__close-color {
   background-image: url(img/cls.svg);
   opacity: 1;
-}
-
-/* Saca el recuadro cuando haces click en el botón cerrar del modal de Bootstrap */
-.btn-close {
-  --bs-btn-close-focus-shadow: 0;
 }
 
 /* El puntero del mouse cambia a lupa encima de las imágenes del carousel */
@@ -2109,19 +2497,268 @@ figure img, figure aside section a img, aside section a figure img {
   padding: 0;
 }
 
-/*clases que se van cuando purgé bootstrap y las preciso*/
+/*Clases para la página error 404*/
+.navegador-error__lista {
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: 700;
+  font-size: 2em;
+}
 
-@media only screen and (max-width: 992px) {
+/*Imágen para aviso de página error 404*/
+.error__image {
+  margin-top: 1.5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.error__image svg {
+  margin-bottom: 1.5%;
+  height: 50vh;
+}
+
+/*Te lleva al formulario compensando la nav*/
+.a__formulario {
+  position: absolute;
+  margin-top: -11rem;
+}
+
+/*Aqui pongo todos los estilos del archivo svg de la imagen de la página error 
+(me pareció pertinente ya que si cambia la paleta de colores del sitio esta imagen también debe sufrir cambios)*/
+.str16 {
+  stroke: #FEFEFE;
+  stroke-width: 10.51;
+  stroke-miterlimit: 22.9256;
+}
+
+.str18 {
+  stroke: #FEFEFE;
+  stroke-width: 10.51;
+  stroke-miterlimit: 22.9256;
+}
+
+.str17 {
+  stroke: #FEFEFE;
+  stroke-width: 10.51;
+  stroke-miterlimit: 22.9256;
+}
+
+.str22 {
+  stroke: #FEFEFE;
+  stroke-width: 52.56;
+  stroke-miterlimit: 22.9256;
+}
+
+.str21 {
+  stroke: #FEFEFE;
+  stroke-width: 52.56;
+  stroke-miterlimit: 22.9256;
+}
+
+.str15 {
+  stroke: #FEFEFE;
+  stroke-width: 19.86;
+  stroke-miterlimit: 22.9256;
+}
+
+.str19 {
+  stroke: rgb(62, 64, 149);
+  stroke-width: 19.86;
+  stroke-miterlimit: 22.9256;
+}
+
+.str0 {
+  stroke: #FEFEFE;
+  stroke-width: 52.56;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str20 {
+  stroke: rgb(62, 64, 149);
+  stroke-width: 10.51;
+  stroke-miterlimit: 22.9256;
+}
+
+.str2 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-miterlimit: 22.9256;
+}
+
+.str8 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str3 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str1 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str13 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str9 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str10 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str5 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str12 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str14 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str7 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str6 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str11 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.str4 {
+  stroke: #FEFEFE;
+  stroke-width: 29.89;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 22.9256;
+}
+
+.fil2 {
+  fill: none;
+}
+
+.fil6 {
+  fill: #FEFEFE;
+}
+
+.fil3 {
+  fill: rgb(255, 242, 18);
+}
+
+.fil5 {
+  fill: rgb(255, 242, 18);
+}
+
+.fil0 {
+  fill: rgb(62, 64, 149);
+}
+
+.fil4 {
+  fill: rgb(255, 242, 18);
+}
+
+.fil7 {
+  fill: #FEFEFE;
+  fill-rule: nonzero;
+}
+
+.fil1 {
+  fill: #FEFEFE;
+  fill-rule: nonzero;
+}
+
+.svg--animation {
+  animation-name: beacon;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@media only screen and (orientation: portrait) {
+  /*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
+}
+@media only screen and (orientation: portrait) and (max-width: 992px) {
   .grid {
     grid-template-columns: 100vw;
     grid-template-rows: 10rem auto auto auto auto;
     grid-template-areas: "nav" "head" "main" "aside" "footer";
   }
   .navegador {
-    grid-template-columns: 35% 65%;
-    grid-template-rows: 100%;
+    grid-template-columns: 25% 55% 20%;
+    grid-template-rows: 25% 75%;
     grid-area: nav;
-    grid-template-areas: "log menu";
+  }
+  .navegador__logo {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
   .encabezado {
     grid-area: head;
@@ -2144,16 +2781,57 @@ figure img, figure aside section a img, aside section a figure img {
     padding-top: 2%;
   }
   .navegador__links {
+    height: 100%;
+    margin-top: 5px;
+    padding: 0;
+    display: flex;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: flex-end;
+    /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
+  }
+  .navegador__links ul li {
     display: none;
+  }
+  .navegador__links .cart {
+    height: 100%;
+    display: flex;
+    z-index: 2;
+  }
+  .navegador__menu {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .navegador__lista {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
   aside section {
     align-content: center;
   }
   aside section img, aside section a img {
-    width: 50vw;
+    height: auto;
+    width: 80vw;
   }
   aside section a img {
-    width: 50vw;
+    height: 60vh;
+    width: auto;
   }
   aside section button {
     font-size: 1.5em;
@@ -2167,32 +2845,43 @@ figure img, figure aside section a img, aside section a figure img {
   footer form {
     height: auto;
     width: 80%;
+    margin: 10px 0;
+    padding-bottom: 2%;
+  }
+  footer form label {
+    padding-bottom: 1%;
   }
   footer section {
     height: auto;
   }
   footer nav {
     height: auto;
-    width: 80%;
-    margin: 20px;
-    padding: 20px 5px 0 5px;
+    width: 60%;
+    margin: 10px;
   }
   footer nav ul li a svg {
+    height: auto;
     width: 2rem;
   }
   footer iframe {
     width: 80%;
     height: 300px;
+    margin: 10px;
   }
   .encabezado__img {
     object-fit: contain;
     height: 100%;
   }
+  .club__grid {
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
+  }
   .club__nav {
     display: none;
   }
   .accordion {
-    background-image: url(img/bck.svg);
     background-color: white;
   }
   /* z-index para que esté por encima del form del footer */
@@ -2205,9 +2894,16 @@ figure img, figure aside section a img, aside section a figure img {
     margin: 0;
     padding: 0;
   }
-  .accordion__club__nav {
+  .accordion--border {
+    border-color: rgb(62, 64, 149);
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1.5px;
+    border-left: 0;
+    border-style: solid;
+  }
+  .navegador__accordion--format {
     height: 100%;
-    background-image: url(img/bck.svg);
     background-color: white;
     font-weight: 700;
     font-size: 1.5em;
@@ -2219,18 +2915,15 @@ figure img, figure aside section a img, aside section a figure img {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    border: 1px solid rgb(62, 64, 149);
     padding: 10px;
+  }
+  /*Saca el ítem Menú del accordion*/
+  .nav__item {
+    display: none;
   }
   /* Uso margin-top: -22.5rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
   .club__a-position {
     margin-top: -22.5rem;
-  }
-  .club-mobile__grid {
-    position: relative;
-    grid-template-columns: 100vw;
-    grid-template-rows: 10rem auto auto auto auto;
-    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
   }
   .calendario {
     width: 80vw;
@@ -2239,7 +2932,7 @@ figure img, figure aside section a img, aside section a figure img {
   .video {
     width: 80vw;
   }
-  .pages-mobile__grid {
+  .pages__grid {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 10rem auto auto auto;
@@ -2269,24 +2962,6 @@ figure img, figure aside section a img, aside section a figure img {
   textarea {
     width: 90%;
   }
-  .hamburger__grid {
-    height: 100%;
-    width: 100%;
-    grid-area: menu;
-    font-weight: 700;
-    font-size: 1em;
-  }
-  .navegador__lista {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
   figure {
     margin: 3px 0;
     border: dotted 1px rgb(62, 64, 149);
@@ -2305,20 +2980,31 @@ figure img, figure aside section a img, aside section a figure img {
     text-align: left;
     line-height: 1.3rem;
   }
+  .a__formulario {
+    position: absolute;
+    margin-top: -3rem;
+  }
+  /*Clase de la página de error 404*/
+  .error__image {
+    margin-top: 7.5%;
+  }
+  .error__image img {
+    height: 60vh;
+  }
 }
-/*No utilizo el metodo mobile first porque ya tenía hechos los grid del modo desktop antes de aprender hacerlo*/
-@media only screen and (max-width: 575.98px) {
+@media only screen and (orientation: portrait) and (max-width: 575.98px) {
   .grid {
     grid-template-columns: 100vw;
-    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: "nav" "head" "main" "aside" "footer";
   }
+  /*Agrego otra fila para hacer lugar para cuando se despliegue el botón hamburguesa*/
   .navegador {
     padding: 5px 0;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    grid-template-areas: "log centrado";
+    grid-template-columns: 35% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "log centrado" "drop drop";
     position: sticky;
     top: 0;
   }
@@ -2345,17 +3031,23 @@ figure img, figure aside section a img, aside section a figure img {
   .navegador__links {
     display: none;
   }
-  .navegador__menu {
+  .navegador__hamburger {
     grid-area: centrado;
-    height: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
   }
   nav div ul {
-    background-image: url(img/bck.svg);
     background-color: white;
     font-size: 2em;
+  }
+  aside section img, aside section a img {
+    height: auto;
+    width: 90vw;
+  }
+  aside section a img {
+    height: auto;
+    width: 75vw;
   }
   aside section button {
     font-size: 1.5em;
@@ -2369,6 +3061,7 @@ figure img, figure aside section a img, aside section a figure img {
   footer form {
     height: auto;
     width: 100%;
+    margin: 10px 0;
   }
   footer section {
     height: auto;
@@ -2376,11 +3069,15 @@ figure img, figure aside section a img, aside section a figure img {
   footer nav {
     height: auto;
     width: 80%;
-    padding: 15px 5px 0 5px;
   }
   footer iframe {
     width: 80%;
     height: 300px;
+    margin: 10px 0;
+  }
+  .navegador__logo {
+    margin-left: 5px;
+    grid-area: log;
   }
   .navegador__logo a {
     content: url(../img/logosnnmbr.svg);
@@ -2392,28 +3089,632 @@ figure img, figure aside section a img, aside section a figure img {
     width: 100%;
     height: 35%;
   }
-  /* ayuda a crear espacio en el grid cuando se abre el botón hamburguesa */
-  .hamburger__grid {
-    grid-area: auto;
+  .navegador__menu {
+    grid-area: drop;
   }
   .navegador__lista {
+    padding-left: 2%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-weight: 700;
     font-size: 2em;
+  }
+  /*Aquí saco el height: 100% para que la animación trabaje bien. 
+  Además uso !important ya que no pude encontrar que hace que el borde no aparezca*/
+  .navegador__lista--row {
+    height: auto;
+    margin-top: 5px;
+    border-style: dashed !important;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 1.5px;
+    border-bottom: 0;
+  }
+  .pages__grid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "nav" "head" "main" "footer";
+  }
+  .club__grid {
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
+    /*Elijo position: static ya que el accordion está sticky y el navegador está en un grid con row auto*/
+  }
+  .club__grid .navegador {
+    position: static;
   }
   .club__nav {
     top: 10rem;
     height: 100%;
-    background-image: url(img/bck.svg);
     background-color: white;
     font-weight: 700;
     font-size: 1.5em;
     justify-content: center;
   }
   .navegador__accordion {
+    top: 0;
+  }
+  .club__a-position {
+    margin-top: -14.5rem;
+  }
+  /*Agrega el ítem Menú del accordion*/
+  .nav__item {
+    display: block;
+  }
+  /*Queda static porque el heigth de la nav es auto*/
+  .tienda__buscar--flex {
+    position: static;
+  }
+  .error__image img {
+    height: 35vh;
+    margin-bottom: 5.5%;
+  }
+  .lista__buscar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: normal;
+  }
+  .lista__buscar form {
+    display: flex;
+    align-items: center;
+  }
+  .lista__buscar a {
+    width: auto;
+    margin-right: 10px;
+  }
+  .lista__buscar a svg {
+    width: 1em;
+    fill: rgb(62, 64, 149);
+  }
+  .tienda__buscar--flex {
+    display: none;
+  }
+  .buscar__input {
+    height: 1.4em;
+    width: 65%;
+    padding-right: 47px;
+  }
+  .buscar__button {
+    width: 2rem;
+    left: auto;
+    right: 37%;
+    top: 9.5px;
+  }
+  .error__main {
+    align-items: center;
+  }
+  .error__image {
+    width: 70%;
+  }
+  .error__image svg {
+    height: auto;
+    width: 100%;
+  }
+  /*Este margin-top trata de ser lo más conveniente ya que la nav tiene height:auto*/
+  .a__formulario {
+    position: absolute;
+    margin-top: -10rem;
+  }
+}
+@media only screen and (orientation: landscape) and (max-width: 992px) {
+  .grid {
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-areas: "nav" "head" "main" "aside" "footer";
+  }
+  .navegador {
+    grid-template-columns: 25% 55% 20%;
+    grid-template-rows: 25% 75%;
+    grid-area: nav;
+  }
+  .navegador__logo {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .encabezado {
+    grid-area: head;
+  }
+  .encabezado img {
+    width: 100%;
+  }
+  .principal {
+    grid-area: main;
+  }
+  .lado {
+    align-content: center;
+    grid-area: aside;
+  }
+  .pie {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    grid-area: footer;
+    padding-top: 2%;
+  }
+  .navegador__links {
+    height: 100%;
+    margin-top: 5px;
+    padding: 0;
+    display: flex;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: flex-end;
+    /*z-index para que funcione <a> (la razón es que está en grids superpuestos)*/
+  }
+  .navegador__links ul li {
+    display: none;
+  }
+  .navegador__links .cart {
+    height: 100%;
+    display: flex;
+    z-index: 2;
+  }
+  .navegador__menu {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .navegador__lista {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  aside section {
+    align-content: center;
+  }
+  aside section img, aside section a img {
+    height: auto;
+    width: 80vw;
+  }
+  aside section a img {
+    height: 60vh;
+    width: auto;
+  }
+  aside section button {
+    font-size: 1.5em;
+  }
+  table {
+    display: block;
+    height: 50vh;
+    width: 80vw;
+    overflow: auto;
+  }
+  footer form {
+    height: auto;
+    width: 80%;
+    margin: 10px 0;
+    padding-bottom: 2%;
+  }
+  footer form label {
+    padding-bottom: 1%;
+  }
+  footer section {
+    height: auto;
+  }
+  footer nav {
+    height: auto;
+    width: 60%;
+    margin: 10px;
+  }
+  footer nav ul li a svg {
+    height: auto;
+    width: 2rem;
+  }
+  footer iframe {
+    width: 80%;
+    height: 300px;
+    margin: 10px;
+  }
+  .encabezado__img {
+    object-fit: contain;
+    height: 100%;
+  }
+  .club__grid {
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto auto;
+    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
+  }
+  .club__nav {
+    display: none;
+  }
+  .accordion {
+    background-color: white;
+  }
+  /* z-index para que esté por encima del form del footer */
+  .navegador__accordion {
+    position: sticky;
     top: 10rem;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+  }
+  .accordion--border {
+    border-color: rgb(62, 64, 149);
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1.5px;
+    border-left: 0;
+    border-style: solid;
+  }
+  .navegador__accordion--format {
+    height: 100%;
+    background-color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    justify-content: center;
+    border: 0;
+  }
+  .accordion__ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+  }
+  /*Saca el ítem Menú del accordion*/
+  .nav__item {
+    display: none;
+  }
+  /* Uso margin-top: -22.5rem para compensar el tamaño de la nav, ya que sino quedaría detrás de ella la sección hacia donde te lleva <a>*/
+  .club__a-position {
+    margin-top: -22.5rem;
+  }
+  .calendario {
+    width: 80vw;
+    height: 50vh;
+  }
+  .video {
+    width: 80vw;
+  }
+  .pages__grid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10rem auto auto auto;
+    grid-template-areas: "nav" "head" "main" "footer";
+  }
+  .contacto__form {
+    width: 90%;
+  }
+  fieldset {
+    min-inline-size: 90%;
+  }
+  fieldset ul {
+    width: 90%;
+  }
+  fieldset ul li {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contacto__li-row {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .contacto__mensaje {
+    width: 100%;
+  }
+  textarea {
+    width: 90%;
+  }
+  figure {
+    margin: 3px 0;
+    border: dotted 1px rgb(62, 64, 149);
+    padding: 5%;
+    background-color: rgb(255, 255, 245);
+  }
+  figure figcaption {
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  figure figcaption p {
+    margin: 0 0.5rem;
+    font-weight: 200;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.3rem;
+  }
+  .a__formulario {
+    position: absolute;
+    margin-top: -3rem;
+  }
+  /*Clase de la página de error 404*/
+  .error__image {
+    margin-top: 7.5%;
+  }
+  .error__image img {
+    height: 60vh;
+  }
+  .navegador {
+    position: static;
+  }
+  aside section {
+    margin-bottom: 5%;
+    align-content: center;
+  }
+  aside section img, aside section a img {
+    height: 75vh;
+    width: auto;
+  }
+  aside section a {
+    margin-top: 5%;
+  }
+  aside section a img {
+    height: 90vh;
+    width: auto;
+  }
+  .navegador__accordion {
+    position: sticky;
+    top: 0;
+  }
+  .club__a-position {
+    margin-top: -15rem;
+  }
+  /*Agrega el ítem Menú del accordion*/
+  .nav__item {
+    display: block;
+  }
+  .tienda__buscar--flex {
+    top: 5px;
+  }
+}
+@media only screen and (orientation: landscape) and (max-width: 575.98px) {
+  .grid {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "nav" "head" "main" "aside" "footer";
+  }
+  /*Agrego otra fila para hacer lugar para cuando se despliegue el botón hamburguesa*/
+  .navegador {
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: 35% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "log centrado" "drop drop";
+    position: sticky;
+    top: 0;
+  }
+  .encabezado {
+    grid-area: head;
+  }
+  .encabezado img {
+    height: 100%;
+  }
+  .principal {
+    grid-area: main;
+  }
+  .lado {
+    align-content: center;
+    grid-area: aside;
+  }
+  .pie {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    grid-area: footer;
+    padding-top: 2%;
+  }
+  .navegador__links {
+    display: none;
+  }
+  .navegador__hamburger {
+    grid-area: centrado;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  nav div ul {
+    background-color: white;
+    font-size: 2em;
+  }
+  aside section img, aside section a img {
+    height: auto;
+    width: 90vw;
+  }
+  aside section a img {
+    height: auto;
+    width: 75vw;
+  }
+  aside section button {
+    font-size: 1.5em;
+  }
+  table {
+    display: block;
+    height: 50vh;
+    width: 80vw;
+    overflow: auto;
+  }
+  footer form {
+    height: auto;
+    width: 100%;
+    margin: 10px 0;
+  }
+  footer section {
+    height: auto;
+  }
+  footer nav {
+    height: auto;
+    width: 80%;
+  }
+  footer iframe {
+    width: 80%;
+    height: 300px;
+    margin: 10px 0;
+  }
+  .navegador__logo {
+    margin-left: 5px;
+    grid-area: log;
+  }
+  .navegador__logo a {
+    content: url(../img/logosnnmbr.svg);
+  }
+  .navegador__logo a img {
+    display: none;
+  }
+  textarea {
+    width: 100%;
+    height: 35%;
+  }
+  .navegador__menu {
+    grid-area: drop;
+  }
+  .navegador__lista {
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  /*Aquí saco el height: 100% para que la animación trabaje bien. 
+  Además uso !important ya que no pude encontrar que hace que el borde no aparezca*/
+  .navegador__lista--row {
+    height: auto;
+    margin-top: 5px;
+    border-style: dashed !important;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 1.5px;
+    border-bottom: 0;
+  }
+  .pages__grid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "nav" "head" "main" "footer";
+  }
+  .club__grid {
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "nav" "head" "mainnav" "seccion" "footer";
+    /*Elijo position: static ya que el accordion está sticky y el navegador está en un grid con row auto*/
+  }
+  .club__grid .navegador {
+    position: static;
+  }
+  .club__nav {
+    top: 10rem;
+    height: 100%;
+    background-color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    justify-content: center;
+  }
+  .navegador__accordion {
+    top: 0;
+  }
+  .club__a-position {
+    margin-top: -14.5rem;
+  }
+  /*Agrega el ítem Menú del accordion*/
+  .nav__item {
+    display: block;
+  }
+  /*Queda static porque el heigth de la nav es auto*/
+  .tienda__buscar--flex {
+    position: static;
+  }
+  .error__image img {
+    height: 35vh;
+    margin-bottom: 5.5%;
+  }
+  .lista__buscar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: normal;
+  }
+  .lista__buscar form {
+    display: flex;
+    align-items: center;
+  }
+  .lista__buscar a {
+    width: auto;
+    margin-right: 10px;
+  }
+  .lista__buscar a svg {
+    width: 1em;
+    fill: rgb(62, 64, 149);
+  }
+  .tienda__buscar--flex {
+    display: none;
+  }
+  .buscar__input {
+    height: 1.4em;
+    width: 65%;
+    padding-right: 47px;
+  }
+  .buscar__button {
+    width: 2rem;
+    left: auto;
+    right: 37%;
+    top: 9.5px;
+  }
+  .error__main {
+    align-items: center;
+  }
+  .error__image {
+    width: 70%;
+  }
+  .error__image svg {
+    height: auto;
+    width: 100%;
+  }
+  /*Este margin-top trata de ser lo más conveniente ya que la nav tiene height:auto*/
+  .a__formulario {
+    position: absolute;
+    margin-top: -10rem;
+  }
+  .navegador {
+    position: static;
+  }
+  aside section img, aside section a img {
+    height: 80vh;
+    width: auto;
+  }
+  aside section a img {
+    height: 90vh;
+    width: auto;
+  }
+  .club__a-position {
+    margin-top: -15rem;
+  }
+  .navegador-error {
+    position: static;
   }
 }
 /* Saca la marca de agua de 000webhost -aprovecho el selector de css '>' para aplicar
